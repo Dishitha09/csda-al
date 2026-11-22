@@ -1,0 +1,106 @@
+{
+  "scope": "CPU synthetic architecture verification; NO REAL ISIC TRAINING",
+  "python": "3.11.15 (main, May 10 2026, 19:31:25) [MSC v.1944 64 bit (AMD64)]",
+  "versions": {
+    "torch": "2.6.0+cpu",
+    "torchvision": "0.21.0+cpu",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.2.3",
+    "pytest": "8.3.5",
+    "ruff": "0.11.2",
+    "mypy": "1.15.0"
+  },
+  "checks": [
+    {
+      "name": "pytest",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 44.921,
+      "log": "pytest.txt"
+    },
+    {
+      "name": "ruff",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.283,
+      "log": "ruff.txt"
+    },
+    {
+      "name": "mypy",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 3.193,
+      "log": "mypy.txt"
+    },
+    {
+      "name": "inspect_missing_data",
+      "status": "PASS",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "seconds": 13.327,
+      "log": "inspect_missing_data.txt"
+    },
+    {
+      "name": "ssl_dry_run",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 14.146,
+      "log": "ssl_dry_run.txt"
+    },
+    {
+      "name": "feature_dry_run",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 13.732,
+      "log": "feature_dry_run.txt"
+    },
+    {
+      "name": "cold_start",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 13.674,
+      "log": "cold_start.txt"
+    },
+    {
+      "name": "active_loop",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 14.554,
+      "log": "active_loop.txt"
+    },
+    {
+      "name": "active_loop_resume",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 13.604,
+      "log": "active_loop_resume.txt"
+    },
+    {
+      "name": "evaluate_help",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 12.665,
+      "log": "evaluate_help.txt"
+    },
+    {
+      "name": "all_imports",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 12.819,
+      "log": "all_imports.txt"
+    }
+  ],
+  "all_passed": true
+}

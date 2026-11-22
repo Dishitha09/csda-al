@@ -1,0 +1,40 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m pytest -q --basetemp "C:\Users\Dishitha Ramesh\Desktop\ml project\audit_work\final_verification\pytest" --junitxml "C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\docs\test_logs\pytest.xml"
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+........................................................................ [ 54%]
+...........................................................              [100%]
+============================== warnings summary ===============================
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+  C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+  C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+  C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_metrics.py::test_synthetic_plot_is_a_standalone_artifact
+  C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\docs\test_logs\pytest.xml -
+131 passed, 14 warnings in 38.41s
+
+STDERR:

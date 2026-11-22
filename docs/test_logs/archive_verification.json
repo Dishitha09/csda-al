@@ -1,0 +1,8 @@
+{
+  "crc": "PASS",
+  "manifest_hashes": "PASS",
+  "extracted_hashes": "PASS",
+  "imports": "PASS: package and CLI imports resolve inside the extracted archive",
+  "extracted_tests": "PASS",
+  "scope": "Full tests passed on the code/config/test payload; final repack changes documentation only. Archive final SHA-256 is outside the archive to avoid a self-hash cycle."
+}

@@ -1,0 +1,18 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli extract-features --config configs/experiment.yaml --dry-run --output "C:\Users\Dishitha Ramesh\Desktop\ml project\audit_work\final_verification\features"
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+{
+  "synthetic": true,
+  "no_real_training": true,
+  "feature_shape": [
+    32,
+    512
+  ],
+  "features": "C:\\Users\\Dishitha Ramesh\\Desktop\\ml project\\audit_work\\final_verification\\features\\train_features.npz",
+  "encoder_version": "synthetic_untrained_wiring_only"
+}
+
+STDERR:

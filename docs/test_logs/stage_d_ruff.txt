@@ -1,0 +1,2 @@
+Command: .venv-csda/Scripts/python.exe -m ruff check csda_al/src/csda_al/acquisition csda_al/src/csda_al/imbalance csda_al/tests/test_supclust.py csda_al/tests/test_difficulty.py csda_al/tests/test_acquisition.py
+All checks passed!

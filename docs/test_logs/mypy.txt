@@ -1,0 +1,9 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m mypy src/csda_al
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+Success: no issues found in 49 source files
+
+STDERR:

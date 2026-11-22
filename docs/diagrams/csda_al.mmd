@@ -1,0 +1,26 @@
+flowchart TD
+  I[ISIC 2019 image manifest and grouping metadata] --> S[Freeze label-independent grouped splits]
+  S --> T[TRAIN images without labels]
+  S --> V[Validation images and separately paid labels]
+  S --> X[Sealed final test partition]
+  T --> SSL[PyTorch SimCLR: ResNet-18 and projection MLP]
+  SSL --> F[Versioned backbone FeatureStore]
+  F --> C[SUPClust cold-start QueryBatch]
+  C --> G[Engine validates budget and eligible IDs]
+  G --> O[Training-only LabelOracle]
+  O --> L[Cumulative acquired training labels]
+  L --> M[Eight-logit ResNet-18 ModelAdapter]
+  T --> P[Predict only for currently unlabeled IDs]
+  M --> P
+  M --> E[Validation evaluator]
+  V --> E
+  E --> D[DifficultyEstimate with class support and provenance]
+  P --> Q[Label-free QueryContext]
+  D --> Q
+  F --> Q
+  Q --> A[Difficulty-aware or baseline acquisition]
+  A --> G
+  G --> J[Atomic committed state, annotation ledger and event log]
+  M --> K[Model checkpoint and reproducibility metadata]
+  X --> Z[Final evaluator after explicit evaluation lock]
+  K --> Z

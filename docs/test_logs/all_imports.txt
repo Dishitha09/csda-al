@@ -1,0 +1,9 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -c "import importlib,pkgutil,csda_al; mods=list(pkgutil.walk_packages(csda_al.__path__,csda_al.__name__+'.')); [importlib.import_module(m.name) for m in mods]; print('Imported',len(mods),'modules')"
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+Imported 48 modules
+
+STDERR:

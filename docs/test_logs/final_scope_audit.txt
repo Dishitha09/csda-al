@@ -1,0 +1,4 @@
+Read-only independent final scope review: PASS
+Reviewed CLI preparation, engine query/round transaction, metadata/splits/datasets/oracle, acquisition contracts, evaluation lock, budgets, logging and ZIP exclusions.
+No hidden candidate labels or full-pool true class frequencies enter acquisition. Oracle targets reach acquired-only training after query commit. Validation truth is restricted to evaluation/difficulty and unique validation labels are charged up front. Test inputs are absent from the engine. Only fixed budget, rounds and pool exhaustion terminate runs. No Co-teaching/VOG/class-aware stopping runtime exists.
+Head/middle/tail metrics are pure APIs; default engine reports aggregate/per-class metrics. Clinical validity, rare-class discovery and scientific performance remain untested.

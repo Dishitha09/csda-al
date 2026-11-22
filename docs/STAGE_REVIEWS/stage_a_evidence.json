@@ -1,0 +1,106 @@
+{
+  "stage": "A",
+  "audit_date_client": "2026-11-21",
+  "client_timezone": "Asia/Calcutta",
+  "scope": "source audit/design only; NO REAL TRAINING; no CSDA-AL runtime implementation",
+  "master_sha256": "0919fee9da3b629e8c3ff3e88b16e5b6fbd2c54b95e4b7eb76fb43d034d2e1d5",
+  "additional_master_identical": true,
+  "input_zip": {
+    "path": "C:\\Users\\Dishitha Ramesh\\Downloads\\ISIC2019_AL_All_Resources_and_Codex_Prompt.zip",
+    "sha256": "ffd7750631e82dce0a0ce8891cc61b04749faf09f60c0687a95c04f0bfee3cad",
+    "entries": 241,
+    "crc_check": "PASS"
+  },
+  "resource_manifest": {
+    "checked_files": 240,
+    "mismatches": [],
+    "unlisted_files": [],
+    "missing_files": [],
+    "total_extracted_files": 241,
+    "status": "PASS"
+  },
+  "standalone_archives": [
+    {
+      "archive": "imbalanced-medical-active-label-cleaning-main.zip",
+      "tree": "active_label_refinement",
+      "matched_files": 12,
+      "mismatches": 0
+    },
+    {
+      "archive": "FlexSampling-main.zip",
+      "tree": "flexible_sampling",
+      "matched_files": 44,
+      "mismatches": 0
+    },
+    {
+      "archive": "TypiClust-main.zip",
+      "tree": "typiclust",
+      "matched_files": 137,
+      "mismatches": 0
+    },
+    {
+      "archive": "simclr-master.zip",
+      "tree": "simclr_google_research",
+      "matched_files": 35,
+      "mismatches": 0
+    }
+  ],
+  "papers": [
+    {
+      "file": "active_label_refinement_imbalanced_medical.pdf",
+      "pages": 13,
+      "text_characters": 29249,
+      "sha256": "9e6d1218c9e3ebdf9e737d8eb960a16fd8428dfdec65a5f2d1dc2c8dc0b14774"
+    },
+    {
+      "file": "flexible_sampling_long_tailed_skin_lesion.pdf",
+      "pages": 12,
+      "text_characters": 27043,
+      "sha256": "997d1a7320697a56a2bf39a53181e3fe7c5e1dcf7c4c3a4a8782711cb3ef39fa"
+    },
+    {
+      "file": "supclust_active_learning_at_boundaries.pdf",
+      "pages": 7,
+      "text_characters": 21020,
+      "sha256": "dc3d33a9ec55e096cf5f4fe81762c883ff72cf24968c8065d1d8a4ab87aed47c"
+    }
+  ],
+  "environment": {
+    "executable": "C:\\Users\\Dishitha Ramesh\\recipe_pipeline_from_scratch\\.venv\\Scripts\\python.exe",
+    "python": "3.13.9",
+    "versions_observed_not_project_tested": {
+      "torch": "2.12.0",
+      "torchvision": null,
+      "numpy": "2.4.6",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1",
+      "pandas": "3.0.3",
+      "Pillow": "12.2.0",
+      "PyYAML": "6.0.3",
+      "pytest": "9.1.1",
+      "pdfplumber": "0.11.9",
+      "pypdf": "6.21.4"
+    },
+    "required_project_python": "3.11",
+    "required_stack_validated": false
+  },
+  "reference_tests": {
+    "suite": "supclust_unofficial_starter",
+    "passed": 3,
+    "exit_code": 0,
+    "seconds": 5.65,
+    "is_csda_al_test_suite": false,
+    "log_sha256": "59675d053945483d8880d9acba38762580c2e69d2b375e1b12e7e274bd29b6f6"
+  },
+  "formula_arithmetic_assertions": "PASS; not integrated algorithm execution",
+  "documents": {
+    "required_nonempty": 13,
+    "local_links_checked": 40,
+    "broken_links": [],
+    "diagram_source_present": true
+  },
+  "stage_b_not_started": true,
+  "final_project_zip_created": false,
+  "audit_utility_sha256": "46cf60c14bfabe4ac28910b0d3c4b73472a9f04b9f528a9e95b50cbe8f7cb52b",
+  "status": "PASS"
+}

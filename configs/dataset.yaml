@@ -1,0 +1,8 @@
+dataset:
+  image_dir: ../data/ISIC_2019_Training_Input
+  metadata_csv: ../data/ISIC_2019_Training_Metadata.csv
+  ground_truth_csv: ../data/ISIC_2019_Training_GroundTruth.csv
+  image_size: 224
+  train_fraction: 0.7
+  validation_fraction: 0.15
+  test_fraction: 0.15

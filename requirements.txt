@@ -1,0 +1,14 @@
+# Install torch/torchvision CPU wheels first as described in README.md.
+torch==2.6.0
+torchvision==0.21.0
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
+Pillow==11.1.0
+PyYAML==6.0.2
+tqdm==4.67.1
+matplotlib==3.10.1
+pytest==8.3.5
+ruff==0.11.2
+mypy==1.15.0

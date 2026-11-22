@@ -1,0 +1,22 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli pretrain-ssl --config configs/simclr.yaml --dry-run --output "C:\Users\Dishitha Ramesh\Desktop\ml project\audit_work\final_verification\ssl"
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+{
+  "synthetic": true,
+  "no_real_training": true,
+  "training": {
+    "loss": 1.8935559391975403,
+    "losses": [
+      2.019813299179077,
+      1.7672985792160034
+    ],
+    "steps": 2,
+    "target_labels_used": 0
+  },
+  "checkpoint": "C:\\Users\\Dishitha Ramesh\\Desktop\\ml project\\audit_work\\final_verification\\ssl\\simclr.pt"
+}
+
+STDERR:

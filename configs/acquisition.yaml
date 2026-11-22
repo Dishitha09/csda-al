@@ -1,0 +1,12 @@
+acquisition:
+  initial_strategy: supclust
+  strategy: difficulty_aware
+  initial_budget: 8
+  batch_budget: 8
+  alpha: 0.5
+  temperature: 1.0
+  k_neighbors: 10
+  smoothing: 1.0
+  prior_recall: 0.5
+  mc_passes: 10
+  diversity: false

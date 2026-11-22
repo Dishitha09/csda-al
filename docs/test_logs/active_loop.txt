@@ -1,0 +1,183 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli run-al --config configs/experiment.yaml --synthetic --dry-run --output "C:\Users\Dishitha Ramesh\Desktop\ml project\audit_work\final_verification\al"
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+{
+  "synthetic": true,
+  "no_real_training": true,
+  "rounds": 2,
+  "training_annotations": 16,
+  "validation_annotations": 8,
+  "total_annotation_cost": 24,
+  "unlabeled_remaining": 16,
+  "training_steps": 2,
+  "checkpoint_id": "a88d63945d4879169fcde3085ea80d19b2694e4c75e2d1831d3787ca599f9c16",
+  "history": [
+    {
+      "image_ids": [
+        "synthetic_train_0004",
+        "synthetic_train_0029",
+        "synthetic_train_0001",
+        "synthetic_train_0014",
+        "synthetic_train_0028",
+        "synthetic_train_0000",
+        "synthetic_train_0003",
+        "synthetic_train_0002"
+      ],
+      "scores": [
+        4.401829555969212,
+        3.8499559129363035,
+        4.25600971870102,
+        4.021041766672686,
+        4.189424680450887,
+        3.861496291065022,
+        4.027267649897236,
+        3.9369546949464307
+      ],
+      "diagnostics": {
+        "configuration": {
+          "temperature": 1.0,
+          "typical_fraction": 0.1,
+          "k_neighbors": 10,
+          "n_init": 10,
+          "epsilon": 1e-12,
+          "variant": "supclust",
+          "strict": false
+        },
+        "requested_batch": 8,
+        "effective_batch": 8,
+        "feature_encoder": "resnet18",
+        "typicality_neighbors": "within_cluster_excluding_self",
+        "rounding": "max(1,ceil(fraction*cluster_size))",
+        "tie_policy": "image_id",
+        "fallback_ids": [],
+        "fallback_reasons": [],
+        "candidates": [
+          {
+            "image_id": "synthetic_train_0004",
+            "cluster": 2,
+            "cluster_size": 10,
+            "typicality": 5.5309742393166825,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0029",
+            "cluster": 4,
+            "cluster_size": 5,
+            "typicality": 5.109571742178229,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0001",
+            "cluster": 0,
+            "cluster_size": 4,
+            "typicality": 4.804806259623826,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0014",
+            "cluster": 3,
+            "cluster_size": 4,
+            "typicality": 5.476090880134551,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0028",
+            "cluster": 6,
+            "cluster_size": 4,
+            "typicality": 5.49405421410587,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0000",
+            "cluster": 7,
+            "cluster_size": 2,
+            "typicality": 5.149050391201146,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0003",
+            "cluster": 5,
+            "cluster_size": 2,
+            "typicality": 5.036875272134537,
+            "singleton": false
+          },
+          {
+            "image_id": "synthetic_train_0002",
+            "cluster": 1,
+            "cluster_size": 1,
+            "typicality": 1.0,
+            "singleton": true
+          }
+        ],
+        "requested_clusters": 8,
+        "effective_clusters": 8,
+        "distinct_vectors": 32,
+        "occupied_clusters": 0,
+        "eligible_clusters": 8,
+        "kmeans_warnings": []
+      },
+      "method": "supclust",
+      "version": "1.0",
+      "config_fingerprint": "f1dd52364ee2dccec9f0923972f1b89db39b2a9d70636a1a1a0e1db170d31897",
+      "pool_version": 0
+    },
+    {
+      "image_ids": [
+        "synthetic_train_0017",
+        "synthetic_train_0011",
+        "synthetic_train_0018",
+        "synthetic_train_0015",
+        "synthetic_train_0012",
+        "synthetic_train_0006",
+        "synthetic_train_0013",
+        "synthetic_train_0016"
+      ],
+      "scores": [
+        0.9933700779024172,
+        0.9354805463165252,
+        0.9204274947427864,
+        0.8947496110957263,
+        0.8715275485196703,
+        0.8457339160522266,
+        0.844842850091591,
+        0.8400804691301544
+      ],
+      "diagnostics": {
+        "experimental_adaptation": true,
+        "configuration": {
+          "alpha": 0.5,
+          "normalization": "minmax",
+          "diversity_weight": 0.0,
+          "shortlist_factor": 4,
+          "missing_validation": "entropy"
+        },
+        "normalization": "minmax",
+        "minimum": 0.6608668994158506,
+        "maximum": 0.6705106906592846,
+        "constant_difficulty_signal": false,
+        "validation_support": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "prior_classes": [],
+        "validation_annotation_cost": 8
+      },
+      "method": "difficulty_aware",
+      "version": "1.0",
+      "config_fingerprint": "96da202d92266c564cd1bd6045df2716d603aaf972aa42b08c60ac69f38e2b13",
+      "pool_version": 1
+    }
+  ],
+  "termination": "fixed_budget_round_limit_or_exhausted_pool"
+}
+
+STDERR:

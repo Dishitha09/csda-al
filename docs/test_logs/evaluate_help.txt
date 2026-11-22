@@ -1,0 +1,27 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli evaluate --help
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+usage: cli.py evaluate [-h] [--config CONFIG] [--output OUTPUT]
+                       [--predictions PREDICTIONS] [--split {validation,test}]
+                       [--lock LOCK] [--checkpoint-id CHECKPOINT_ID]
+                       [--split-fingerprint SPLIT_FINGERPRINT]
+                       [--label-budget LABEL_BUDGET]
+                       [--validation-cost VALIDATION_COST]
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --output OUTPUT       Override run output directory
+  --predictions PREDICTIONS
+                        NPZ with y_true and probabilities
+  --split {validation,test}
+  --lock LOCK           JSON EvaluationLock required for final test
+  --checkpoint-id CHECKPOINT_ID
+  --split-fingerprint SPLIT_FINGERPRINT
+  --label-budget LABEL_BUDGET
+  --validation-cost VALIDATION_COST
+
+STDERR:

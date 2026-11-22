@@ -1,0 +1,11 @@
+# Stage E: orchestration, evaluation and CLI
+
+Implemented ActiveLearningEngine, JSONL logging, all required CLI commands, synthetic image generation, split-aware eight-class metrics/exports, head/middle/tail summaries, AULC/target label savings and final-test locks. New-label budgeting and strategy modularity are inspired by Active Label Refinement Section 2.4; label correction, Co-teaching, VOG and class-aware stopping are absent.
+
+Each round validates a completed query before oracle access, atomically prepares its request, commits acquired labels and pool state, trains cumulatively, checkpoints, exports paid-validation metrics and acquires again. The controller accepts no test-data argument. Initial queries use SUPClust with zero acquired TRAIN labels. Subsequent difficulty uses aggregate validation recall and model predictions. Validation cost is never described as free.
+
+Persistent phases are ready, prepared, training_pending and evaluation_pending. Matching oracle requests replay without a second charge. Interrupted optimizer work reloads the last committed model/optimizer and deterministic round seed. Validation export can resume without retraining. Resume checks exact annotated IDs, ledger count, checkpoint checksum, runtime step cap, config, feature provenance and validation identities. Retrospective composition is computed after query commit and never revises selection. Events are audit views; state/ledger/checkpoints are authoritative.
+
+Ten focused engine tests passed, including real two-round CPU execution and exact resumed/uninterrupted model-tensor comparison after injected failures. CLI tests also passed: SSL dry run, feature extraction, cold-start, AL run/resume and clear missing-data failure. Evaluation has 23 analytic tests and a synthetic plot inspection; none is scientific performance evidence. Full commands and raw outputs are in ../test_logs/ and stage_e_engine_tests.log.
+
+Limitations: single writer per run; local simulated annotation oracle; test lock is an audit workflow guard rather than adversarial security. Real ISIC training, CUDA scaling and class-discovery efficacy remain untested. No-validation acquisition explicitly falls back to entropy.

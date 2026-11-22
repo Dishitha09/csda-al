@@ -1,0 +1,119 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli cold-start --strategy supclust --budget 8 --synthetic
+EXPECTED EXIT: 0
+ACTUAL EXIT: 0
+STATUS: PASS
+
+STDOUT:
+{
+  "synthetic": true,
+  "no_real_training": true,
+  "image_ids": [
+    "synthetic_001",
+    "synthetic_013",
+    "synthetic_022",
+    "synthetic_030",
+    "synthetic_035",
+    "synthetic_040",
+    "synthetic_050",
+    "synthetic_062"
+  ],
+  "scores": [
+    0.08554530912092301,
+    0.07978996895944046,
+    0.08331932192755005,
+    0.08129860763034663,
+    0.08034135715918349,
+    0.07848401410979326,
+    0.08021513017436961,
+    0.07135865073854056
+  ],
+  "diagnostics": {
+    "configuration": {
+      "temperature": 1.0,
+      "typical_fraction": 0.1,
+      "k_neighbors": 10,
+      "n_init": 10,
+      "epsilon": 1e-12,
+      "variant": "supclust",
+      "strict": false
+    },
+    "requested_batch": 8,
+    "effective_batch": 8,
+    "feature_encoder": "unspecified",
+    "typicality_neighbors": "within_cluster_excluding_self",
+    "rounding": "max(1,ceil(fraction*cluster_size))",
+    "tie_policy": "image_id",
+    "fallback_ids": [],
+    "fallback_reasons": [],
+    "candidates": [
+      {
+        "image_id": "synthetic_001",
+        "cluster": 3,
+        "cluster_size": 8,
+        "typicality": 0.25108187027143486,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_013",
+        "cluster": 4,
+        "cluster_size": 8,
+        "typicality": 0.20578119410972534,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_022",
+        "cluster": 0,
+        "cluster_size": 8,
+        "typicality": 0.20560853315602434,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_030",
+        "cluster": 6,
+        "cluster_size": 8,
+        "typicality": 0.21228328814835865,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_035",
+        "cluster": 5,
+        "cluster_size": 8,
+        "typicality": 0.20370411376647823,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_040",
+        "cluster": 2,
+        "cluster_size": 8,
+        "typicality": 0.17726200150137228,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_050",
+        "cluster": 7,
+        "cluster_size": 8,
+        "typicality": 0.21031555595241946,
+        "singleton": false
+      },
+      {
+        "image_id": "synthetic_062",
+        "cluster": 1,
+        "cluster_size": 8,
+        "typicality": 0.21875794141591193,
+        "singleton": false
+      }
+    ],
+    "requested_clusters": 8,
+    "effective_clusters": 8,
+    "distinct_vectors": 64,
+    "occupied_clusters": 0,
+    "eligible_clusters": 8,
+    "kmeans_warnings": []
+  },
+  "method": "supclust",
+  "version": "1.0",
+  "config_fingerprint": "f1dd52364ee2dccec9f0923972f1b89db39b2a9d70636a1a1a0e1db170d31897",
+  "pool_version": 0
+}
+
+STDERR:

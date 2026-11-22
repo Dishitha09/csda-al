@@ -1,0 +1,5 @@
+Command: ../.venv-csda/Scripts/python.exe -m pytest tests/test_engine.py -q --basetemp=../audit_work/engine-tests-final
+NO REAL ISIC TRAINING: synthetic CPU fixtures only.
+
+..........                                                               [100%]
+10 passed in 25.08s

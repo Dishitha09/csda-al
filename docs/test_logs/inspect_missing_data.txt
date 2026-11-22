@@ -1,0 +1,9 @@
+COMMAND: "C:\Users\Dishitha Ramesh\Desktop\ml project\.venv-csda\Scripts\python.exe" -m csda_al.cli inspect-data --config configs/dataset.yaml
+EXPECTED EXIT: 2
+ACTUAL EXIT: 2
+STATUS: PASS
+
+STDOUT:
+
+STDERR:
+CSDA-AL input/run error: ISIC image directory does not exist: C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\data\ISIC_2019_Training_Input. Supply dataset.image_dir.

@@ -1,0 +1,27 @@
+# Stage 1 data configuration. No real training is authorized by this file.
+dataset:
+  prepared_dir: ../../data/isic2019/prepared
+  image_dir: ../../data/isic2019/images
+  metadata_csv: null
+  ground_truth_csv: null
+  image_size: 224
+  train_fraction: 0.7
+  validation_fraction: 0.15
+  test_fraction: 0.15
+ssl:
+  checkpoint: outputs/isic2019/simclr.pt
+classifier:
+  freeze_stage: head
+  pretrained: false
+acquisition:
+  initial_strategy: supclust
+  strategy: difficulty_aware
+  initial_budget: 8
+  batch_budget: 8
+experiment:
+  seed: 42
+  max_annotations: 32
+  max_rounds: 4
+  output_dir: ../outputs/isic2019
+  device: cpu
+  num_workers: 0

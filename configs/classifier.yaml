@@ -1,0 +1,8 @@
+classifier:
+  epochs: 10
+  batch_size: 16
+  lr: 0.001
+  freeze_stage: head
+  pretrained: false
+  dropout: 0.1
+  weighted_ce: false

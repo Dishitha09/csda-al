@@ -1,0 +1,23 @@
+dataset:
+  image_dir: ../data/ISIC_2019_Training_Input
+  metadata_csv: ../data/ISIC_2019_Training_Metadata.csv
+  ground_truth_csv: ../data/ISIC_2019_Training_GroundTruth.csv
+  image_size: 224
+ssl:
+  checkpoint: null  # Required for real cold-start feature extraction after pretraining.
+classifier:
+  freeze_stage: head
+  pretrained: false
+acquisition:
+  initial_strategy: supclust
+  strategy: difficulty_aware
+  initial_budget: 8
+  batch_budget: 8
+  alpha: 0.5
+experiment:
+  seed: 42
+  max_annotations: 32
+  max_rounds: 4
+  output_dir: ../outputs/run
+  device: cpu
+  num_workers: 0

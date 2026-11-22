@@ -1,0 +1,6 @@
+REFERENCE STARTER TESTS ONLY; NOT CSDA-AL IMPLEMENTATION TESTS
+COMMAND: "C:\Users\Dishitha Ramesh\recipe_pipeline_from_scratch\.venv\Scripts\python.exe" -m pytest -q -p no:cacheprovider "C:\Users\Dishitha Ramesh\Desktop\ml project\reference_resources\ISIC2019_AL_Architecture_Resource_Pack\reference_code\supclust_unofficial_starter\tests\test_supclust_selector.py"
+...                                                                      [100%]
+3 passed in 5.65s
+
+EXIT CODE: 0

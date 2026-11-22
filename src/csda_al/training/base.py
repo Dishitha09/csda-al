@@ -1,0 +1,16 @@
+"""Structural interfaces for alternative trainers and PyTorch model adapters."""
+from collections.abc import Iterable
+from typing import Protocol
+import numpy as np
+import torch
+
+
+class ModelAdapter(Protocol):
+    def encode(self, images: torch.Tensor) -> torch.Tensor: ...
+    def predict_proba(self, images: torch.Tensor) -> torch.Tensor: ...
+
+
+class Trainer(Protocol):
+    def fit(self, loader: Iterable, epochs: int = 1, max_steps: int | None = None) -> dict: ...
+    def predict(self, loader: Iterable) -> tuple[tuple[str, ...], np.ndarray]: ...
+    def extract(self, loader: Iterable) -> tuple[tuple[str, ...], np.ndarray]: ...

@@ -1,0 +1,19 @@
+flowchart LR
+    CLI[cli] --> CFG[config]
+    CLI --> DATA[data]
+    CLI --> SSL[models and SSL training]
+    CLI --> ENG[engine]
+    ENG --> ACQ[acquisition contracts and strategies]
+    ENG --> TR[supervised trainer]
+    ENG --> EV[evaluation]
+    ENG --> OR[data oracle]
+    ENG --> UTIL[atomic IO and logging]
+    ACQ --> FEAT[feature store]
+    ACQ --> DIFF[imbalance difficulty]
+    TR --> MOD[eight-class classifier]
+    SSL --> FEAT
+    EV --> MET[metrics and learning curves]
+    TEST[synthetic and analytic tests] -.-> ENG
+    TEST -.-> ACQ
+    TEST -.-> TR
+    TEST -.-> EV

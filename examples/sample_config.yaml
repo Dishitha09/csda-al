@@ -1,0 +1,14 @@
+dataset:
+  image_size: 32
+classifier:
+  epochs: 1
+  batch_size: 8
+  freeze_stage: head
+acquisition:
+  initial_budget: 8
+  batch_budget: 8
+experiment:
+  max_annotations: 16
+  max_rounds: 2
+  output_dir: ../outputs/synthetic_demo
+  seed: 42

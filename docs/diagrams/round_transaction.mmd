@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant S as Acquisition strategy
+    participant E as AL engine
+    participant J as Atomic state journal
+    participant O as TRAIN annotation oracle
+    participant T as Acquired-only trainer
+    participant V as Paid validation evaluator
+    E->>S: IDs, features, predictions, aggregate difficulty
+    S-->>E: QueryBatch without truth labels
+    E->>E: Validate IDs, version, uniqueness and budget
+    E->>J: Commit prepared request ID and selected IDs
+    E->>O: Annotate selected TRAIN IDs
+    O->>O: Persist idempotent receipt and unique charge
+    O-->>E: Acquired labels
+    E->>J: Commit pool, acquired labels and training_pending
+    E->>T: Fit cumulative acquired TRAIN examples
+    T-->>E: Model, optimizer and RNG checkpoint
+    E->>J: Commit checkpoint hash and evaluation_pending
+    E->>V: Predict and measure paid validation split
+    V-->>E: Support-aware metrics and class difficulty
+    E->>J: Commit reports and ready phase
+    Note over E,J: Resume pending phases; preserve paid annotations

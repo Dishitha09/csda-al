@@ -1,0 +1,36 @@
+Stage A source/design audit; NO REAL TRAINING.
+
+Reproduce final source/document verification from the workspace root:
+  python audit_work/stage_a_checks.py
+
+The utility is outside the original project and reads the source ZIPs/resources.
+It writes evidence JSON, this command record, and the architecture Mermaid source.
+It performs no model training, dependency installation, dataset download, annotation,
+or Stage B package implementation. Archive CRC checks here concern INPUT ZIPs.
+
+Actual reference-starter test invocation (absolute executable and args in raw log):
+  PYTHONDONTWRITEBYTECODE=1
+  PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+  PYTHONPATH=<workspace>/reference_resources/ISIC2019_AL_Architecture_Resource_Pack/reference_code/supclust_unofficial_starter
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+  python -m pytest -q -p no:cacheprovider <reference-starter>/tests/test_supclust_selector.py
+  Result: 3 passed in 5.65s; exit code 0. See stage_a_reference_tests.log.
+
+Other executed review commands/forms (PowerShell here-strings piped to python):
+  rg --files reference_resources
+  Get-Content -Raw -LiteralPath <pdf-skill>/SKILL.md
+  python -  # safe ZIP extraction with resolved-path containment check
+  python -  # complete master and source-map/blueprint/license text reads
+  python -  # pypdf.PdfReader: all pages from each of three PDFs
+  python -  # source text with line numbers, nested license reads
+  python -  # pdfplumber/pypdfium2 rendering of selected complete method pages
+  view_image # visual inspection of rendered equations/method pages
+  rg -n <source symbols and class mappings> <reference source files>
+  python -  # sealed-source synthetic edge probes (see SUPCLUST_AUDIT.md)
+  python -  # NumPy hand-formula calculations and assertions; JSON output retained
+  Get-Command py,python,uv,pdftoppm -ErrorAction SilentlyContinue
+
+The initial master-text print hit a cp1252 UnicodeEncodeError; it was immediately
+rerun with PYTHONIOENCODING=utf-8 and the complete master was read successfully.
+Poppler was unavailable; available PDFium rendering was used successfully.
+Integrated project unit tests/imports were NOT RUN: no runtime package exists yet.
