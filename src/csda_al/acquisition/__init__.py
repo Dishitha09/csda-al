@@ -7,6 +7,8 @@ from .supclust import SUPClustAcquisition, KMeansRepresentativeAcquisition
 from .typiclust import TypiClustAcquisition
 from .bald import BALDAcquisition, bald_scores, mc_dropout_probabilities
 from .difficulty_aware import DifficultyAwareAcquisition, DifficultyOnlyAcquisition, EntropyDifficultyAcquisition
+from .bengar import BengarClassBalancedAcquisition
+from .flex_sampling import FlexibleSamplingAcquisition
 
 
 def make_strategy(name: str, **config) -> AcquisitionStrategy:
@@ -19,7 +21,13 @@ def make_strategy(name: str, **config) -> AcquisitionStrategy:
                "coreset": CoreSetAcquisition, "core_set": CoreSetAcquisition,
                "bald": BALDAcquisition, "difficulty_only": DifficultyOnlyAcquisition,
                "difficulty_aware": DifficultyAwareAcquisition,
-               "entropy_difficulty": DifficultyAwareAcquisition}
+               "entropy_difficulty": DifficultyAwareAcquisition,
+               "bengar": BengarClassBalancedAcquisition,
+               "bengar_class_balanced": BengarClassBalancedAcquisition,
+               "class_balanced": BengarClassBalancedAcquisition,
+               "flexible_sampling": FlexibleSamplingAcquisition,
+               "flex_sampling": FlexibleSamplingAcquisition,
+               "flexsampling": FlexibleSamplingAcquisition}
     if normalized in {"without_sup", "supclust_without_sup"}:
         return SUPClustAcquisition(variant="without_SUP", **config)
     if normalized in {"without_typicality", "supclust_without_typicality"}:
@@ -33,5 +41,6 @@ __all__ = ["AcquisitionStrategy", "PredictionBatch", "QueryBatch", "QueryContext
            "RandomInitialAcquisition", "RandomAcquisition", "EntropyAcquisition",
            "CoreSetAcquisition", "SUPClustAcquisition", "KMeansRepresentativeAcquisition",
            "TypiClustAcquisition", "BALDAcquisition", "DifficultyAwareAcquisition",
-           "DifficultyOnlyAcquisition", "EntropyDifficultyAcquisition", "make_strategy",
-           "entropy_scores", "bald_scores", "mc_dropout_probabilities"]
+           "DifficultyOnlyAcquisition", "EntropyDifficultyAcquisition",
+           "BengarClassBalancedAcquisition", "FlexibleSamplingAcquisition",
+           "make_strategy", "entropy_scores", "bald_scores", "mc_dropout_probabilities"]

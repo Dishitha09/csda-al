@@ -42,6 +42,7 @@ def classification_metrics(
     y_true: Sequence[int] | np.ndarray,
     y_pred: Sequence[int] | np.ndarray,
     num_classes: int = 8,
+    y_prob: Sequence[Sequence[float]] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """Return JSON-safe metrics; rows=true and columns=predicted in confusion.
 
@@ -98,7 +99,58 @@ def classification_metrics(
         result[f"macro_{metric}"] = float(values.mean())
         result[f"micro_{metric}"] = micro
         result[f"weighted_{metric}"] = float(np.dot(values, weights))
+    if y_prob is not None:
+        auroc_res = compute_macro_auroc(truth, y_prob, count)
+        result["macro_auroc"] = auroc_res["macro_auroc"]
+        result["per_class_auroc"] = auroc_res["per_class_auroc"]
+    else:
+        result["macro_auroc"] = None
+        result["per_class_auroc"] = [None] * count
     return result
+
+
+def compute_macro_auroc(
+    y_true: Sequence[int] | np.ndarray,
+    y_prob: Sequence[Sequence[float]] | np.ndarray,
+    num_classes: int = 8,
+) -> dict[str, Any]:
+    """Compute one-vs-rest Macro-AUROC across supported classes.
+
+    For classes with zero true positives or zero true negatives, AUROC is
+    undefined (None). Macro-AUROC averages across classes where AUROC is defined.
+    """
+    from sklearn.metrics import roc_auc_score
+
+    count = _class_count(num_classes)
+    truth = _labels(y_true, count, "y_true")
+    if truth.size == 0:
+        return {"macro_auroc": None, "per_class_auroc": [None] * count, "evaluated_classes": 0}
+    probs = np.asarray(y_prob, dtype=np.float64)
+    if probs.ndim != 2 or probs.shape[1] != count or len(probs) != len(truth):
+        raise ValueError(f"y_prob must have shape (N, {count}) matching length of y_true")
+
+    per_class: list[float | None] = []
+    valid: list[float] = []
+
+    for c in range(count):
+        binary_truth = (truth == c).astype(np.int64)
+        positives = int(binary_truth.sum())
+        negatives = len(binary_truth) - positives
+        if positives > 0 and negatives > 0:
+            try:
+                val = float(roc_auc_score(binary_truth, probs[:, c]))
+                per_class.append(val)
+                valid.append(val)
+            except Exception:
+                per_class.append(None)
+        else:
+            per_class.append(None)
+
+    return {
+        "macro_auroc": float(np.mean(valid)) if valid else None,
+        "per_class_auroc": per_class,
+        "evaluated_classes": len(valid),
+    }
 
 
 def frequency_groups(

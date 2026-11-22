@@ -77,6 +77,7 @@ class QueryContext:
     predictions: PredictionBatch | None = None
     difficulty: Any = None
     mc_probabilities: np.ndarray | None = None
+    labeled_counts: tuple[int, ...] | None = None
 
     def __post_init__(self) -> None:
         universe = unique_ids(self.feature_store.image_ids, "feature IDs")
@@ -106,6 +107,11 @@ class QueryContext:
             if mc.shape[0] < 2 or mc.shape[1] != len(unlabeled):
                 raise ValueError("MC predictions must have shape [T>=2, unlabeled_count, 8]")
             object.__setattr__(self, "mc_probabilities", mc)
+        if self.labeled_counts is not None:
+            counts = tuple(int(x) for x in self.labeled_counts)
+            if len(counts) != len(CLASSES) or any(x < 0 for x in counts):
+                raise ValueError("labeled_counts must have eight nonnegative class counts")
+            object.__setattr__(self, "labeled_counts", counts)
 
     @property
     def effective_budget(self) -> int:

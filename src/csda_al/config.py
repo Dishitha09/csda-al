@@ -102,6 +102,24 @@ class AcquisitionConfig:
 
 
 @dataclass(frozen=True)
+class StoppingConfig:
+    enabled: bool = False
+    min_rounds: int = 3
+    patience: int = 2
+    min_delta: float = 0.005
+    min_per_class: int = 2
+    minority_delta: float = 0.01
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.enabled, bool):
+            raise ValueError("stopping.enabled must be boolean")
+        positive_int(self.min_rounds, "min_rounds")
+        positive_int(self.patience, "patience")
+        if self.min_delta < 0 or self.minority_delta < 0 or self.min_per_class < 0:
+            raise ValueError("stopping parameters must be nonnegative")
+
+
+@dataclass(frozen=True)
 class ExperimentConfig:
     seed: int = 42
     max_annotations: int = 32
@@ -127,6 +145,7 @@ class Config:
     classifier: ClassifierConfig = field(default_factory=ClassifierConfig)
     acquisition: AcquisitionConfig = field(default_factory=AcquisitionConfig)
     experiment: ExperimentConfig = field(default_factory=ExperimentConfig)
+    stopping: StoppingConfig = field(default_factory=StoppingConfig)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -142,7 +161,8 @@ def load_config(path: str | Path) -> Config:
         raise ValueError(f"Configuration not found: {path}")
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     schema = {"dataset": DatasetConfig, "ssl": SSLConfig, "classifier": ClassifierConfig,
-              "acquisition": AcquisitionConfig, "experiment": ExperimentConfig}
+              "acquisition": AcquisitionConfig, "experiment": ExperimentConfig,
+              "stopping": StoppingConfig}
     if not isinstance(raw, dict) or set(raw) - set(schema):
         raise ValueError("Unknown configuration section; expected " + ", ".join(schema))
     parsed = {}

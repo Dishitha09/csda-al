@@ -1,0 +1,6 @@
+Method,Labels for 40% Bound,Labels for 50% Bound,Label Savings vs Random,Speedup
+Random (B0),320,> 500,0%,1.0x
+Entropy (M4),280,440,12.5%,1.14x
+Flexible Sampling (M2),160,280,50.0%,2.0x
+Bengar Class-Balanced (M3),160,260,50.0%,2.0x
+Proposed CSDA-AL (C4),110,180,65.6%,2.91x

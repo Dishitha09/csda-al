@@ -1,0 +1,15 @@
+ID,Method,Cold-Start,Acquisition Strategy,Accuracy,Balanced Acc,Macro-F1,Macro-AUROC,AULC,Tail Recall
+B0,Random Baseline,Random,Random,0.457,0.165,0.143,0.519,0.128,0.000
+B1,Supervised Upper Bound,"Full (17,732)",N/A,0.784,0.625,0.648,0.885,N/A,0.542
+M1,SUPClust Cold-Start,SUPClust,Random,0.492,0.204,0.178,0.554,0.158,0.065
+M2,Flexible Sampling,Random,Flexible Sampling,0.528,0.276,0.254,0.665,0.186,0.184
+M3,Bengar Class-Balanced,Random,Bengar (Constrained),0.534,0.282,0.261,0.672,0.198,0.218
+M4,Entropy Uncertainty,Random,Entropy,0.485,0.186,0.168,0.542,0.145,0.041
+M5,Core-Set Diversity,Random,Core-Set,0.468,0.172,0.152,0.528,0.134,0.024
+M6,BALD MC-Dropout,Random,BALD,0.479,0.179,0.162,0.536,0.142,0.038
+M7,Difficulty-Aware,Random,Difficulty-Aware,0.538,0.291,0.272,0.684,0.205,0.229
+M8,Khanal Refinement (40% noise),Random,Co-teaching + VOG,0.682,0.512,0.541,0.742,N/A,0.385
+C1,Combined: SUP + Flex,SUPClust,Flexible Sampling,0.554,0.312,0.286,0.705,0.218,0.254
+C2,Combined: SUP + Bengar,SUPClust,Bengar Class-Balanced,0.568,0.334,0.304,0.728,0.231,0.288
+C3,Combined: Flex + Bengar,Random,Flex + Class-Balanced,0.572,0.338,0.312,0.735,0.238,0.295
+C4,Proposed CSDA-AL Full,SUPClust,CSDA-AL (Difficulty+Balance),0.605,0.371,0.342,0.768,0.258,0.358

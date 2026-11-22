@@ -1,0 +1,9 @@
+# Table3 Ablation Summary
+
+| Ablation Variant | Cold Start | Acquisition | Early Stopping | Macro-F1 | Balanced Acc | Tail Recall | Delta F1 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Full CSDA-AL (C4) | SUPClust | Difficulty + Class-Balance | Enabled (Round 6) | 0.342 | 0.371 | 0.358 | Reference |
+| w/o SUPClust Init | Random | Difficulty + Class-Balance | Enabled (Round 6) | 0.284 | 0.308 | 0.264 | -0.058 |
+| w/o Difficulty Weighting | SUPClust | Entropy + Class-Balance | Enabled (Round 6) | 0.295 | 0.322 | 0.278 | -0.047 |
+| w/o Class-Balanced Constraints | SUPClust | Difficulty-Aware Only | Enabled (Round 6) | 0.278 | 0.298 | 0.242 | -0.064 |
+| w/o Early Stopping | SUPClust | Difficulty + Class-Balance | Disabled (Round 7) | 0.339 | 0.368 | 0.352 | -0.003 |

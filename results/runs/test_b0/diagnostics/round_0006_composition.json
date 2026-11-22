@@ -1,0 +1,25 @@
+{
+  "class_order": [
+    "MEL",
+    "NV",
+    "BCC",
+    "AK",
+    "BKL",
+    "DF",
+    "VASC",
+    "SCC"
+  ],
+  "counts": [
+    5,
+    24,
+    3,
+    1,
+    7,
+    0,
+    0,
+    0
+  ],
+  "phase": "post_annotation_only",
+  "synthetic": false,
+  "total": 40
+}

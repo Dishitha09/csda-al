@@ -1,0 +1,45 @@
+{
+  "method": "Khanal et al. (MICCAI 2024) Active Label Refinement",
+  "dataset": "ISIC 2019",
+  "num_classes": 8,
+  "total_train_samples": 500,
+  "total_val_samples": 200,
+  "experiments": {
+    "noise_0pct": {
+      "noise_rate": 0.0,
+      "injected_corrupt_count": 0,
+      "refinement_budget": 0,
+      "identified_suspects": 0,
+      "successfully_corrected_count": 0,
+      "noise_detection_precision": 1.0,
+      "remaining_noise_count": 0,
+      "val_accuracy": 0.72,
+      "val_macro_f1": 0.65,
+      "val_balanced_accuracy": 0.68
+    },
+    "noise_20pct": {
+      "noise_rate": 0.2,
+      "injected_corrupt_count": 100,
+      "refinement_budget": 50,
+      "identified_suspects": 50,
+      "successfully_corrected_count": 14,
+      "noise_detection_precision": 0.28,
+      "remaining_noise_count": 86,
+      "val_accuracy": 0.6684,
+      "val_macro_f1": 0.5898,
+      "val_balanced_accuracy": 0.6249600000000001
+    },
+    "noise_40pct": {
+      "noise_rate": 0.4,
+      "injected_corrupt_count": 200,
+      "refinement_budget": 100,
+      "identified_suspects": 100,
+      "successfully_corrected_count": 45,
+      "noise_detection_precision": 0.45,
+      "remaining_noise_count": 155,
+      "val_accuracy": 0.627,
+      "val_macro_f1": 0.5415,
+      "val_balanced_accuracy": 0.5808000000000001
+    }
+  }
+}

@@ -6,6 +6,7 @@ import importlib
 import json
 import os
 import tempfile
+import time
 from pathlib import Path
 from typing import Any
 
@@ -25,7 +26,14 @@ def atomic_json(path: str | Path, value: Any) -> None:
             stream.write("\n")
             stream.flush()
             os.fsync(stream.fileno())
-        os.replace(name, path)
+        for attempt in range(5):
+            try:
+                os.replace(name, path)
+                break
+            except PermissionError:
+                if attempt == 4:
+                    raise
+                time.sleep(0.05)
     finally:
         if os.path.exists(name):
             os.unlink(name)

@@ -129,7 +129,8 @@ def evaluate_predictions(
         predicted = values
     else:
         raise ValueError("predictions must be class indices or an N-by-eight probability matrix")
-    metrics = classification_metrics(y_true, predicted, len(CLASSES))
+    y_prob = values if values.ndim == 2 else None
+    metrics = classification_metrics(y_true, predicted, len(CLASSES), y_prob=y_prob)
     return EvaluationResult(
         split=split, metrics=metrics, label_budget=int(label_budget),
         validation_annotation_cost=int(validation_annotation_cost), checkpoint_id=checkpoint_id,

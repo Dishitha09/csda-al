@@ -29,6 +29,7 @@ from ..utils.seed import seed_everything, seed_worker
 from .budget import AnnotationBudget
 from .checkpointing import load_checkpoint, save_checkpoint
 from .pool_state import PoolState
+from .stopping import ClassAwareStoppingCriterion
 
 
 class ActiveLearningEngine:
@@ -78,6 +79,21 @@ class ActiveLearningEngine:
             "validation_ids": sorted(val_ids), "synthetic": synthetic,
         })
         self.logger = JsonlLogger(self.output / "events.jsonl")
+        stopping_cfg = getattr(self.config, "stopping", None)
+        stopping_enabled = getattr(stopping_cfg, "enabled", False) if stopping_cfg else False
+        min_rounds = getattr(stopping_cfg, "min_rounds", 3) if stopping_cfg else 3
+        patience = getattr(stopping_cfg, "patience", 2) if stopping_cfg else 2
+        min_delta = getattr(stopping_cfg, "min_delta", 0.005) if stopping_cfg else 0.005
+        min_per_class = getattr(stopping_cfg, "min_per_class", 2) if stopping_cfg else 2
+        minority_delta = getattr(stopping_cfg, "minority_delta", 0.01) if stopping_cfg else 0.01
+        self.stopping_criterion = ClassAwareStoppingCriterion(
+            min_rounds=min_rounds,
+            patience=patience,
+            min_delta=min_delta,
+            min_per_class=min_per_class,
+            minority_delta=minority_delta,
+            enabled=stopping_enabled,
+        )
 
     def _loader(self, ids: Sequence[str] | None = None, *, labels: dict | None = None,
                 validation: bool = False, training: bool = False, seed: int = 42) -> DataLoader:
@@ -163,9 +179,14 @@ class ActiveLearningEngine:
                                  passes=self.config.acquisition.mc_passes,
                                  seed=self.config.experiment.seed + state.query_round))
                 mc = np.concatenate(draws, axis=1)
+        labeled_counts = None
+        if snapshot.get("acquired_labels") and state.labeled_ids:
+            raw_counts = np.bincount([snapshot["acquired_labels"][i] for i in state.labeled_ids],
+                                     minlength=len(CLASSES))
+            labeled_counts = tuple(int(x) for x in raw_counts[:len(CLASSES)])
         context = QueryContext(self.store, state.labeled_ids, state.unlabeled_ids, count,
                                self.config.experiment.seed + state.query_round, state.state_version,
-                               predictions, difficulty, mc)
+                               predictions, difficulty, mc, labeled_counts)
         query = self._strategy(name).select(context)
         # This is deliberately a second validation outside the strategy.
         if (query.pool_version != state.state_version or len(query.image_ids) != count
@@ -217,7 +238,7 @@ class ActiveLearningEngine:
                 state = PoolState.from_dict(snapshot["pool"])
                 if snapshot["phase"] == "ready":
                     remaining = self.budget.remaining(len(state.labeled_ids))
-                    if (remaining == 0 or not state.unlabeled_ids
+                    if (snapshot.get("stopped_early") or remaining == 0 or not state.unlabeled_ids
                             or state.query_round >= self.config.experiment.max_rounds):
                         break
                     proposed = (self.config.acquisition.initial_budget if not state.labeled_ids
@@ -279,15 +300,25 @@ class ActiveLearningEngine:
                                   validation_annotation_cost=self.budget.validation_annotation_cost)
                         export_result(result, self.output / "validation", prefix=f"round_{state.query_round:04d}",
                                       synthetic=self.synthetic)
+                        acquired_counts = tuple(np.bincount([snapshot["acquired_labels"][i] for i in state.labeled_ids],
+                                                            minlength=len(CLASSES)))
+                        decision = self.stopping_criterion.evaluate(state.query_round, acquired_counts, result.metrics)
+                        atomic_json(self.output / "diagnostics" / f"round_{state.query_round:04d}_stopping.json",
+                                    {"synthetic": self.synthetic, **decision.to_dict()})
+                        if decision.should_stop:
+                            snapshot["stopped_early"] = True
+                            snapshot["stop_reason"] = decision.reason
+                            self.logger.log("early_stopping_triggered", round=state.query_round, reason=decision.reason)
                     snapshot["phase"] = "ready"
                     atomic_json(state_path, snapshot)
             state = PoolState.from_dict(snapshot["pool"])
+            term_reason = snapshot.get("stop_reason") if snapshot.get("stopped_early") else "fixed_budget_round_limit_or_exhausted_pool"
             summary = {"synthetic": self.synthetic, "no_real_training": self.synthetic,
                        "rounds": state.query_round, "training_annotations": len(state.labeled_ids),
                        "validation_annotations": self.budget.validation_annotation_cost,
                        "total_annotation_cost": len(state.labeled_ids) + self.budget.validation_annotation_cost,
                        "unlabeled_remaining": len(state.unlabeled_ids), "training_steps": self.trainer.total_steps,
                        "checkpoint_id": snapshot["checkpoint_id"], "history": snapshot["history"],
-                       "termination": "fixed_budget_round_limit_or_exhausted_pool"}
+                       "termination": term_reason}
             atomic_json(self.output / "summary.json", summary)
             return summary

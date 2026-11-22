@@ -1,0 +1,31 @@
+{
+  "acquired_class_counts": [
+    36,
+    118,
+    37,
+    8,
+    27,
+    3,
+    2,
+    9
+  ],
+  "best_macro_f1": 0.14062578451088004,
+  "current_macro_f1": 0.10060424620416608,
+  "diagnostics": {},
+  "min_class_coverage_met": true,
+  "patience_counter": 0,
+  "per_class_recalls": [
+    0.0,
+    0.9487726787620064,
+    0.09018036072144289,
+    0.0,
+    0.01440329218106996,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "reason": "stopping_criterion_disabled",
+  "round": 5,
+  "should_stop": false,
+  "synthetic": false
+}

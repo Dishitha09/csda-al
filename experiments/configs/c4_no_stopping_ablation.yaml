@@ -1,0 +1,44 @@
+dataset:
+  prepared_dir: ../../../data/isic2019/prepared
+  image_dir: ../../../data/isic2019/images
+  metadata_csv: null
+  ground_truth_csv: null
+  image_size: 224
+  train_fraction: 0.7
+  validation_fraction: 0.15
+  test_fraction: 0.15
+ssl:
+  checkpoint: ../../outputs/isic2019/simclr.pt
+  epochs: 100
+  batch_size: 64
+  lr: 0.001
+  temperature: 0.5
+  projection_dim: 128
+classifier:
+  epochs: 5
+  batch_size: 16
+  lr: 0.001
+  freeze_stage: head
+  pretrained: false
+  dropout: 0.1
+  weighted_ce: false
+acquisition:
+  initial_strategy: supclust
+  strategy: difficulty_aware
+  initial_budget: 80
+  batch_budget: 40
+  alpha: 0.5
+  diversity: false
+stopping:
+  enabled: false
+  min_rounds: 3
+  patience: 2
+  min_delta: 0.005
+  min_per_class: 2
+experiment:
+  seed: 42
+  max_annotations: 320
+  max_rounds: 7
+  output_dir: ../../results/runs/c4_no_stopping_ablation_seed42
+  device: cpu
+  num_workers: 0
