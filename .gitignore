@@ -7,7 +7,13 @@ __pycache__/
 .mypy_cache/
 .test-tmp*/
 outputs/
-/data/
+/data/images/
+/data/prepared/
+/data/*.zip
+*.zip
+!/data/metadata/
+!/data/metadata/**
+!/data/README.md
 *.pt
 *.pth
 *.npz
