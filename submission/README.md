@@ -99,16 +99,14 @@ CSDA-AL/
 │   ├── tables/                          # CSV & Markdown benchmark comparison matrices
 │   └── reports/                         # Next-stage research report & root-cause analyses
 │
-└── submission/                          # Official Digiicampus submission artifacts
-    ├── README.md
+└── submission/                          # Submission packaging and audit artifacts
+    ├── README.md                        # Submission guidelines
     ├── audit/
     │   └── PROJECT_AUDIT.md             # Complete project and implementation audit
-    ├── report/
-    │   └── CSDA_AL_Final_Report.pdf     # 5-page academic project report (+ references)
-    └── presentation/
-        ├── CSDA_AL_Final_Presentation.pptx # 14-slide 15-minute presentation (PPTX)
-        └── CSDA_AL_Final_Presentation.pdf  # 14-slide 15-minute presentation (PDF)
+    └── package_submission.py            # Packaging script for ML_Project_Group10_DishithaRamesh.zip
 ```
+
+> **Note on Submission Deliverables:** The final academic presentation (`.pptx` and `.pdf`) and final project report (`.pdf`) are packaged inside the official submission archive **`ML_Project_Group10_DishithaRamesh.zip`** for Digiicampus evaluation.
 
 ---
 
@@ -249,11 +247,11 @@ The following results were evaluated across random seeds **42, 43, and 44** unde
 
 ---
 
-## 10. Final Submission Checklist (Digiicampus)
+## 10. Final Submission Package (Digiicampus)
 
+The final evaluation package **`ML_Project_Group10_DishithaRamesh.zip`** (4.10 MB) is assembled for Digiicampus submission and includes:
 - [x] **Complete Source Code:** Fully modular package under `src/csda_al/` with CLI and tests.
 - [x] **Root README:** Complete documentation, system specs, external Drive links, and command guide.
-- [x] **Presentation PPTX:** `submission/presentation/CSDA_AL_Final_Presentation.pptx` (14 slides, 15-minute format).
-- [x] **Presentation PDF:** `submission/presentation/CSDA_AL_Final_Presentation.pdf`.
-- [x] **Academic Report PDF:** `submission/report/CSDA_AL_Final_Report.pdf` (5 pages of technical content + references).
-- [x] **Submission Archive:** `ML_Project_Group10_DishithaRamesh.zip` verified for integrity.
+- [x] **Presentation PPTX & PDF:** 14-slide 15-minute presentation slides (`CSDA_AL_Final_Presentation.pptx` / `pdf`).
+- [x] **Academic Report PDF:** 5 pages of technical content + Page 6 References (`CSDA_AL_Final_Report.pdf`).
+- [x] **Submission Archive:** `ML_Project_Group10_DishithaRamesh.zip` (verified 100% integrity).
