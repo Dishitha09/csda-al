@@ -1,0 +1,12 @@
+Configuration,Balanced Accuracy,Macro-F1,Macro-AUROC
+[A0] Random Baseline (Unweighted),26.06 ± 0.27%,0.2606 ± 0.0048,0.7436 ± 0.0218
+[A1] Class-Weighted Random,28.11 ± 1.57%,0.2798 ± 0.0175,0.7376 ± 0.0203
+[A2] Calibrated Cold-Start Only,27.49 ± 0.56%,0.2769 ± 0.0069,0.7503 ± 0.0075
+[A3] Uncertainty Only (Entropy),26.75 ± 1.06%,0.2707 ± 0.0117,0.7542 ± 0.0211
+[A7] CSDA-AL without Diversity,26.53 ± 0.65%,0.2623 ± 0.0095,0.7603 ± 0.0150
+[A8] Original CSDA-AL Combined,26.36 ± 1.34%,0.2675 ± 0.0238,0.7594 ± 0.0128
+[A9] Class-Weighted + Calibrated Cold-Start,27.13 ± 0.12%,0.2699 ± 0.0047,0.7534 ± 0.0058
+[A10] Class-Weighted + Uncertainty Acquisition,25.61 ± 1.11%,0.2583 ± 0.0120,0.7070 ± 0.0220
+[A11] Class-Weighted + Uncertainty + Revised Diversity,27.32 ± 0.97%,0.2730 ± 0.0048,0.7626 ± 0.0171
+[A12] Validation-Tuned CSDA-AL (W1_Balanced),24.73 ± 1.06%,0.2379 ± 0.0157,0.7165 ± 0.0284
+[A13] Final Improved CSDA-AL,26.54 ± 1.09%,0.2696 ± 0.0172,0.7606 ± 0.0085

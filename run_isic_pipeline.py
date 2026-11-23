@@ -505,9 +505,15 @@ def mode_evaluate(output_dir: Path):
 
 # ----------------- MAIN ENTRYPOINT ----------------- #
 
+def mode_next_stage(args, train_f, train_l, val_f, val_l, test_f, test_l):
+    """Execute Next-Stage Experiments A9 to A13."""
+    from scripts.run_next_stage_experiments import run_experiment_suite
+    print("\n----------------- EXECUTING NEXT-STAGE EXPERIMENTS A9 - A13 -----------------")
+    run_experiment_suite()
+
 def main():
     parser = argparse.ArgumentParser(description="Master Execution Pipeline for CSDA-AL on ISIC 2019")
-    parser.add_argument("--mode", type=str, default="diagnose", choices=["diagnose", "improve", "ablation", "evaluate", "all"], help="Execution mode")
+    parser.add_argument("--mode", type=str, default="diagnose", choices=["diagnose", "improve", "ablation", "next_stage", "evaluate", "all"], help="Execution mode")
     parser.add_argument("--output-dir", type=str, default="outputs/isic2019", help="Output directory")
     parser.add_argument("--seeds", type=int, nargs="+", default=[42, 43, 44], help="Random seeds")
     parser.add_argument("--budget", type=int, default=320, help="Total annotation budget")
@@ -527,7 +533,7 @@ def main():
         mode_diagnose(out_dir)
 
     # For training and ablation modes, load features
-    if args.mode in ["improve", "ablation", "all"]:
+    if args.mode in ["improve", "ablation", "next_stage", "all"]:
         feat_dict = load_or_extract_features(out_dir)
         train_f, train_l = feat_dict["train"]["features"], feat_dict["train"]["labels"].long()
         val_f, val_l = feat_dict["val"]["features"], feat_dict["val"]["labels"].long()
@@ -538,6 +544,9 @@ def main():
 
         if args.mode in ["ablation", "all"]:
             mode_ablation(args, train_f, train_l, val_f, val_l, test_f, test_l)
+
+        if args.mode in ["next_stage", "all"]:
+            mode_next_stage(args, train_f, train_l, val_f, val_l, test_f, test_l)
 
     if args.mode in ["evaluate", "all"]:
         mode_evaluate(out_dir)
