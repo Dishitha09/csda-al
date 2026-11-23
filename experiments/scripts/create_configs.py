@@ -88,14 +88,14 @@ methods = [
         "id": "c4_csda_al_full",
         "name": "Combined C4: CSDA-AL Full Pipeline",
         "initial_strategy": "supclust",
-        "strategy": "difficulty_aware",
+        "strategy": "csda_al_combined",
         "stopping": True,
     },
     {
         "id": "c4_no_stopping_ablation",
         "name": "Ablation: CSDA-AL Full without Early Stopping",
         "initial_strategy": "supclust",
-        "strategy": "difficulty_aware",
+        "strategy": "csda_al_combined",
         "stopping": False,
     },
 ]

@@ -9,6 +9,7 @@ from .bald import BALDAcquisition, bald_scores, mc_dropout_probabilities
 from .difficulty_aware import DifficultyAwareAcquisition, DifficultyOnlyAcquisition, EntropyDifficultyAcquisition
 from .bengar import BengarClassBalancedAcquisition
 from .flex_sampling import FlexibleSamplingAcquisition
+from .combined_csda import CombinedCSDAAcquisition
 
 
 def make_strategy(name: str, **config) -> AcquisitionStrategy:
@@ -27,7 +28,12 @@ def make_strategy(name: str, **config) -> AcquisitionStrategy:
                "class_balanced": BengarClassBalancedAcquisition,
                "flexible_sampling": FlexibleSamplingAcquisition,
                "flex_sampling": FlexibleSamplingAcquisition,
-               "flexsampling": FlexibleSamplingAcquisition}
+               "flexsampling": FlexibleSamplingAcquisition,
+               "csda_al": CombinedCSDAAcquisition,
+               "csda_al_combined": CombinedCSDAAcquisition,
+               "combined_csda": CombinedCSDAAcquisition,
+               "combined": CombinedCSDAAcquisition,
+               "c4": CombinedCSDAAcquisition}
     if normalized in {"without_sup", "supclust_without_sup"}:
         return SUPClustAcquisition(variant="without_SUP", **config)
     if normalized in {"without_typicality", "supclust_without_typicality"}:
@@ -43,4 +49,5 @@ __all__ = ["AcquisitionStrategy", "PredictionBatch", "QueryBatch", "QueryContext
            "TypiClustAcquisition", "BALDAcquisition", "DifficultyAwareAcquisition",
            "DifficultyOnlyAcquisition", "EntropyDifficultyAcquisition",
            "BengarClassBalancedAcquisition", "FlexibleSamplingAcquisition",
+           "CombinedCSDAAcquisition",
            "make_strategy", "entropy_scores", "bald_scores", "mc_dropout_probabilities"]

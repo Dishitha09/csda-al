@@ -1,0 +1,184 @@
+{
+  "round": 6,
+  "budget": 320,
+  "class_counts": [
+    47,
+    66,
+    100,
+    25,
+    48,
+    7,
+    7,
+    20
+  ],
+  "accuracy": 0.5544736842105263,
+  "balanced_accuracy": 0.2465865015076216,
+  "macro_f1": 0.24954794074230424,
+  "macro_precision": 0.2587764340594131,
+  "macro_recall": 0.2465865015076216,
+  "macro_auroc": 0.7445907119619692,
+  "per_class": [
+    {
+      "class_index": 0,
+      "class_name": "MEL",
+      "precision": 0.48532289628180036,
+      "recall": 0.3786259541984733,
+      "f1": 0.42538593481989706,
+      "support": 655,
+      "predicted_count": 511,
+      "auroc": 0.7540868214420078
+    },
+    {
+      "class_index": 1,
+      "class_name": "NV",
+      "precision": 0.7186616399622997,
+      "recall": 0.8137673425827108,
+      "f1": 0.7632632632632632,
+      "support": 1874,
+      "predicted_count": 2122,
+      "auroc": 0.8316292746231705
+    },
+    {
+      "class_index": 2,
+      "class_name": "BCC",
+      "precision": 0.48739495798319327,
+      "recall": 0.3486973947895792,
+      "f1": 0.40654205607476634,
+      "support": 499,
+      "predicted_count": 357,
+      "auroc": 0.8663871214103458
+    },
+    {
+      "class_index": 3,
+      "class_name": "AK",
+      "precision": 0.13114754098360656,
+      "recall": 0.12307692307692308,
+      "f1": 0.12698412698412698,
+      "support": 130,
+      "predicted_count": 122,
+      "auroc": 0.806721861245022
+    },
+    {
+      "class_index": 4,
+      "class_name": "BKL",
+      "precision": 0.2310177705977383,
+      "recall": 0.294238683127572,
+      "f1": 0.25882352941176473,
+      "support": 486,
+      "predicted_count": 619,
+      "auroc": 0.641784696921155
+    },
+    {
+      "class_index": 5,
+      "class_name": "DF",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 41,
+      "predicted_count": 7,
+      "auroc": 0.646383638616913
+    },
+    {
+      "class_index": 6,
+      "class_name": "VASC",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 45,
+      "predicted_count": 2,
+      "auroc": 0.7324515460866992
+    },
+    {
+      "class_index": 7,
+      "class_name": "SCC",
+      "precision": 0.016666666666666666,
+      "recall": 0.014285714285714285,
+      "f1": 0.015384615384615385,
+      "support": 70,
+      "predicted_count": 60,
+      "auroc": 0.6772807353504404
+    }
+  ],
+  "confusion_matrix": [
+    [
+      248,
+      213,
+      50,
+      15,
+      120,
+      0,
+      1,
+      8
+    ],
+    [
+      105,
+      1525,
+      35,
+      10,
+      190,
+      1,
+      0,
+      8
+    ],
+    [
+      52,
+      116,
+      174,
+      37,
+      86,
+      2,
+      1,
+      31
+    ],
+    [
+      13,
+      19,
+      29,
+      16,
+      50,
+      1,
+      0,
+      2
+    ],
+    [
+      79,
+      180,
+      39,
+      34,
+      143,
+      3,
+      0,
+      8
+    ],
+    [
+      4,
+      19,
+      7,
+      4,
+      7,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      32,
+      4,
+      0,
+      5,
+      0,
+      0,
+      2
+    ],
+    [
+      8,
+      18,
+      19,
+      6,
+      18,
+      0,
+      0,
+      1
+    ]
+  ]
+}

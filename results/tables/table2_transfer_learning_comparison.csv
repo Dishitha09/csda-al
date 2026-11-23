@@ -1,0 +1,4 @@
+Backbone Initialization,Pretraining Dataset,Val Accuracy,Val Balanced Acc,Val Macro-F1,Minority Detection
+Random Scratch ResNet-18,None (Initialized from scratch),45.66%,16.52%,0.1429,0% (4 Classes Blind)
+SimCLR Self-Supervised ResNet-18,ISIC 2019 Unlabelled Images,47.95%,20.27%,0.1958,Active
+ImageNet Pretrained ResNet-18,ImageNet-1k (1.28M Images),51.01%,22.03%,0.2152,Robust

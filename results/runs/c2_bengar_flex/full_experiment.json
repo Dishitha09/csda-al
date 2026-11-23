@@ -1,0 +1,4961 @@
+[
+  {
+    "method": "c2_bengar_flex",
+    "seed": 42,
+    "stopped_early": false,
+    "stop_round": 7,
+    "final_budget": 320,
+    "val_history": [
+      {
+        "round": 0,
+        "budget": 80,
+        "class_counts": [
+          19,
+          44,
+          9,
+          2,
+          6,
+          0,
+          0,
+          0
+        ],
+        "accuracy": 0.49,
+        "balanced_accuracy": 0.20247751786020568,
+        "macro_f1": 0.19597668995728312,
+        "macro_precision": 0.20247845514612997,
+        "macro_recall": 0.20247751786020568,
+        "macro_auroc": 0.6482870712969566,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.29191797346200243,
+            "recall": 0.36946564885496186,
+            "f1": 0.3261455525606469,
+            "support": 655,
+            "predicted_count": 829,
+            "auroc": 0.6665605165111228
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.628140703517588,
+            "recall": 0.7337246531483458,
+            "f1": 0.6768397735663303,
+            "support": 1874,
+            "predicted_count": 2189,
+            "auroc": 0.7328028738899584
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.35283018867924526,
+            "recall": 0.374749498997996,
+            "f1": 0.36345966958211856,
+            "support": 499,
+            "predicted_count": 530,
+            "auroc": 0.7871161893614553
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.07142857142857142,
+            "recall": 0.03076923076923077,
+            "f1": 0.043010752688172046,
+            "support": 130,
+            "predicted_count": 56,
+            "auroc": 0.7230769230769232
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2755102040816326,
+            "recall": 0.1111111111111111,
+            "f1": 0.15835777126099707,
+            "support": 486,
+            "predicted_count": 196,
+            "auroc": 0.5701823663669033
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.6458515822189347
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.36201213197218524
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 70,
+            "predicted_count": 0,
+            "auroc": 0.6986939869781693
+          }
+        ],
+        "confusion_matrix": [
+          [
+            242,
+            262,
+            108,
+            6,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            349,
+            1375,
+            55,
+            7,
+            88,
+            0,
+            0,
+            0
+          ],
+          [
+            66,
+            216,
+            187,
+            27,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            19,
+            50,
+            54,
+            4,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            105,
+            210,
+            107,
+            10,
+            54,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            25,
+            3,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            27,
+            1,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            28,
+            24,
+            15,
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "class_counts": [
+          25,
+          52,
+          17,
+          4,
+          20,
+          1,
+          0,
+          1
+        ],
+        "accuracy": 0.5126315789473684,
+        "balanced_accuracy": 0.21772078896392336,
+        "macro_f1": 0.21257181141102366,
+        "macro_precision": 0.2252686086465271,
+        "macro_recall": 0.21772078896392336,
+        "macro_auroc": 0.6550964688473225,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3230035756853397,
+            "recall": 0.41374045801526715,
+            "f1": 0.3627844712182062,
+            "support": 655,
+            "predicted_count": 839,
+            "auroc": 0.697921576718164
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6288939051918736,
+            "recall": 0.7433297758804696,
+            "f1": 0.6813401809733431,
+            "support": 1874,
+            "predicted_count": 2215,
+            "auroc": 0.7340683463163739
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.42588726513569936,
+            "recall": 0.4088176352705411,
+            "f1": 0.4171779141104294,
+            "support": 499,
+            "predicted_count": 479,
+            "auroc": 0.8154151380616428
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.1111111111111111,
+            "recall": 0.015384615384615385,
+            "f1": 0.02702702702702703,
+            "support": 130,
+            "predicted_count": 18,
+            "auroc": 0.763443722490044
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.3132530120481928,
+            "recall": 0.16049382716049382,
+            "f1": 0.21224489795918366,
+            "support": 486,
+            "predicted_count": 249,
+            "auroc": 0.5962899632684384
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.5988619183877393
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.38097943482763724
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 70,
+            "predicted_count": 0,
+            "auroc": 0.6537916507085407
+          }
+        ],
+        "confusion_matrix": [
+          [
+            271,
+            288,
+            58,
+            3,
+            35,
+            0,
+            0,
+            0
+          ],
+          [
+            311,
+            1393,
+            64,
+            3,
+            103,
+            0,
+            0,
+            0
+          ],
+          [
+            78,
+            193,
+            204,
+            8,
+            16,
+            0,
+            0,
+            0
+          ],
+          [
+            23,
+            47,
+            54,
+            2,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            111,
+            213,
+            82,
+            2,
+            78,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            27,
+            1,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            31,
+            4,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            33,
+            23,
+            12,
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "class_counts": [
+          34,
+          54,
+          23,
+          10,
+          31,
+          2,
+          0,
+          6
+        ],
+        "accuracy": 0.49657894736842106,
+        "balanced_accuracy": 0.22485680521192108,
+        "macro_f1": 0.22190071706180797,
+        "macro_precision": 0.22618199784685936,
+        "macro_recall": 0.22485680521192108,
+        "macro_auroc": 0.6618800773031179,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.31798715203426126,
+            "recall": 0.4534351145038168,
+            "f1": 0.3738200125865324,
+            "support": 655,
+            "predicted_count": 934,
+            "auroc": 0.6998293668612483
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6712113266911379,
+            "recall": 0.6830309498399146,
+            "f1": 0.6770695583179053,
+            "support": 1874,
+            "predicted_count": 1907,
+            "auroc": 0.746957324972765
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4692874692874693,
+            "recall": 0.38276553106212424,
+            "f1": 0.4216335540838852,
+            "support": 499,
+            "predicted_count": 407,
+            "auroc": 0.8218047728295124
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.07692307692307693,
+            "recall": 0.03076923076923077,
+            "f1": 0.04395604395604396,
+            "support": 130,
+            "predicted_count": 52,
+            "auroc": 0.7757115908614547
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2446351931330472,
+            "recall": 0.2345679012345679,
+            "f1": 0.23949579831932774,
+            "support": 486,
+            "predicted_count": 466,
+            "auroc": 0.593741229998187
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.610651509547817
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.34954283177984913
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.029411764705882353,
+            "recall": 0.014285714285714285,
+            "f1": 0.019230769230769232,
+            "support": 70,
+            "predicted_count": 34,
+            "auroc": 0.6968019915741095
+          }
+        ],
+        "confusion_matrix": [
+          [
+            297,
+            224,
+            37,
+            8,
+            75,
+            0,
+            0,
+            14
+          ],
+          [
+            327,
+            1280,
+            56,
+            10,
+            198,
+            0,
+            0,
+            3
+          ],
+          [
+            91,
+            149,
+            191,
+            19,
+            44,
+            0,
+            0,
+            5
+          ],
+          [
+            28,
+            35,
+            45,
+            4,
+            14,
+            0,
+            0,
+            4
+          ],
+          [
+            141,
+            158,
+            56,
+            10,
+            114,
+            0,
+            0,
+            7
+          ],
+          [
+            9,
+            21,
+            4,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            26,
+            7,
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            37,
+            14,
+            11,
+            1,
+            6,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "class_counts": [
+          45,
+          56,
+          34,
+          14,
+          37,
+          3,
+          0,
+          11
+        ],
+        "accuracy": 0.5397368421052632,
+        "balanced_accuracy": 0.24278965288572074,
+        "macro_f1": 0.24237721145823662,
+        "macro_precision": 0.24968895878385597,
+        "macro_recall": 0.24278965288572074,
+        "macro_auroc": 0.6764094327319291,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.37468030690537085,
+            "recall": 0.44732824427480916,
+            "f1": 0.4077940153096729,
+            "support": 655,
+            "predicted_count": 782,
+            "auroc": 0.7165839391254749
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6717877094972067,
+            "recall": 0.7700106723585912,
+            "f1": 0.7175534559920438,
+            "support": 1874,
+            "predicted_count": 2148,
+            "auroc": 0.7702993690785311
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.47671840354767187,
+            "recall": 0.4308617234468938,
+            "f1": 0.45263157894736844,
+            "support": 499,
+            "predicted_count": 451,
+            "auroc": 0.8294067687025064
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.08860759493670886,
+            "recall": 0.05384615384615385,
+            "f1": 0.06698564593301436,
+            "support": 130,
+            "predicted_count": 79,
+            "auroc": 0.7891133934185707
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.32014388489208634,
+            "recall": 0.1831275720164609,
+            "f1": 0.23298429319371727,
+            "support": 486,
+            "predicted_count": 278,
+            "auroc": 0.6006578898351177
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 1,
+            "auroc": 0.6569274391866026
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3365823346648913
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.06557377049180328,
+            "recall": 0.05714285714285714,
+            "f1": 0.061068702290076333,
+            "support": 70,
+            "predicted_count": 61,
+            "auroc": 0.711704327843738
+          }
+        ],
+        "confusion_matrix": [
+          [
+            293,
+            256,
+            48,
+            10,
+            36,
+            0,
+            0,
+            12
+          ],
+          [
+            230,
+            1443,
+            51,
+            7,
+            119,
+            0,
+            0,
+            24
+          ],
+          [
+            71,
+            149,
+            215,
+            36,
+            19,
+            0,
+            0,
+            9
+          ],
+          [
+            25,
+            39,
+            52,
+            7,
+            3,
+            0,
+            0,
+            4
+          ],
+          [
+            114,
+            200,
+            58,
+            16,
+            89,
+            1,
+            0,
+            8
+          ],
+          [
+            8,
+            21,
+            5,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            11,
+            26,
+            5,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            30,
+            14,
+            17,
+            2,
+            3,
+            0,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "class_counts": [
+          56,
+          62,
+          39,
+          21,
+          43,
+          4,
+          0,
+          15
+        ],
+        "accuracy": 0.5413157894736842,
+        "balanced_accuracy": 0.24832308870704864,
+        "macro_f1": 0.24648262569151685,
+        "macro_precision": 0.26673980560111066,
+        "macro_recall": 0.24832308870704864,
+        "macro_auroc": 0.6857016486024194,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3300359712230216,
+            "recall": 0.5603053435114503,
+            "f1": 0.4153933220147142,
+            "support": 655,
+            "predicted_count": 1112,
+            "auroc": 0.7414162793237783
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7097919837645865,
+            "recall": 0.7465314834578441,
+            "f1": 0.7276983094928479,
+            "support": 1874,
+            "predicted_count": 1971,
+            "auroc": 0.8036042206241389
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.5163934426229508,
+            "recall": 0.3787575150300601,
+            "f1": 0.4369942196531792,
+            "support": 499,
+            "predicted_count": 366,
+            "auroc": 0.8424434449025284
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.175,
+            "recall": 0.1076923076923077,
+            "f1": 0.13333333333333333,
+            "support": 130,
+            "predicted_count": 80,
+            "auroc": 0.796246070006288
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.3438735177865613,
+            "recall": 0.17901234567901234,
+            "f1": 0.2354533152909337,
+            "support": 486,
+            "predicted_count": 253,
+            "auroc": 0.6070902593064464
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 1,
+            "auroc": 0.6248418429914546
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3622843615919515
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.058823529411764705,
+            "recall": 0.014285714285714285,
+            "f1": 0.022988505747126436,
+            "support": 70,
+            "predicted_count": 17,
+            "auroc": 0.7076867100727691
+          }
+        ],
+        "confusion_matrix": [
+          [
+            367,
+            202,
+            27,
+            10,
+            42,
+            0,
+            0,
+            7
+          ],
+          [
+            329,
+            1399,
+            48,
+            5,
+            92,
+            0,
+            0,
+            1
+          ],
+          [
+            126,
+            128,
+            189,
+            30,
+            20,
+            1,
+            0,
+            5
+          ],
+          [
+            43,
+            26,
+            38,
+            14,
+            6,
+            0,
+            0,
+            3
+          ],
+          [
+            178,
+            167,
+            38,
+            16,
+            87,
+            0,
+            0,
+            0
+          ],
+          [
+            17,
+            14,
+            6,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            25,
+            5,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            40,
+            10,
+            15,
+            4,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "class_counts": [
+          59,
+          68,
+          42,
+          30,
+          57,
+          5,
+          0,
+          19
+        ],
+        "accuracy": 0.5557894736842105,
+        "balanced_accuracy": 0.2593084244809114,
+        "macro_f1": 0.26149962826740203,
+        "macro_precision": 0.303877520941775,
+        "macro_recall": 0.2593084244809114,
+        "macro_auroc": 0.7028257243371832,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3598233995584989,
+            "recall": 0.49770992366412214,
+            "f1": 0.4176809737347854,
+            "support": 655,
+            "predicted_count": 906,
+            "auroc": 0.7226917802400514
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6999528968440886,
+            "recall": 0.7929562433297759,
+            "f1": 0.7435576682511884,
+            "support": 1874,
+            "predicted_count": 2123,
+            "auroc": 0.80736808333084
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.5139949109414759,
+            "recall": 0.40480961923847697,
+            "f1": 0.452914798206278,
+            "support": 499,
+            "predicted_count": 393,
+            "auroc": 0.8491335898091245
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.19444444444444445,
+            "recall": 0.16153846153846155,
+            "f1": 0.17647058823529413,
+            "support": 130,
+            "predicted_count": 108,
+            "auroc": 0.8043994969608048
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.3686868686868687,
+            "recall": 0.15020576131687244,
+            "f1": 0.2134502923976608,
+            "support": 486,
+            "predicted_count": 198,
+            "auroc": 0.6251822297721847
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.25,
+            "recall": 0.024390243902439025,
+            "f1": 0.044444444444444446,
+            "support": 41,
+            "predicted_count": 4,
+            "auroc": 0.7578235000227097
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3599289835774523
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.04411764705882353,
+            "recall": 0.04285714285714286,
+            "f1": 0.043478260869565216,
+            "support": 70,
+            "predicted_count": 68,
+            "auroc": 0.6960781309842974
+          }
+        ],
+        "confusion_matrix": [
+          [
+            326,
+            229,
+            40,
+            9,
+            30,
+            0,
+            0,
+            21
+          ],
+          [
+            273,
+            1486,
+            40,
+            5,
+            61,
+            2,
+            0,
+            7
+          ],
+          [
+            80,
+            139,
+            202,
+            46,
+            20,
+            0,
+            0,
+            12
+          ],
+          [
+            29,
+            26,
+            41,
+            21,
+            6,
+            0,
+            0,
+            7
+          ],
+          [
+            146,
+            179,
+            49,
+            24,
+            73,
+            1,
+            0,
+            14
+          ],
+          [
+            12,
+            19,
+            4,
+            0,
+            3,
+            1,
+            0,
+            2
+          ],
+          [
+            6,
+            30,
+            5,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            34,
+            15,
+            12,
+            2,
+            4,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "class_counts": [
+          62,
+          78,
+          48,
+          36,
+          68,
+          5,
+          0,
+          23
+        ],
+        "accuracy": 0.57,
+        "balanced_accuracy": 0.27125890304153044,
+        "macro_f1": 0.2692944207778668,
+        "macro_precision": 0.2779363324627398,
+        "macro_recall": 0.27125890304153044,
+        "macro_auroc": 0.706898286730339,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.36073619631901843,
+            "recall": 0.4488549618320611,
+            "f1": 0.4,
+            "support": 655,
+            "predicted_count": 815,
+            "auroc": 0.7379002172356461
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7263513513513513,
+            "recall": 0.8030949839914621,
+            "f1": 0.7627977698935631,
+            "support": 1874,
+            "predicted_count": 2072,
+            "auroc": 0.8360676403670051
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.5131313131313131,
+            "recall": 0.5090180360721442,
+            "f1": 0.5110663983903421,
+            "support": 499,
+            "predicted_count": 495,
+            "auroc": 0.8629922674795213
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.225,
+            "recall": 0.2076923076923077,
+            "f1": 0.216,
+            "support": 130,
+            "predicted_count": 120,
+            "auroc": 0.8108614546216726
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.3684210526315789,
+            "recall": 0.1728395061728395,
+            "f1": 0.23529411764705882,
+            "support": 486,
+            "predicted_count": 228,
+            "auroc": 0.6396115991267872
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 3,
+            "auroc": 0.7524056086530538
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.34405681313803815
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.029850746268656716,
+            "recall": 0.02857142857142857,
+            "f1": 0.029197080291970802,
+            "support": 70,
+            "predicted_count": 67,
+            "auroc": 0.6712906932209881
+          }
+        ],
+        "confusion_matrix": [
+          [
+            294,
+            234,
+            46,
+            10,
+            41,
+            0,
+            0,
+            30
+          ],
+          [
+            218,
+            1505,
+            67,
+            7,
+            68,
+            2,
+            0,
+            7
+          ],
+          [
+            73,
+            99,
+            254,
+            41,
+            21,
+            0,
+            0,
+            11
+          ],
+          [
+            23,
+            25,
+            45,
+            27,
+            5,
+            0,
+            0,
+            5
+          ],
+          [
+            157,
+            158,
+            52,
+            27,
+            84,
+            1,
+            0,
+            7
+          ],
+          [
+            12,
+            16,
+            6,
+            1,
+            3,
+            0,
+            0,
+            3
+          ],
+          [
+            10,
+            24,
+            7,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            28,
+            11,
+            18,
+            6,
+            5,
+            0,
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "final_val_metrics": {
+      "round": 6,
+      "budget": 320,
+      "class_counts": [
+        62,
+        78,
+        48,
+        36,
+        68,
+        5,
+        0,
+        23
+      ],
+      "accuracy": 0.57,
+      "balanced_accuracy": 0.27125890304153044,
+      "macro_f1": 0.2692944207778668,
+      "macro_precision": 0.2779363324627398,
+      "macro_recall": 0.27125890304153044,
+      "macro_auroc": 0.706898286730339,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.36073619631901843,
+          "recall": 0.4488549618320611,
+          "f1": 0.4,
+          "support": 655,
+          "predicted_count": 815,
+          "auroc": 0.7379002172356461
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.7263513513513513,
+          "recall": 0.8030949839914621,
+          "f1": 0.7627977698935631,
+          "support": 1874,
+          "predicted_count": 2072,
+          "auroc": 0.8360676403670051
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.5131313131313131,
+          "recall": 0.5090180360721442,
+          "f1": 0.5110663983903421,
+          "support": 499,
+          "predicted_count": 495,
+          "auroc": 0.8629922674795213
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.225,
+          "recall": 0.2076923076923077,
+          "f1": 0.216,
+          "support": 130,
+          "predicted_count": 120,
+          "auroc": 0.8108614546216726
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.3684210526315789,
+          "recall": 0.1728395061728395,
+          "f1": 0.23529411764705882,
+          "support": 486,
+          "predicted_count": 228,
+          "auroc": 0.6396115991267872
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 41,
+          "predicted_count": 3,
+          "auroc": 0.7524056086530538
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 45,
+          "predicted_count": 0,
+          "auroc": 0.34405681313803815
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.029850746268656716,
+          "recall": 0.02857142857142857,
+          "f1": 0.029197080291970802,
+          "support": 70,
+          "predicted_count": 67,
+          "auroc": 0.6712906932209881
+        }
+      ],
+      "confusion_matrix": [
+        [
+          294,
+          234,
+          46,
+          10,
+          41,
+          0,
+          0,
+          30
+        ],
+        [
+          218,
+          1505,
+          67,
+          7,
+          68,
+          2,
+          0,
+          7
+        ],
+        [
+          73,
+          99,
+          254,
+          41,
+          21,
+          0,
+          0,
+          11
+        ],
+        [
+          23,
+          25,
+          45,
+          27,
+          5,
+          0,
+          0,
+          5
+        ],
+        [
+          157,
+          158,
+          52,
+          27,
+          84,
+          1,
+          0,
+          7
+        ],
+        [
+          12,
+          16,
+          6,
+          1,
+          3,
+          0,
+          0,
+          3
+        ],
+        [
+          10,
+          24,
+          7,
+          1,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          28,
+          11,
+          18,
+          6,
+          5,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "final_test_metrics": {
+      "accuracy": 0.5748881284548566,
+      "balanced_accuracy": 0.28242487943614636,
+      "macro_f1": 0.28783191906665845,
+      "macro_precision": 0.3591252649791852,
+      "macro_recall": 0.28242487943614636,
+      "macro_auroc": 0.7348478199283126,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.3944055944055944,
+          "recall": 0.409288824383164,
+          "f1": 0.4017094017094017,
+          "support": 689,
+          "predicted_count": 715,
+          "auroc": 0.7378539194228085
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.7015539305301646,
+          "recall": 0.8297297297297297,
+          "f1": 0.7602773650321941,
+          "support": 1850,
+          "predicted_count": 2188,
+          "auroc": 0.8386895566680072
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.510556621880998,
+          "recall": 0.4827586206896552,
+          "f1": 0.4962686567164179,
+          "support": 551,
+          "predicted_count": 521,
+          "auroc": 0.8689166808221505
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.2871287128712871,
+          "recall": 0.20567375886524822,
+          "f1": 0.2396694214876033,
+          "support": 141,
+          "predicted_count": 101,
+          "auroc": 0.8706594697718786
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.3160919540229885,
+          "recall": 0.1478494623655914,
+          "f1": 0.20146520146520147,
+          "support": 372,
+          "predicted_count": 174,
+          "auroc": 0.6663787883066478
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.5,
+          "recall": 0.020833333333333332,
+          "f1": 0.04,
+          "support": 48,
+          "predicted_count": 2,
+          "auroc": 0.7101328534612992
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50,
+          "predicted_count": 0,
+          "auroc": 0.38586289677247265
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.16326530612244897,
+          "recall": 0.16326530612244897,
+          "f1": 0.16326530612244897,
+          "support": 98,
+          "predicted_count": 98,
+          "auroc": 0.8002883942012363
+        }
+      ],
+      "confusion_matrix": [
+        [
+          282,
+          280,
+          48,
+          9,
+          33,
+          0,
+          0,
+          37
+        ],
+        [
+          179,
+          1535,
+          67,
+          5,
+          58,
+          0,
+          0,
+          6
+        ],
+        [
+          100,
+          120,
+          266,
+          33,
+          14,
+          1,
+          0,
+          17
+        ],
+        [
+          32,
+          19,
+          44,
+          29,
+          6,
+          0,
+          0,
+          11
+        ],
+        [
+          82,
+          162,
+          46,
+          16,
+          55,
+          0,
+          0,
+          11
+        ],
+        [
+          16,
+          18,
+          9,
+          0,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          39,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          18,
+          15,
+          36,
+          9,
+          4,
+          0,
+          0,
+          16
+        ]
+      ]
+    }
+  },
+  {
+    "method": "c2_bengar_flex",
+    "seed": 123,
+    "stopped_early": false,
+    "stop_round": 7,
+    "final_budget": 320,
+    "val_history": [
+      {
+        "round": 0,
+        "budget": 80,
+        "class_counts": [
+          20,
+          41,
+          7,
+          2,
+          7,
+          1,
+          0,
+          2
+        ],
+        "accuracy": 0.5244736842105263,
+        "balanced_accuracy": 0.23208020255961767,
+        "macro_f1": 0.22803677673533115,
+        "macro_precision": 0.23922909130668943,
+        "macro_recall": 0.23208020255961767,
+        "macro_auroc": 0.6538747435563664,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3438735177865613,
+            "recall": 0.5312977099236641,
+            "f1": 0.4175164967006599,
+            "support": 655,
+            "predicted_count": 1012,
+            "auroc": 0.7526819500236653
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7109260166585007,
+            "recall": 0.7742796157950907,
+            "f1": 0.7412515964240102,
+            "support": 1874,
+            "predicted_count": 2041,
+            "auroc": 0.8100091596099436
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4228187919463087,
+            "recall": 0.25250501002004005,
+            "f1": 0.3161856963613551,
+            "support": 499,
+            "predicted_count": 298,
+            "auroc": 0.8037559517702475
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.11392405063291139,
+            "recall": 0.06923076923076923,
+            "f1": 0.0861244019138756,
+            "support": 130,
+            "predicted_count": 79,
+            "auroc": 0.7183420666526934
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.1895910780669145,
+            "recall": 0.10493827160493827,
+            "f1": 0.13509933774834437,
+            "support": 486,
+            "predicted_count": 269,
+            "auroc": 0.5692591102468391
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.03125,
+            "recall": 0.024390243902439025,
+            "f1": 0.0273972602739726,
+            "support": 41,
+            "predicted_count": 32,
+            "auroc": 0.5850024980696734
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.38192040242639447
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.10144927536231885,
+            "recall": 0.1,
+            "f1": 0.10071942446043165,
+            "support": 70,
+            "predicted_count": 69,
+            "auroc": 0.6100268096514746
+          }
+        ],
+        "confusion_matrix": [
+          [
+            348,
+            203,
+            51,
+            13,
+            29,
+            2,
+            0,
+            9
+          ],
+          [
+            294,
+            1451,
+            23,
+            19,
+            45,
+            19,
+            0,
+            23
+          ],
+          [
+            127,
+            113,
+            126,
+            14,
+            100,
+            1,
+            0,
+            18
+          ],
+          [
+            36,
+            35,
+            29,
+            9,
+            19,
+            0,
+            0,
+            2
+          ],
+          [
+            172,
+            185,
+            51,
+            9,
+            51,
+            8,
+            0,
+            10
+          ],
+          [
+            8,
+            15,
+            7,
+            4,
+            6,
+            1,
+            0,
+            0
+          ],
+          [
+            14,
+            29,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            10,
+            10,
+            11,
+            18,
+            1,
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "class_counts": [
+          22,
+          50,
+          18,
+          4,
+          14,
+          2,
+          0,
+          10
+        ],
+        "accuracy": 0.5344736842105263,
+        "balanced_accuracy": 0.23930091258061836,
+        "macro_f1": 0.23385564710269935,
+        "macro_precision": 0.23641347485143696,
+        "macro_recall": 0.23930091258061836,
+        "macro_auroc": 0.684900416391105,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3821428571428571,
+            "recall": 0.4900763358778626,
+            "f1": 0.4294314381270903,
+            "support": 655,
+            "predicted_count": 840,
+            "auroc": 0.7560810204007329
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7128953771289538,
+            "recall": 0.7817502668089648,
+            "f1": 0.7457368287095953,
+            "support": 1874,
+            "predicted_count": 2055,
+            "auroc": 0.8122151128576987
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4106280193236715,
+            "recall": 0.3406813627254509,
+            "f1": 0.3723986856516977,
+            "support": 499,
+            "predicted_count": 414,
+            "auroc": 0.8208376765648837
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.11702127659574468,
+            "recall": 0.08461538461538462,
+            "f1": 0.09821428571428571,
+            "support": 130,
+            "predicted_count": 94,
+            "auroc": 0.7357535107943829
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2087912087912088,
+            "recall": 0.11728395061728394,
+            "f1": 0.15019762845849802,
+            "support": 486,
+            "predicted_count": 273,
+            "auroc": 0.5845117732229648
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 7,
+            "auroc": 0.649647350424023
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3861162893919219
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.05982905982905983,
+            "recall": 0.1,
+            "f1": 0.0748663101604278,
+            "support": 70,
+            "predicted_count": 117,
+            "auroc": 0.7340405974722329
+          }
+        ],
+        "confusion_matrix": [
+          [
+            321,
+            219,
+            54,
+            15,
+            30,
+            1,
+            0,
+            15
+          ],
+          [
+            250,
+            1465,
+            55,
+            28,
+            55,
+            2,
+            0,
+            19
+          ],
+          [
+            79,
+            97,
+            170,
+            15,
+            84,
+            1,
+            0,
+            53
+          ],
+          [
+            23,
+            23,
+            42,
+            11,
+            24,
+            0,
+            0,
+            7
+          ],
+          [
+            140,
+            187,
+            73,
+            11,
+            57,
+            3,
+            0,
+            15
+          ],
+          [
+            9,
+            20,
+            5,
+            3,
+            3,
+            0,
+            0,
+            1
+          ],
+          [
+            9,
+            31,
+            2,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            13,
+            13,
+            11,
+            17,
+            0,
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "class_counts": [
+          28,
+          64,
+          30,
+          6,
+          17,
+          4,
+          0,
+          11
+        ],
+        "accuracy": 0.5384210526315789,
+        "balanced_accuracy": 0.24106246221705363,
+        "macro_f1": 0.23383576673645937,
+        "macro_precision": 0.2401577833831038,
+        "macro_recall": 0.24106246221705363,
+        "macro_auroc": 0.6857288198571195,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.37897310513447435,
+            "recall": 0.4732824427480916,
+            "f1": 0.42090970807875083,
+            "support": 655,
+            "predicted_count": 818,
+            "auroc": 0.7555557713079042
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6956521739130435,
+            "recall": 0.7769477054429029,
+            "f1": 0.7340559616838921,
+            "support": 1874,
+            "predicted_count": 2093,
+            "auroc": 0.8113278275932003
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4288537549407115,
+            "recall": 0.4348697394789579,
+            "f1": 0.4318407960199005,
+            "support": 499,
+            "predicted_count": 506,
+            "auroc": 0.8403811561323191
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.11627906976744186,
+            "recall": 0.038461538461538464,
+            "f1": 0.057803468208092484,
+            "support": 130,
+            "predicted_count": 43,
+            "auroc": 0.7177698595682247
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2328767123287671,
+            "recall": 0.10493827160493827,
+            "f1": 0.14468085106382977,
+            "support": 486,
+            "predicted_count": 219,
+            "auroc": 0.5831948759595779
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 19,
+            "auroc": 0.6901160791336565
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3607634265423879
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.06862745098039216,
+            "recall": 0.1,
+            "f1": 0.08139534883720931,
+            "support": 70,
+            "predicted_count": 102,
+            "auroc": 0.7267215626196859
+          }
+        ],
+        "confusion_matrix": [
+          [
+            310,
+            235,
+            57,
+            9,
+            28,
+            2,
+            0,
+            14
+          ],
+          [
+            253,
+            1456,
+            76,
+            9,
+            54,
+            14,
+            0,
+            12
+          ],
+          [
+            78,
+            96,
+            217,
+            8,
+            54,
+            0,
+            0,
+            46
+          ],
+          [
+            19,
+            30,
+            57,
+            5,
+            13,
+            0,
+            0,
+            6
+          ],
+          [
+            127,
+            214,
+            73,
+            3,
+            51,
+            2,
+            0,
+            16
+          ],
+          [
+            6,
+            19,
+            7,
+            3,
+            5,
+            0,
+            0,
+            1
+          ],
+          [
+            12,
+            27,
+            5,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            16,
+            14,
+            6,
+            13,
+            1,
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "class_counts": [
+          31,
+          71,
+          41,
+          9,
+          26,
+          6,
+          0,
+          16
+        ],
+        "accuracy": 0.5547368421052632,
+        "balanced_accuracy": 0.24628566555752202,
+        "macro_f1": 0.2389473403711054,
+        "macro_precision": 0.2500618637860526,
+        "macro_recall": 0.24628566555752202,
+        "macro_auroc": 0.7026593545205733,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3803680981595092,
+            "recall": 0.4732824427480916,
+            "f1": 0.4217687074829932,
+            "support": 655,
+            "predicted_count": 815,
+            "auroc": 0.752135826891103
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7104136947218259,
+            "recall": 0.7972251867662753,
+            "f1": 0.7513200905204929,
+            "support": 1874,
+            "predicted_count": 2103,
+            "auroc": 0.8215099281749159
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4260869565217391,
+            "recall": 0.4909819639278557,
+            "f1": 0.45623836126629425,
+            "support": 499,
+            "predicted_count": 575,
+            "auroc": 0.8545233453881408
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.16981132075471697,
+            "recall": 0.06923076923076923,
+            "f1": 0.09836065573770492,
+            "support": 130,
+            "predicted_count": 53,
+            "auroc": 0.7772752043596731
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.27485380116959063,
+            "recall": 0.09670781893004116,
+            "f1": 0.1430745814307458,
+            "support": 486,
+            "predicted_count": 171,
+            "auroc": 0.594751410030026
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 6,
+            "auroc": 0.6823428649290483
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.35915372096463977
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.03896103896103896,
+            "recall": 0.04285714285714286,
+            "f1": 0.04081632653061224,
+            "support": 70,
+            "predicted_count": 77,
+            "auroc": 0.7795825354270395
+          }
+        ],
+        "confusion_matrix": [
+          [
+            310,
+            242,
+            57,
+            11,
+            21,
+            0,
+            0,
+            14
+          ],
+          [
+            236,
+            1494,
+            91,
+            7,
+            32,
+            5,
+            0,
+            9
+          ],
+          [
+            78,
+            87,
+            245,
+            11,
+            41,
+            1,
+            0,
+            36
+          ],
+          [
+            19,
+            20,
+            65,
+            9,
+            13,
+            0,
+            0,
+            4
+          ],
+          [
+            138,
+            201,
+            85,
+            7,
+            47,
+            0,
+            0,
+            8
+          ],
+          [
+            4,
+            20,
+            9,
+            2,
+            3,
+            0,
+            0,
+            3
+          ],
+          [
+            13,
+            24,
+            6,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            17,
+            15,
+            17,
+            6,
+            12,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "class_counts": [
+          34,
+          79,
+          50,
+          18,
+          29,
+          8,
+          0,
+          22
+        ],
+        "accuracy": 0.5528947368421052,
+        "balanced_accuracy": 0.23426045791227518,
+        "macro_f1": 0.22879779163334385,
+        "macro_precision": 0.2370299983628385,
+        "macro_recall": 0.23426045791227518,
+        "macro_auroc": 0.7068903099293401,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.38254172015404364,
+            "recall": 0.4549618320610687,
+            "f1": 0.41562064156206413,
+            "support": 655,
+            "predicted_count": 779,
+            "auroc": 0.742067743540577
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7106244175209693,
+            "recall": 0.8137673425827108,
+            "f1": 0.7587064676616916,
+            "support": 1874,
+            "predicted_count": 2146,
+            "auroc": 0.8216919567209815
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.42857142857142855,
+            "recall": 0.43887775551102204,
+            "f1": 0.43366336633663366,
+            "support": 499,
+            "predicted_count": 511,
+            "auroc": 0.8558589460047026
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.07272727272727272,
+            "recall": 0.06153846153846154,
+            "f1": 0.06666666666666667,
+            "support": 130,
+            "predicted_count": 110,
+            "auroc": 0.7808216306853909
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.30177514792899407,
+            "recall": 0.10493827160493827,
+            "f1": 0.15572519083969466,
+            "support": 486,
+            "predicted_count": 169,
+            "auroc": 0.6060217160767016
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 4,
+            "auroc": 0.6809348620222037
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3710193815653203
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 70,
+            "predicted_count": 81,
+            "auroc": 0.7967062428188433
+          }
+        ],
+        "confusion_matrix": [
+          [
+            298,
+            243,
+            56,
+            31,
+            19,
+            0,
+            0,
+            8
+          ],
+          [
+            224,
+            1525,
+            64,
+            16,
+            34,
+            3,
+            0,
+            8
+          ],
+          [
+            73,
+            101,
+            219,
+            18,
+            40,
+            0,
+            0,
+            48
+          ],
+          [
+            19,
+            21,
+            63,
+            8,
+            13,
+            0,
+            0,
+            6
+          ],
+          [
+            131,
+            196,
+            80,
+            20,
+            51,
+            1,
+            0,
+            7
+          ],
+          [
+            5,
+            19,
+            6,
+            5,
+            3,
+            0,
+            0,
+            3
+          ],
+          [
+            14,
+            25,
+            5,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            15,
+            16,
+            18,
+            12,
+            9,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "class_counts": [
+          39,
+          84,
+          62,
+          21,
+          33,
+          12,
+          0,
+          29
+        ],
+        "accuracy": 0.5268421052631579,
+        "balanced_accuracy": 0.2459143711877635,
+        "macro_f1": 0.24589311510514222,
+        "macro_precision": 0.2528609688706361,
+        "macro_recall": 0.2459143711877635,
+        "macro_auroc": 0.6990305557258658,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3668005354752343,
+            "recall": 0.4183206106870229,
+            "f1": 0.3908701854493581,
+            "support": 655,
+            "predicted_count": 747,
+            "auroc": 0.7374045801526719
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7103825136612022,
+            "recall": 0.7630736392742796,
+            "f1": 0.7357859531772575,
+            "support": 1874,
+            "predicted_count": 2013,
+            "auroc": 0.8083267115947473
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4077079107505071,
+            "recall": 0.4028056112224449,
+            "f1": 0.40524193548387094,
+            "support": 499,
+            "predicted_count": 493,
+            "auroc": 0.8508674422458974
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.10526315789473684,
+            "recall": 0.09230769230769231,
+            "f1": 0.09836065573770492,
+            "support": 130,
+            "predicted_count": 114,
+            "auroc": 0.7773946761685181
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2689655172413793,
+            "recall": 0.16049382716049382,
+            "f1": 0.20103092783505155,
+            "support": 486,
+            "predicted_count": 290,
+            "auroc": 0.5958373380421258
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.13043478260869565,
+            "recall": 0.07317073170731707,
+            "f1": 0.09375,
+            "support": 41,
+            "predicted_count": 23,
+            "auroc": 0.7095945340937847
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3412220742713419
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.03333333333333333,
+            "recall": 0.05714285714285714,
+            "f1": 0.042105263157894736,
+            "support": 70,
+            "predicted_count": 120,
+            "auroc": 0.77159708923784
+          }
+        ],
+        "confusion_matrix": [
+          [
+            274,
+            236,
+            73,
+            30,
+            27,
+            0,
+            0,
+            15
+          ],
+          [
+            233,
+            1430,
+            62,
+            18,
+            99,
+            13,
+            0,
+            19
+          ],
+          [
+            73,
+            96,
+            201,
+            17,
+            48,
+            4,
+            0,
+            60
+          ],
+          [
+            13,
+            16,
+            64,
+            12,
+            16,
+            0,
+            0,
+            9
+          ],
+          [
+            128,
+            176,
+            72,
+            23,
+            78,
+            1,
+            0,
+            8
+          ],
+          [
+            6,
+            15,
+            3,
+            4,
+            7,
+            3,
+            0,
+            3
+          ],
+          [
+            8,
+            32,
+            1,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          [
+            12,
+            12,
+            17,
+            10,
+            13,
+            2,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "class_counts": [
+          40,
+          97,
+          71,
+          22,
+          43,
+          15,
+          0,
+          32
+        ],
+        "accuracy": 0.5368421052631579,
+        "balanced_accuracy": 0.23991766232939116,
+        "macro_f1": 0.23858366070489173,
+        "macro_precision": 0.24235700662177556,
+        "macro_recall": 0.23991766232939116,
+        "macro_auroc": 0.7107374827806197,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.38159675236806495,
+            "recall": 0.4305343511450382,
+            "f1": 0.40459110473457677,
+            "support": 655,
+            "predicted_count": 739,
+            "auroc": 0.744208546220221
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.6949233716475096,
+            "recall": 0.7742796157950907,
+            "f1": 0.7324583543664815,
+            "support": 1874,
+            "predicted_count": 2088,
+            "auroc": 0.8084326871181418
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.4531590413943355,
+            "recall": 0.4168336673346693,
+            "f1": 0.4342379958246347,
+            "support": 499,
+            "predicted_count": 459,
+            "auroc": 0.869352154779113
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.0898876404494382,
+            "recall": 0.06153846153846154,
+            "f1": 0.0730593607305936,
+            "support": 130,
+            "predicted_count": 89,
+            "auroc": 0.7812450220079646
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2815533980582524,
+            "recall": 0.17901234567901234,
+            "f1": 0.2188679245283019,
+            "support": 486,
+            "predicted_count": 309,
+            "auroc": 0.6165475809075354
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 10,
+            "auroc": 0.7194700199196725
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.3625151649652315
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.03773584905660377,
+            "recall": 0.05714285714285714,
+            "f1": 0.045454545454545456,
+            "support": 70,
+            "predicted_count": 106,
+            "auroc": 0.7841286863270778
+          }
+        ],
+        "confusion_matrix": [
+          [
+            282,
+            248,
+            55,
+            18,
+            34,
+            0,
+            0,
+            18
+          ],
+          [
+            223,
+            1451,
+            53,
+            18,
+            101,
+            7,
+            0,
+            21
+          ],
+          [
+            81,
+            101,
+            208,
+            15,
+            49,
+            1,
+            0,
+            44
+          ],
+          [
+            16,
+            23,
+            58,
+            8,
+            18,
+            0,
+            0,
+            7
+          ],
+          [
+            114,
+            194,
+            64,
+            19,
+            87,
+            1,
+            0,
+            7
+          ],
+          [
+            6,
+            19,
+            3,
+            3,
+            6,
+            0,
+            0,
+            4
+          ],
+          [
+            7,
+            35,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            10,
+            17,
+            18,
+            8,
+            12,
+            1,
+            0,
+            4
+          ]
+        ]
+      }
+    ],
+    "final_val_metrics": {
+      "round": 6,
+      "budget": 320,
+      "class_counts": [
+        40,
+        97,
+        71,
+        22,
+        43,
+        15,
+        0,
+        32
+      ],
+      "accuracy": 0.5368421052631579,
+      "balanced_accuracy": 0.23991766232939116,
+      "macro_f1": 0.23858366070489173,
+      "macro_precision": 0.24235700662177556,
+      "macro_recall": 0.23991766232939116,
+      "macro_auroc": 0.7107374827806197,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.38159675236806495,
+          "recall": 0.4305343511450382,
+          "f1": 0.40459110473457677,
+          "support": 655,
+          "predicted_count": 739,
+          "auroc": 0.744208546220221
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.6949233716475096,
+          "recall": 0.7742796157950907,
+          "f1": 0.7324583543664815,
+          "support": 1874,
+          "predicted_count": 2088,
+          "auroc": 0.8084326871181418
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.4531590413943355,
+          "recall": 0.4168336673346693,
+          "f1": 0.4342379958246347,
+          "support": 499,
+          "predicted_count": 459,
+          "auroc": 0.869352154779113
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.0898876404494382,
+          "recall": 0.06153846153846154,
+          "f1": 0.0730593607305936,
+          "support": 130,
+          "predicted_count": 89,
+          "auroc": 0.7812450220079646
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.2815533980582524,
+          "recall": 0.17901234567901234,
+          "f1": 0.2188679245283019,
+          "support": 486,
+          "predicted_count": 309,
+          "auroc": 0.6165475809075354
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 41,
+          "predicted_count": 10,
+          "auroc": 0.7194700199196725
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 45,
+          "predicted_count": 0,
+          "auroc": 0.3625151649652315
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.03773584905660377,
+          "recall": 0.05714285714285714,
+          "f1": 0.045454545454545456,
+          "support": 70,
+          "predicted_count": 106,
+          "auroc": 0.7841286863270778
+        }
+      ],
+      "confusion_matrix": [
+        [
+          282,
+          248,
+          55,
+          18,
+          34,
+          0,
+          0,
+          18
+        ],
+        [
+          223,
+          1451,
+          53,
+          18,
+          101,
+          7,
+          0,
+          21
+        ],
+        [
+          81,
+          101,
+          208,
+          15,
+          49,
+          1,
+          0,
+          44
+        ],
+        [
+          16,
+          23,
+          58,
+          8,
+          18,
+          0,
+          0,
+          7
+        ],
+        [
+          114,
+          194,
+          64,
+          19,
+          87,
+          1,
+          0,
+          7
+        ],
+        [
+          6,
+          19,
+          3,
+          3,
+          6,
+          0,
+          0,
+          4
+        ],
+        [
+          7,
+          35,
+          0,
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          10,
+          17,
+          18,
+          8,
+          12,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    "final_test_metrics": {
+      "accuracy": 0.5548828639115557,
+      "balanced_accuracy": 0.2539635561574244,
+      "macro_f1": 0.2588935719423702,
+      "macro_precision": 0.2904241913301081,
+      "macro_recall": 0.2539635561574244,
+      "macro_auroc": 0.7099559464843586,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.40575539568345326,
+          "recall": 0.409288824383164,
+          "f1": 0.407514450867052,
+          "support": 689,
+          "predicted_count": 695,
+          "auroc": 0.7260179485623883
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.6986111111111111,
+          "recall": 0.8156756756756757,
+          "f1": 0.7526184538653367,
+          "support": 1850,
+          "predicted_count": 2160,
+          "auroc": 0.8156414238764162
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.47692307692307695,
+          "recall": 0.3938294010889292,
+          "f1": 0.43141153081510936,
+          "support": 551,
+          "predicted_count": 455,
+          "auroc": 0.8648438128615236
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.05555555555555555,
+          "recall": 0.028368794326241134,
+          "f1": 0.03755868544600939,
+          "support": 141,
+          "predicted_count": 72,
+          "auroc": 0.8057071065458394
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.2469879518072289,
+          "recall": 0.22043010752688172,
+          "f1": 0.23295454545454544,
+          "support": 372,
+          "predicted_count": 332,
+          "auroc": 0.6440113457019055
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.2857142857142857,
+          "recall": 0.041666666666666664,
+          "f1": 0.07272727272727272,
+          "support": 48,
+          "predicted_count": 7,
+          "auroc": 0.6853838976272993
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50,
+          "predicted_count": 0,
+          "auroc": 0.4019365164043745
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.15384615384615385,
+          "recall": 0.12244897959183673,
+          "f1": 0.13636363636363635,
+          "support": 98,
+          "predicted_count": 78,
+          "auroc": 0.7361055202951216
+        }
+      ],
+      "confusion_matrix": [
+        [
+          282,
+          286,
+          54,
+          22,
+          34,
+          0,
+          0,
+          11
+        ],
+        [
+          194,
+          1509,
+          42,
+          8,
+          77,
+          0,
+          0,
+          20
+        ],
+        [
+          91,
+          112,
+          217,
+          28,
+          77,
+          3,
+          0,
+          23
+        ],
+        [
+          18,
+          18,
+          65,
+          4,
+          29,
+          0,
+          0,
+          7
+        ],
+        [
+          84,
+          153,
+          42,
+          6,
+          82,
+          1,
+          0,
+          4
+        ],
+        [
+          6,
+          24,
+          9,
+          1,
+          5,
+          2,
+          0,
+          1
+        ],
+        [
+          7,
+          40,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          13,
+          18,
+          26,
+          3,
+          25,
+          1,
+          0,
+          12
+        ]
+      ]
+    }
+  },
+  {
+    "method": "c2_bengar_flex",
+    "seed": 999,
+    "stopped_early": false,
+    "stop_round": 7,
+    "final_budget": 320,
+    "val_history": [
+      {
+        "round": 0,
+        "budget": 80,
+        "class_counts": [
+          16,
+          42,
+          14,
+          1,
+          6,
+          0,
+          0,
+          1
+        ],
+        "accuracy": 0.5373684210526316,
+        "balanced_accuracy": 0.24327332568933233,
+        "macro_f1": 0.22140870944964372,
+        "macro_precision": 0.24114405933962252,
+        "macro_recall": 0.24327332568933233,
+        "macro_auroc": 0.6824251983542525,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.3761755485893417,
+            "recall": 0.366412213740458,
+            "f1": 0.37122969837587005,
+            "support": 655,
+            "predicted_count": 638,
+            "auroc": 0.690224395927135
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7125,
+            "recall": 0.7604055496264674,
+            "f1": 0.7356737222509034,
+            "support": 1874,
+            "predicted_count": 2000,
+            "auroc": 0.8098832357527337
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.33861386138613864,
+            "recall": 0.685370741482966,
+            "f1": 0.4532803180914513,
+            "support": 499,
+            "predicted_count": 1010,
+            "auroc": 0.8254108944942293
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.2894736842105263,
+            "recall": 0.08461538461538462,
+            "f1": 0.13095238095238096,
+            "support": 130,
+            "predicted_count": 38,
+            "auroc": 0.755558583106267
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.21238938053097345,
+            "recall": 0.04938271604938271,
+            "f1": 0.08013355592654424,
+            "support": 486,
+            "predicted_count": 113,
+            "auroc": 0.6020443262279245
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.6772623751776224
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.36851605267051346
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 70,
+            "predicted_count": 1,
+            "auroc": 0.7305017234775948
+          }
+        ],
+        "confusion_matrix": [
+          [
+            240,
+            224,
+            153,
+            2,
+            36,
+            0,
+            0,
+            0
+          ],
+          [
+            230,
+            1425,
+            202,
+            2,
+            15,
+            0,
+            0,
+            0
+          ],
+          [
+            54,
+            69,
+            342,
+            14,
+            20,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            22,
+            74,
+            11,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            76,
+            188,
+            190,
+            8,
+            24,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            28,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            28,
+            4,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            14,
+            16,
+            34,
+            1,
+            5,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "class_counts": [
+          26,
+          48,
+          20,
+          5,
+          13,
+          1,
+          0,
+          7
+        ],
+        "accuracy": 0.5473684210526316,
+        "balanced_accuracy": 0.25843897851964825,
+        "macro_f1": 0.24477773903393707,
+        "macro_precision": 0.26599234894425205,
+        "macro_recall": 0.25843897851964825,
+        "macro_auroc": 0.6823384520875391,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.40827586206896554,
+            "recall": 0.45190839694656487,
+            "f1": 0.4289855072463768,
+            "support": 655,
+            "predicted_count": 725,
+            "auroc": 0.7426153230014927
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7209889001009082,
+            "recall": 0.7625400213447172,
+            "f1": 0.7411825726141079,
+            "support": 1874,
+            "predicted_count": 1982,
+            "auroc": 0.8135152178080992
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.34846765039727584,
+            "recall": 0.6152304609218436,
+            "f1": 0.4449275362318841,
+            "support": 499,
+            "predicted_count": 881,
+            "auroc": 0.8120072316702475
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.32,
+            "recall": 0.12307692307692308,
+            "f1": 0.17777777777777778,
+            "support": 130,
+            "predicted_count": 50,
+            "auroc": 0.7361517501571998
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.22764227642276422,
+            "recall": 0.05761316872427984,
+            "f1": 0.09195402298850575,
+            "support": 486,
+            "predicted_count": 123,
+            "auroc": 0.6106603485400508
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.6717666218960674
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.36482911673324453
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.10256410256410256,
+            "recall": 0.05714285714285714,
+            "f1": 0.07339449541284404,
+            "support": 70,
+            "predicted_count": 39,
+            "auroc": 0.7071620068939104
+          }
+        ],
+        "confusion_matrix": [
+          [
+            296,
+            202,
+            114,
+            10,
+            27,
+            0,
+            0,
+            6
+          ],
+          [
+            226,
+            1429,
+            186,
+            2,
+            26,
+            0,
+            0,
+            5
+          ],
+          [
+            63,
+            79,
+            307,
+            13,
+            27,
+            0,
+            0,
+            10
+          ],
+          [
+            13,
+            16,
+            72,
+            16,
+            9,
+            0,
+            0,
+            4
+          ],
+          [
+            102,
+            176,
+            165,
+            5,
+            28,
+            0,
+            0,
+            10
+          ],
+          [
+            3,
+            25,
+            12,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            11,
+            31,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            11,
+            24,
+            23,
+            3,
+            5,
+            0,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "class_counts": [
+          33,
+          50,
+          33,
+          8,
+          25,
+          2,
+          1,
+          8
+        ],
+        "accuracy": 0.565,
+        "balanced_accuracy": 0.2624934265290104,
+        "macro_f1": 0.2426017277904208,
+        "macro_precision": 0.28404468620851725,
+        "macro_recall": 0.2624934265290104,
+        "macro_auroc": 0.7337336872350163,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.420584498094028,
+            "recall": 0.5053435114503817,
+            "f1": 0.4590846047156727,
+            "support": 655,
+            "predicted_count": 787,
+            "auroc": 0.7631903299797329
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.724761426418885,
+            "recall": 0.7700106723585912,
+            "f1": 0.7467011642949547,
+            "support": 1874,
+            "predicted_count": 1991,
+            "auroc": 0.8255881156693055
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.3807909604519774,
+            "recall": 0.6753507014028056,
+            "f1": 0.4869942196531792,
+            "support": 499,
+            "predicted_count": 885,
+            "auroc": 0.8520014885875963
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.375,
+            "recall": 0.06923076923076923,
+            "f1": 0.11688311688311688,
+            "support": 130,
+            "predicted_count": 24,
+            "auroc": 0.7612806539509538
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.26595744680851063,
+            "recall": 0.051440329218107,
+            "f1": 0.08620689655172414,
+            "support": 486,
+            "predicted_count": 94,
+            "auroc": 0.639728325522599
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 0,
+            "auroc": 0.6719547881831572
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.6486344133747595
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.10526315789473684,
+            "recall": 0.02857142857142857,
+            "f1": 0.0449438202247191,
+            "support": 70,
+            "predicted_count": 19,
+            "auroc": 0.7074913826120259
+          }
+        ],
+        "confusion_matrix": [
+          [
+            331,
+            191,
+            101,
+            4,
+            27,
+            0,
+            0,
+            1
+          ],
+          [
+            231,
+            1443,
+            168,
+            1,
+            22,
+            0,
+            0,
+            9
+          ],
+          [
+            66,
+            72,
+            337,
+            7,
+            13,
+            0,
+            0,
+            4
+          ],
+          [
+            15,
+            19,
+            81,
+            9,
+            5,
+            0,
+            0,
+            1
+          ],
+          [
+            120,
+            192,
+            144,
+            3,
+            25,
+            0,
+            0,
+            2
+          ],
+          [
+            3,
+            22,
+            14,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            29,
+            8,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            23,
+            32,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "class_counts": [
+          38,
+          60,
+          36,
+          16,
+          37,
+          3,
+          1,
+          9
+        ],
+        "accuracy": 0.5631578947368421,
+        "balanced_accuracy": 0.2670912721981662,
+        "macro_f1": 0.24898574517637007,
+        "macro_precision": 0.29844764289479625,
+        "macro_recall": 0.2670912721981662,
+        "macro_auroc": 0.7246947693723136,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.43857142857142856,
+            "recall": 0.4687022900763359,
+            "f1": 0.4531365313653137,
+            "support": 655,
+            "predicted_count": 700,
+            "auroc": 0.7612252575880775
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7469688982604111,
+            "recall": 0.756136606189968,
+            "f1": 0.7515247944842217,
+            "support": 1874,
+            "predicted_count": 1897,
+            "auroc": 0.8350067768922934
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.3663265306122449,
+            "recall": 0.7194388777555111,
+            "f1": 0.4854631507775524,
+            "support": 499,
+            "predicted_count": 980,
+            "auroc": 0.8456962394950458
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.3,
+            "recall": 0.06923076923076923,
+            "f1": 0.1125,
+            "support": 130,
+            "predicted_count": 30,
+            "auroc": 0.7301173758121987
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.25,
+            "recall": 0.09465020576131687,
+            "f1": 0.1373134328358209,
+            "support": 486,
+            "predicted_count": 184,
+            "auroc": 0.6475812800663602
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 2,
+            "auroc": 0.6415756655571344
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 45,
+            "predicted_count": 0,
+            "auroc": 0.6340997188933273
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.2857142857142857,
+            "recall": 0.02857142857142857,
+            "f1": 0.05194805194805195,
+            "support": 70,
+            "predicted_count": 7,
+            "auroc": 0.7022558406740713
+          }
+        ],
+        "confusion_matrix": [
+          [
+            307,
+            185,
+            124,
+            4,
+            34,
+            0,
+            0,
+            1
+          ],
+          [
+            185,
+            1417,
+            197,
+            1,
+            72,
+            1,
+            0,
+            1
+          ],
+          [
+            62,
+            50,
+            359,
+            9,
+            16,
+            0,
+            0,
+            3
+          ],
+          [
+            11,
+            17,
+            78,
+            9,
+            15,
+            0,
+            0,
+            0
+          ],
+          [
+            102,
+            167,
+            163,
+            7,
+            46,
+            1,
+            0,
+            0
+          ],
+          [
+            7,
+            16,
+            17,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            25,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            20,
+            35,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "class_counts": [
+          40,
+          63,
+          44,
+          22,
+          47,
+          5,
+          2,
+          17
+        ],
+        "accuracy": 0.5707894736842105,
+        "balanced_accuracy": 0.2700732680507373,
+        "macro_f1": 0.2626178136783419,
+        "macro_precision": 0.41267930963412913,
+        "macro_recall": 0.2700732680507373,
+        "macro_auroc": 0.7429708703323832,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.46656050955414013,
+            "recall": 0.44732824427480916,
+            "f1": 0.4567420109119252,
+            "support": 655,
+            "predicted_count": 628,
+            "auroc": 0.7618495370089442
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.729135432283858,
+            "recall": 0.7785485592315902,
+            "f1": 0.7530322580645161,
+            "support": 1874,
+            "predicted_count": 2001,
+            "auroc": 0.8394012285957149
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.39520958083832336,
+            "recall": 0.6613226452905812,
+            "f1": 0.4947526236881559,
+            "support": 499,
+            "predicted_count": 835,
+            "auroc": 0.856413827351765
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.3793103448275862,
+            "recall": 0.08461538461538462,
+            "f1": 0.13836477987421383,
+            "support": 130,
+            "predicted_count": 29,
+            "auroc": 0.7568727730035631
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.2542955326460481,
+            "recall": 0.1522633744855967,
+            "f1": 0.19047619047619047,
+            "support": 486,
+            "predicted_count": 291,
+            "auroc": 0.6538714668534289
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 41,
+            "predicted_count": 2,
+            "auroc": 0.6410241436811814
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1": 0.043478260869565216,
+            "support": 45,
+            "predicted_count": 1,
+            "auroc": 0.7165438674360113
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.07692307692307693,
+            "recall": 0.014285714285714285,
+            "f1": 0.024096385542168676,
+            "support": 70,
+            "predicted_count": 13,
+            "auroc": 0.7177901187284564
+          }
+        ],
+        "confusion_matrix": [
+          [
+            293,
+            195,
+            100,
+            6,
+            57,
+            0,
+            0,
+            4
+          ],
+          [
+            152,
+            1459,
+            154,
+            1,
+            102,
+            2,
+            0,
+            4
+          ],
+          [
+            53,
+            76,
+            330,
+            5,
+            32,
+            0,
+            0,
+            3
+          ],
+          [
+            8,
+            21,
+            69,
+            11,
+            21,
+            0,
+            0,
+            0
+          ],
+          [
+            91,
+            183,
+            132,
+            6,
+            74,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            17,
+            14,
+            0,
+            3,
+            0,
+            0,
+            1
+          ],
+          [
+            10,
+            27,
+            7,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            15,
+            23,
+            29,
+            0,
+            2,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "class_counts": [
+          47,
+          66,
+          55,
+          27,
+          52,
+          6,
+          3,
+          24
+        ],
+        "accuracy": 0.5623684210526316,
+        "balanced_accuracy": 0.27985881827795855,
+        "macro_f1": 0.27012181932495033,
+        "macro_precision": 0.41992925753910537,
+        "macro_recall": 0.27985881827795855,
+        "macro_auroc": 0.7563043207331654,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.42282749675745784,
+            "recall": 0.49770992366412214,
+            "f1": 0.45722300140252453,
+            "support": 655,
+            "predicted_count": 771,
+            "auroc": 0.7533678806781635
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.760307861462342,
+            "recall": 0.7379935965848452,
+            "f1": 0.7489845653939886,
+            "support": 1874,
+            "predicted_count": 1819,
+            "auroc": 0.8401019138209815
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.39590443686006827,
+            "recall": 0.6973947895791583,
+            "f1": 0.5050798258345428,
+            "support": 499,
+            "predicted_count": 879,
+            "auroc": 0.8603787399093857
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.3548387096774194,
+            "recall": 0.08461538461538462,
+            "f1": 0.13664596273291926,
+            "support": 130,
+            "predicted_count": 31,
+            "auroc": 0.7721882204988472
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.25,
+            "recall": 0.13168724279835392,
+            "f1": 0.1725067385444744,
+            "support": 486,
+            "predicted_count": 256,
+            "auroc": 0.6468685039898076
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.05555555555555555,
+            "recall": 0.024390243902439025,
+            "f1": 0.03389830508474576,
+            "support": 41,
+            "predicted_count": 18,
+            "auroc": 0.647850037957682
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1": 0.043478260869565216,
+            "support": 45,
+            "predicted_count": 1,
+            "auroc": 0.7603610001479508
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.12,
+            "recall": 0.04285714285714286,
+            "f1": 0.06315789473684211,
+            "support": 70,
+            "predicted_count": 25,
+            "auroc": 0.7693182688625048
+          }
+        ],
+        "confusion_matrix": [
+          [
+            326,
+            162,
+            105,
+            7,
+            45,
+            1,
+            0,
+            9
+          ],
+          [
+            219,
+            1383,
+            159,
+            1,
+            101,
+            7,
+            0,
+            4
+          ],
+          [
+            60,
+            52,
+            348,
+            4,
+            27,
+            4,
+            0,
+            4
+          ],
+          [
+            13,
+            17,
+            73,
+            11,
+            15,
+            0,
+            0,
+            1
+          ],
+          [
+            112,
+            154,
+            140,
+            8,
+            64,
+            5,
+            0,
+            3
+          ],
+          [
+            6,
+            15,
+            15,
+            0,
+            3,
+            1,
+            0,
+            1
+          ],
+          [
+            17,
+            17,
+            9,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            18,
+            19,
+            30,
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "class_counts": [
+          48,
+          71,
+          62,
+          33,
+          68,
+          7,
+          4,
+          27
+        ],
+        "accuracy": 0.5676315789473684,
+        "balanced_accuracy": 0.26387504397994077,
+        "macro_f1": 0.2654881704821388,
+        "macro_precision": 0.44329822938637636,
+        "macro_recall": 0.26387504397994077,
+        "macro_auroc": 0.7686815793907997,
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "MEL",
+            "precision": 0.38540478905359177,
+            "recall": 0.516030534351145,
+            "f1": 0.4412532637075718,
+            "support": 655,
+            "predicted_count": 877,
+            "auroc": 0.7632272236313549
+          },
+          {
+            "class_index": 1,
+            "class_name": "NV",
+            "precision": 0.7324431256181998,
+            "recall": 0.7902881536819637,
+            "f1": 0.7602669404517454,
+            "support": 1874,
+            "predicted_count": 2022,
+            "auroc": 0.8448659638203718
+          },
+          {
+            "class_index": 2,
+            "class_name": "BCC",
+            "precision": 0.43439716312056736,
+            "recall": 0.4909819639278557,
+            "f1": 0.4609595484477893,
+            "support": 499,
+            "predicted_count": 564,
+            "auroc": 0.8646963724480163
+          },
+          {
+            "class_index": 3,
+            "class_name": "AK",
+            "precision": 0.3333333333333333,
+            "recall": 0.09230769230769231,
+            "f1": 0.14457831325301204,
+            "support": 130,
+            "predicted_count": 36,
+            "auroc": 0.7786920980926431
+          },
+          {
+            "class_index": 4,
+            "class_name": "BKL",
+            "precision": 0.30115830115830117,
+            "recall": 0.16049382716049382,
+            "f1": 0.20939597315436242,
+            "support": 486,
+            "predicted_count": 259,
+            "auroc": 0.6634442730801613
+          },
+          {
+            "class_index": 5,
+            "class_name": "DF",
+            "precision": 0.3333333333333333,
+            "recall": 0.024390243902439025,
+            "f1": 0.045454545454545456,
+            "support": 41,
+            "predicted_count": 3,
+            "auroc": 0.6503221536604831
+          },
+          {
+            "class_index": 6,
+            "class_name": "VASC",
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1": 0.043478260869565216,
+            "support": 45,
+            "predicted_count": 1,
+            "auroc": 0.8276017162302116
+          },
+          {
+            "class_index": 7,
+            "class_name": "SCC",
+            "precision": 0.02631578947368421,
+            "recall": 0.014285714285714285,
+            "f1": 0.018518518518518517,
+            "support": 70,
+            "predicted_count": 38,
+            "auroc": 0.7566028341631558
+          }
+        ],
+        "confusion_matrix": [
+          [
+            338,
+            205,
+            55,
+            5,
+            44,
+            0,
+            0,
+            8
+          ],
+          [
+            202,
+            1481,
+            103,
+            1,
+            83,
+            0,
+            0,
+            4
+          ],
+          [
+            123,
+            81,
+            245,
+            9,
+            27,
+            1,
+            0,
+            13
+          ],
+          [
+            21,
+            21,
+            49,
+            12,
+            22,
+            0,
+            0,
+            5
+          ],
+          [
+            140,
+            167,
+            86,
+            8,
+            78,
+            1,
+            0,
+            6
+          ],
+          [
+            13,
+            18,
+            5,
+            0,
+            3,
+            1,
+            0,
+            1
+          ],
+          [
+            15,
+            25,
+            4,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            25,
+            24,
+            17,
+            1,
+            2,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "final_val_metrics": {
+      "round": 6,
+      "budget": 320,
+      "class_counts": [
+        48,
+        71,
+        62,
+        33,
+        68,
+        7,
+        4,
+        27
+      ],
+      "accuracy": 0.5676315789473684,
+      "balanced_accuracy": 0.26387504397994077,
+      "macro_f1": 0.2654881704821388,
+      "macro_precision": 0.44329822938637636,
+      "macro_recall": 0.26387504397994077,
+      "macro_auroc": 0.7686815793907997,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.38540478905359177,
+          "recall": 0.516030534351145,
+          "f1": 0.4412532637075718,
+          "support": 655,
+          "predicted_count": 877,
+          "auroc": 0.7632272236313549
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.7324431256181998,
+          "recall": 0.7902881536819637,
+          "f1": 0.7602669404517454,
+          "support": 1874,
+          "predicted_count": 2022,
+          "auroc": 0.8448659638203718
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.43439716312056736,
+          "recall": 0.4909819639278557,
+          "f1": 0.4609595484477893,
+          "support": 499,
+          "predicted_count": 564,
+          "auroc": 0.8646963724480163
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.3333333333333333,
+          "recall": 0.09230769230769231,
+          "f1": 0.14457831325301204,
+          "support": 130,
+          "predicted_count": 36,
+          "auroc": 0.7786920980926431
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.30115830115830117,
+          "recall": 0.16049382716049382,
+          "f1": 0.20939597315436242,
+          "support": 486,
+          "predicted_count": 259,
+          "auroc": 0.6634442730801613
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.3333333333333333,
+          "recall": 0.024390243902439025,
+          "f1": 0.045454545454545456,
+          "support": 41,
+          "predicted_count": 3,
+          "auroc": 0.6503221536604831
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 1.0,
+          "recall": 0.022222222222222223,
+          "f1": 0.043478260869565216,
+          "support": 45,
+          "predicted_count": 1,
+          "auroc": 0.8276017162302116
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.02631578947368421,
+          "recall": 0.014285714285714285,
+          "f1": 0.018518518518518517,
+          "support": 70,
+          "predicted_count": 38,
+          "auroc": 0.7566028341631558
+        }
+      ],
+      "confusion_matrix": [
+        [
+          338,
+          205,
+          55,
+          5,
+          44,
+          0,
+          0,
+          8
+        ],
+        [
+          202,
+          1481,
+          103,
+          1,
+          83,
+          0,
+          0,
+          4
+        ],
+        [
+          123,
+          81,
+          245,
+          9,
+          27,
+          1,
+          0,
+          13
+        ],
+        [
+          21,
+          21,
+          49,
+          12,
+          22,
+          0,
+          0,
+          5
+        ],
+        [
+          140,
+          167,
+          86,
+          8,
+          78,
+          1,
+          0,
+          6
+        ],
+        [
+          13,
+          18,
+          5,
+          0,
+          3,
+          1,
+          0,
+          1
+        ],
+        [
+          15,
+          25,
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          25,
+          24,
+          17,
+          1,
+          2,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "final_test_metrics": {
+      "accuracy": 0.5648854961832062,
+      "balanced_accuracy": 0.2605426757436734,
+      "macro_f1": 0.2597076707616784,
+      "macro_precision": 0.27998382778475456,
+      "macro_recall": 0.2605426757436734,
+      "macro_auroc": 0.7936832945798195,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "MEL",
+          "precision": 0.3730512249443207,
+          "recall": 0.4862119013062409,
+          "f1": 0.42218021424070573,
+          "support": 689,
+          "predicted_count": 898,
+          "auroc": 0.7458645037544509
+        },
+        {
+          "class_index": 1,
+          "class_name": "NV",
+          "precision": 0.7426395939086294,
+          "recall": 0.7908108108108108,
+          "f1": 0.7659685863874346,
+          "support": 1850,
+          "predicted_count": 1970,
+          "auroc": 0.853835230818299
+        },
+        {
+          "class_index": 2,
+          "class_name": "BCC",
+          "precision": 0.4603174603174603,
+          "recall": 0.47368421052631576,
+          "f1": 0.4669051878354204,
+          "support": 551,
+          "predicted_count": 567,
+          "auroc": 0.8486260985400482
+        },
+        {
+          "class_index": 3,
+          "class_name": "AK",
+          "precision": 0.2727272727272727,
+          "recall": 0.06382978723404255,
+          "f1": 0.10344827586206896,
+          "support": 141,
+          "predicted_count": 33,
+          "auroc": 0.8555386232061081
+        },
+        {
+          "class_index": 4,
+          "class_name": "BKL",
+          "precision": 0.2641509433962264,
+          "recall": 0.1881720430107527,
+          "f1": 0.21978021978021978,
+          "support": 372,
+          "predicted_count": 265,
+          "auroc": 0.6481334186771086
+        },
+        {
+          "class_index": 5,
+          "class_name": "DF",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 48,
+          "predicted_count": 2,
+          "auroc": 0.7077446014396161
+        },
+        {
+          "class_index": 6,
+          "class_name": "VASC",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50,
+          "predicted_count": 1,
+          "auroc": 0.8683435582822085
+        },
+        {
+          "class_index": 7,
+          "class_name": "SCC",
+          "precision": 0.12698412698412698,
+          "recall": 0.08163265306122448,
+          "f1": 0.09937888198757763,
+          "support": 98,
+          "predicted_count": 63,
+          "auroc": 0.8213803219207163
+        }
+      ],
+      "confusion_matrix": [
+        [
+          335,
+          219,
+          72,
+          5,
+          46,
+          0,
+          0,
+          12
+        ],
+        [
+          216,
+          1463,
+          80,
+          1,
+          83,
+          1,
+          1,
+          5
+        ],
+        [
+          153,
+          74,
+          261,
+          6,
+          39,
+          0,
+          0,
+          18
+        ],
+        [
+          34,
+          10,
+          62,
+          9,
+          14,
+          0,
+          0,
+          12
+        ],
+        [
+          101,
+          142,
+          43,
+          8,
+          70,
+          1,
+          0,
+          7
+        ],
+        [
+          13,
+          15,
+          14,
+          0,
+          5,
+          0,
+          0,
+          1
+        ],
+        [
+          19,
+          29,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          27,
+          18,
+          33,
+          4,
+          8,
+          0,
+          0,
+          8
+        ]
+      ]
+    }
+  }
+]

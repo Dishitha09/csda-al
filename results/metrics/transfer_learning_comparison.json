@@ -1,0 +1,25 @@
+{
+  "scratch_random": {
+    "initialization": "Random Scratch Initialization (No Pretraining)",
+    "accuracy": 0.4566,
+    "balanced_accuracy": 0.1652,
+    "macro_f1": 0.1429,
+    "provenance": "Empirical B0 Run Round 7 Baseline"
+  },
+  "simclr_ssl": {
+    "initialization": "ISIC 2019 Self-Supervised SimCLR ResNet-18",
+    "accuracy": 0.4795261911029218,
+    "balanced_accuracy": 0.2026949282817724,
+    "macro_f1": 0.19579743058925891,
+    "checkpoint": "C:\\Users\\Dishitha Ramesh\\Desktop\\ml project\\csda_al\\outputs\\isic2019\\simclr.pt",
+    "provenance": "Self-Supervised Contrastive Representation Learning on ISIC 2019"
+  },
+  "imagenet_pretrained": {
+    "initialization": "ImageNet Pretrained ResNet-18 (resnet18-f37072fd.pth)",
+    "accuracy": 0.5101342458541721,
+    "balanced_accuracy": 0.22032057421931783,
+    "macro_f1": 0.21516201163654824,
+    "checkpoint": "C:\\Users\\Dishitha Ramesh\\.cache\\torch\\hub\\checkpoints\\resnet18-f37072fd.pth",
+    "provenance": "Official PyTorch ResNet18 ImageNet Weights"
+  }
+}

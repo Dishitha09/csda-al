@@ -1,0 +1,10 @@
+Class Index,Code,Diagnosis,Train (70%),Val (15%),Test (15%),Total Support,Prevalence
+0,MEL,Melanoma (Malignant),3178,655,689,4522,17.85%
+1,NV,Melanocytic Nevus (Benign),9151,1874,1850,12875,50.83%
+2,BCC,Basal Cell Carcinoma (Malignant),2273,499,551,3323,13.12%
+3,AK,Actinic Keratosis (Pre-malignant),596,130,141,867,3.42%
+4,BKL,Benign Keratosis,1766,486,372,2624,10.36%
+5,DF,Dermatofibroma (Benign Rare),150,41,48,239,0.94%
+6,VASC,Vascular Lesion (Benign Rare),158,45,50,253,1.00%
+7,SCC,Squamous Cell Carcinoma (Malignant),460,70,98,628,2.48%
+TOTAL,--,Canonical 70/15/15 Split,17732,3800,3799,25331,100.00%

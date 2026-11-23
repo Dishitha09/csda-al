@@ -6,6 +6,7 @@ import pytest
 from csda_al.acquisition import (
     BengarClassBalancedAcquisition,
     FlexibleSamplingAcquisition,
+    CombinedCSDAAcquisition,
     PredictionBatch,
     QueryContext,
     make_strategy,
@@ -203,3 +204,48 @@ def test_macro_auroc_computation():
     metrics = classification_metrics(y_true, y_prob.argmax(axis=1), 8, y_prob=y_prob)
     assert "macro_auroc" in metrics
     assert metrics["macro_auroc"] is not None
+
+
+def test_combined_csda_strategy_registration():
+    s1 = make_strategy("csda_al")
+    assert isinstance(s1, CombinedCSDAAcquisition)
+    s2 = make_strategy("csda_al_combined")
+    assert isinstance(s2, CombinedCSDAAcquisition)
+    s3 = make_strategy("combined_csda")
+    assert isinstance(s3, CombinedCSDAAcquisition)
+    s4 = make_strategy("c4")
+    assert isinstance(s4, CombinedCSDAAcquisition)
+
+
+def test_combined_csda_selection():
+    n_candidates = 32
+    ids = [f"cand_{i:03d}" for i in range(n_candidates)]
+    store = MockFeatureStore(ids)
+
+    # Predictions with varying confidence and predicted classes
+    probs = np.full((n_candidates, 8), 0.05)
+    for i in range(n_candidates):
+        probs[i, i % 8] = 0.65
+
+    pred = PredictionBatch(tuple(ids), probs, model_checkpoint_id="test_cp", pool_version=1)
+    diff = MockDifficulty([0.2, 0.9, 0.8, 0.1, 0.4, 0.5, 0.7, 0.6])
+    labeled_counts = (40, 2, 2, 1, 1, 0, 0, 0)  # Heavy head class 0
+
+    context = QueryContext(
+        store, labeled_ids=(), unlabeled_ids=tuple(ids),
+        batch_budget=8, pool_version=1, predictions=pred, difficulty=diff,
+        labeled_counts=labeled_counts,
+    )
+
+    strategy = CombinedCSDAAcquisition(alpha=0.5)
+    query = strategy.select(context)
+
+    assert len(query.image_ids) == 8
+    assert query.pool_version == 1
+    assert query.method == "csda_al_combined"
+    assert "quotas" in query.diagnostics
+    assert "deficits" in query.diagnostics
+    assert "strategy" in query.diagnostics
+    # Head class 0 should have lowest deficit and therefore 0 or lowest quota
+    assert query.diagnostics["quotas"][0] <= query.diagnostics["quotas"][5]
+
