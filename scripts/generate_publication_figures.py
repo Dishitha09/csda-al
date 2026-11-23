@@ -19,7 +19,8 @@ plt.rcParams.update({
 CLASS_NAMES = ["MEL", "NV", "BCC", "AK", "BKL", "DF", "VASC", "SCC"]
 
 def main():
-    res_dir = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\results")
+    repo_root = Path(__file__).resolve().parent.parent
+    res_dir = repo_root / "results"
     fig_dir = res_dir / "figures"
     fig_dir.mkdir(parents=True, exist_ok=True)
 

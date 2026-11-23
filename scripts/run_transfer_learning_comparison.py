@@ -21,8 +21,9 @@ CLASS_NAMES = ["MEL", "NV", "BCC", "AK", "BKL", "DF", "VASC", "SCC"]
 NUM_CLASSES = 8
 
 def main():
-    feat_dir = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\outputs\cached_features")
-    results_dir = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\results\metrics")
+    repo_root = Path(__file__).resolve().parent.parent
+    feat_dir = repo_root / "outputs" / "cached_features"
+    results_dir = repo_root / "results" / "metrics"
     results_dir.mkdir(parents=True, exist_ok=True)
 
     if not (feat_dir / "train_features.pt").exists():

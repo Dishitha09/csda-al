@@ -466,12 +466,20 @@ def run_experiment(
 
 
 def main():
-    feat_dir = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\outputs\cached_features")
-    results_dir = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al\results")
+    repo_root = Path(__file__).resolve().parent.parent
+    feat_dir = repo_root / "outputs" / "cached_features"
+    results_dir = repo_root / "results"
     runs_dir = results_dir / "runs"
     tables_dir = results_dir / "tables"
     runs_dir.mkdir(parents=True, exist_ok=True)
     tables_dir.mkdir(parents=True, exist_ok=True)
+
+    train_pt = feat_dir / "train_features.pt"
+    if not train_pt.exists():
+        print(f"[Notice] Cached features file not found at {train_pt}.")
+        print("All benchmark comparison matrices and figures are already pre-computed in results/tables/ and results/figures/!")
+        print("To re-run extraction, place ISIC 2019 images in data/ and run scripts/cache_all_features.py.")
+        return
 
     print("Loading cached features...")
     train_cache = torch.load(feat_dir / "train_features.pt", map_location="cpu")
