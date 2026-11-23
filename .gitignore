@@ -21,3 +21,6 @@ dist/
 build/
 !/data/cached_features/
 !/data/cached_features/*.pt
+submission/presentation/
+submission/report/
+*.pptx
