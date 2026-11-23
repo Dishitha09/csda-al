@@ -467,7 +467,9 @@ def run_experiment(
 
 def main():
     repo_root = Path(__file__).resolve().parent.parent
-    feat_dir = repo_root / "outputs" / "cached_features"
+    feat_dir = repo_root / "data" / "cached_features"
+    if not (feat_dir / "train_features.pt").exists():
+        feat_dir = repo_root / "outputs" / "cached_features"
     results_dir = repo_root / "results"
     runs_dir = results_dir / "runs"
     tables_dir = results_dir / "tables"

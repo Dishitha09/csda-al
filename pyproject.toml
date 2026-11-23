@@ -6,11 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "csda-al"
 version = "0.1.0"
 description = "Cold-start and difficulty-aware active learning research architecture"
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.10"
 dependencies = [
-  "torch==2.6.0", "torchvision==0.21.0", "numpy==1.26.4", "pandas==2.2.3",
-  "scikit-learn==1.6.1", "scipy==1.15.2", "Pillow==11.1.0", "PyYAML==6.0.2",
-  "tqdm==4.67.1", "matplotlib==3.10.1"
+  "torch>=2.0.0", "torchvision>=0.15.0", "numpy>=1.20.0", "pandas>=2.0.0",
+  "scikit-learn>=1.3.0", "scipy>=1.10.0", "Pillow>=9.0.0", "PyYAML>=6.0",
+  "tqdm>=4.60.0", "matplotlib>=3.5.0"
 ]
 
 [project.optional-dependencies]

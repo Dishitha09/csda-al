@@ -19,3 +19,5 @@ outputs/
 *.npz
 dist/
 build/
+!/data/cached_features/
+!/data/cached_features/*.pt
