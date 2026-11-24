@@ -290,6 +290,20 @@ def evaluate_predictions(
 # 6. Main Execution
 # =============================================================================
 
+def seed_everything(seed: int) -> None:
+    """Complete 4-tier random seed synchronization across Python, NumPy, and PyTorch."""
+    import random
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def main():
     repo_root = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al")
     feat_dir = repo_root / "data" / "cached_features"
@@ -318,6 +332,7 @@ def main():
 
     print(f"\n=======================================================")
     print(f"  RUNNING A18: Improved MAL with Fine-Tuned Backbone")
+    print(f"  Complete Seeding: Synchronized across Python, NumPy & PyTorch")
     print(f"  Weights: alpha={cfg.alpha_uncertainty}, beta={cfg.beta_diversity}, gamma={cfg.gamma_minority}, delta={cfg.delta_redundancy}")
     print(f"=======================================================")
 
@@ -326,7 +341,8 @@ def main():
     acquired_distributions = {}
 
     for seed in seeds:
-        print(f"\n  --- Seed {seed} ---")
+        print(f"\n  --- Seed {seed} (Fully Seeded) ---")
+        seed_everything(seed)
         rng = np.random.RandomState(seed)
         lab = list(rng.choice(len(train_f), size=init_budget, replace=False))
         unlab = [i for i in range(len(train_f)) if i not in lab]
@@ -336,7 +352,8 @@ def main():
             X_tr = train_f[lab]
             y_tr = train_l[lab]
 
-            # Fit Fine-Tuned Backbone Adapter
+            # Re-seed model initialization deterministically per round and seed
+            torch.manual_seed(seed * 1000 + r)
             model = FineTunedAdapter(in_features=512, num_classes=NUM_CLASSES)
             model = train_model(model, X_tr, y_tr, epochs=50, lr=0.003)
 

@@ -321,6 +321,20 @@ def improved_mal_with_diversity(
 # 6. Master Runner
 # =============================================================================
 
+def seed_everything(seed: int) -> None:
+    """Complete 4-tier random seed synchronization across Python, NumPy, and PyTorch."""
+    import random
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def run_experiment_suite():
     repo_root = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al")
     feat_dir = repo_root / "data" / "cached_features"
@@ -400,7 +414,8 @@ def run_experiment_suite():
         exp_runs = []
 
         for seed in seeds:
-            print(f"  --- Seed {seed} ---")
+            print(f"  --- Seed {seed} (Fully Seeded) ---")
+            seed_everything(seed)
             rng = np.random.RandomState(seed)
 
             # Seeding
@@ -416,6 +431,7 @@ def run_experiment_suite():
                 X_tr = train_f[lab]
                 y_tr = train_l[lab]
 
+                torch.manual_seed(seed * 1000 + r)
                 # Instantiate model
                 if exp["model_type"] == "finetuned":
                     model = FineTunedAdapter(in_features=512, num_classes=NUM_CLASSES)

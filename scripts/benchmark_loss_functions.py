@@ -175,6 +175,20 @@ def evaluate_model(y_true: np.ndarray, probs: np.ndarray, tau: float = 0.0, prio
         "probabilities": probs.tolist()
     }
 
+def seed_everything(seed: int) -> None:
+    """Complete 4-tier random seed synchronization across Python, NumPy, and PyTorch."""
+    import random
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def main():
     repo_root = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al")
     feat_dir = repo_root / "data" / "cached_features"
@@ -228,6 +242,8 @@ def main():
         loss_runs = []
 
         for seed in seeds:
+            seed_everything(seed)
+            torch.manual_seed(seed)
             lab_indices = seed_matched_indices[seed]
             
             X_tr = train_f[lab_indices]
