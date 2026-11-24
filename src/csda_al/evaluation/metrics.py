@@ -153,6 +153,60 @@ def compute_macro_auroc(
     }
 
 
+def evaluate_complete_metrics(
+    y_true: Sequence[int] | np.ndarray,
+    y_pred: Sequence[int] | np.ndarray,
+    y_prob: Sequence[Sequence[float]] | np.ndarray | None = None,
+    num_classes: int = 8,
+) -> dict[str, Any]:
+    """Comprehensive evaluation returning aggregate, per-class, minority recall, and confusion matrix.
+    
+    Guarantees:
+    - Balanced Accuracy strictly equals the arithmetic mean of all 8 class recalls.
+    - Macro-F1 strictly equals the arithmetic mean of all 8 class F1 scores.
+    - Minority Recall (DF/VASC/SCC) is strictly (DF_rec + VASC_rec + SCC_rec) / 3.
+    """
+    raw = classification_metrics(y_true, y_pred, num_classes=num_classes, y_prob=y_prob)
+    names = _names(num_classes)
+    
+    recalls = {row["class_name"]: row["recall"] for row in raw["per_class"]}
+    precisions = {row["class_name"]: row["precision"] for row in raw["per_class"]}
+    f1s = {row["class_name"]: row["f1"] for row in raw["per_class"]}
+    
+    # Mathematical identity verification
+    expected_ba = float(np.mean([row["recall"] for row in raw["per_class"]]))
+    expected_macro_f1 = float(np.mean([row["f1"] for row in raw["per_class"]]))
+    
+    if not np.isclose(raw["balanced_accuracy"], expected_ba, atol=1e-5):
+        raise ValueError(f"Balanced Accuracy ({raw['balanced_accuracy']}) != arithmetic mean recall ({expected_ba})")
+    if not np.isclose(raw["macro_f1"], expected_macro_f1, atol=1e-5):
+        raise ValueError(f"Macro-F1 ({raw['macro_f1']}) != arithmetic mean F1 ({expected_macro_f1})")
+        
+    # Standardized Minority Recall (DF/VASC/SCC)
+    df_rec = recalls.get("DF", 0.0)
+    vasc_rec = recalls.get("VASC", 0.0)
+    scc_rec = recalls.get("SCC", 0.0)
+    minority_rec_3 = float((df_rec + vasc_rec + scc_rec) / 3.0)
+    
+    ak_rec = recalls.get("AK", 0.0)
+    bkl_rec = recalls.get("BKL", 0.0)
+    minority_rec_5 = float((df_rec + vasc_rec + scc_rec + ak_rec + bkl_rec) / 5.0)
+
+    return {
+        "balanced_accuracy": raw["balanced_accuracy"],
+        "macro_f1": raw["macro_f1"],
+        "macro_auroc": raw["macro_auroc"],
+        "accuracy": raw["accuracy"],
+        "minority_recall_3": minority_rec_3,
+        "minority_recall_5": minority_rec_5,
+        "per_class_recall": recalls,
+        "per_class_precision": precisions,
+        "per_class_f1": f1s,
+        "confusion_matrix": raw["confusion_matrix"],
+        "raw_metrics": raw,
+    }
+
+
 def frequency_groups(
     acquired_training_labels: Sequence[int] | np.ndarray,
     num_classes: int = 8,

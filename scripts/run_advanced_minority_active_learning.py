@@ -302,7 +302,25 @@ def run_experiment():
                     "best_tau": best_tau
                 }
                 seed_traj.append(traj_point)
-                print(f"    Round {r} (Budget {curr_budget}): Uncal BA: {uncal_test['balanced_accuracy']:.2f}% | Cal BA: {cal_test['balanced_accuracy']:.2f}% | Cal F1: {cal_test['macro_f1']:.4f} | MinRec: {cal_test['minority_recall']:.1f}%")
+
+                # Save physical model checkpoint for this exact round, budget, and seed
+                ckpt_dir = Path("outputs/isic2019/research_investigation/checkpoints") / m["id"] / f"seed_{seed}"
+                ckpt_dir.mkdir(parents=True, exist_ok=True)
+                ckpt_path = ckpt_dir / f"round_{r:04d}_budget_{curr_budget}.pt"
+                torch.save({
+                    "round": r,
+                    "budget": curr_budget,
+                    "seed": seed,
+                    "strategy": m["id"],
+                    "model_state_dict": model.state_dict(),
+                    "best_tau": best_tau,
+                    "labeled_indices": list(lab),
+                    "calibrated_test_ba": cal_test["balanced_accuracy"],
+                    "calibrated_test_f1": cal_test["macro_f1"],
+                    "calibrated_test_auroc": cal_test["macro_auroc"],
+                }, ckpt_path)
+
+                print(f"    Round {r} (Budget {curr_budget}): Uncal BA: {uncal_test['balanced_accuracy']:.2f}% | Cal BA: {cal_test['balanced_accuracy']:.2f}% | Cal F1: {cal_test['macro_f1']:.4f} | MinRec: {cal_test['minority_recall']:.1f}% -> Checkpoint: {ckpt_path.name}")
 
                 if r == rounds:
                     break
