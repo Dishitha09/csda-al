@@ -1,0 +1,1798 @@
+{
+  "A1_Random": [
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 19,
+          "NV": 44,
+          "BCC": 9,
+          "AK": 2,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 0
+        },
+        "uncalibrated_test_ba": 19.83862443185723,
+        "uncalibrated_test_f1": 0.19222252196748213,
+        "calibrated_test_ba": 22.075463237688286,
+        "calibrated_test_f1": 0.21634183095628523,
+        "calibrated_test_auroc": 0.656018068428206,
+        "calibrated_minority_recall": 1.950354609929078,
+        "best_tau": 0.7
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 27,
+          "NV": 64,
+          "BCC": 18,
+          "AK": 4,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 21.900510592602057,
+        "uncalibrated_test_f1": 0.21346555702989012,
+        "calibrated_test_ba": 23.899192377198382,
+        "calibrated_test_f1": 0.2312879626586663,
+        "calibrated_test_auroc": 0.6830212979088108,
+        "calibrated_minority_recall": 4.25531914893617,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 30,
+          "NV": 88,
+          "BCC": 22,
+          "AK": 7,
+          "BKL": 10,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 26.61293750243161,
+        "uncalibrated_test_f1": 0.262211781123361,
+        "calibrated_test_ba": 28.61225106380594,
+        "calibrated_test_f1": 0.2667746740519172,
+        "calibrated_test_auroc": 0.7393377155463433,
+        "calibrated_minority_recall": 9.187943262411348,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 38,
+          "NV": 104,
+          "BCC": 28,
+          "AK": 8,
+          "BKL": 16,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 27.28578912824691,
+        "uncalibrated_test_f1": 0.2729619259663458,
+        "calibrated_test_ba": 29.79640036783894,
+        "calibrated_test_f1": 0.2817897067040393,
+        "calibrated_test_auroc": 0.7572313019535024,
+        "calibrated_minority_recall": 12.75937183383992,
+        "best_tau": 0.5973684210526315
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 49,
+          "NV": 120,
+          "BCC": 37,
+          "AK": 8,
+          "BKL": 19,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 6
+        },
+        "uncalibrated_test_ba": 25.288666542355475,
+        "uncalibrated_test_f1": 0.25652514845410795,
+        "calibrated_test_ba": 29.76221495451688,
+        "calibrated_test_f1": 0.2848807375056025,
+        "calibrated_test_auroc": 0.7513777015091831,
+        "calibrated_minority_recall": 12.670068027210883,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 56,
+          "NV": 140,
+          "BCC": 44,
+          "AK": 9,
+          "BKL": 22,
+          "DF": 1,
+          "VASC": 1,
+          "SCC": 7
+        },
+        "uncalibrated_test_ba": 27.952355102371506,
+        "uncalibrated_test_f1": 0.2781605127152009,
+        "calibrated_test_ba": 29.43160191157571,
+        "calibrated_test_f1": 0.28410253188867235,
+        "calibrated_test_auroc": 0.7764516991719721,
+        "calibrated_minority_recall": 13.291286727456939,
+        "best_tau": 0.3578947368421052
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 63,
+          "NV": 160,
+          "BCC": 49,
+          "AK": 9,
+          "BKL": 28,
+          "DF": 1,
+          "VASC": 1,
+          "SCC": 9
+        },
+        "uncalibrated_test_ba": 27.82462922181448,
+        "uncalibrated_test_f1": 0.28183142262991373,
+        "calibrated_test_ba": 31.388298792738656,
+        "calibrated_test_f1": 0.30194071476449913,
+        "calibrated_test_auroc": 0.7781799356804736,
+        "calibrated_minority_recall": 12.804376537849182,
+        "best_tau": 0.7
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 13,
+          "NV": 43,
+          "BCC": 6,
+          "AK": 4,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 22.948520254307297,
+        "uncalibrated_test_f1": 0.2237041581251939,
+        "calibrated_test_ba": 23.96612651392664,
+        "calibrated_test_f1": 0.2218382539361884,
+        "calibrated_test_auroc": 0.6457072977765705,
+        "calibrated_minority_recall": 12.268418005500072,
+        "best_tau": 0.7
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 20,
+          "NV": 63,
+          "BCC": 12,
+          "AK": 6,
+          "BKL": 16,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 22.329389471927296,
+        "uncalibrated_test_f1": 0.22644010862213093,
+        "calibrated_test_ba": 23.75657276217861,
+        "calibrated_test_f1": 0.23607882631738575,
+        "calibrated_test_auroc": 0.6801761634985537,
+        "calibrated_minority_recall": 5.928860906064553,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 30,
+          "NV": 81,
+          "BCC": 16,
+          "AK": 8,
+          "BKL": 21,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.58630493934089,
+        "uncalibrated_test_f1": 0.2592755156510072,
+        "calibrated_test_ba": 28.423000037794584,
+        "calibrated_test_f1": 0.2671514041367563,
+        "calibrated_test_auroc": 0.6959155594917195,
+        "calibrated_minority_recall": 13.945578231292515,
+        "best_tau": 0.7
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 37,
+          "NV": 101,
+          "BCC": 22,
+          "AK": 12,
+          "BKL": 23,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 4
+        },
+        "uncalibrated_test_ba": 25.748591424581786,
+        "uncalibrated_test_f1": 0.2531895215860123,
+        "calibrated_test_ba": 27.195590044409546,
+        "calibrated_test_f1": 0.24981008026147927,
+        "calibrated_test_auroc": 0.6930666755477207,
+        "calibrated_minority_recall": 13.911202778983935,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 43,
+          "NV": 125,
+          "BCC": 26,
+          "AK": 13,
+          "BKL": 27,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 25.323838203260962,
+        "uncalibrated_test_f1": 0.25465628217839,
+        "calibrated_test_ba": 27.429219512613322,
+        "calibrated_test_f1": 0.25796898176298066,
+        "calibrated_test_auroc": 0.6971192961078179,
+        "calibrated_minority_recall": 12.803951367781155,
+        "best_tau": 0.7
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 49,
+          "NV": 147,
+          "BCC": 33,
+          "AK": 13,
+          "BKL": 30,
+          "DF": 1,
+          "VASC": 2,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 26.133542936645927,
+        "uncalibrated_test_f1": 0.2639355920938,
+        "calibrated_test_ba": 29.360357018077732,
+        "calibrated_test_f1": 0.27907075241690743,
+        "calibrated_test_auroc": 0.7284031628843094,
+        "calibrated_minority_recall": 13.900998697351282,
+        "best_tau": 0.7
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 57,
+          "NV": 165,
+          "BCC": 41,
+          "AK": 15,
+          "BKL": 33,
+          "DF": 1,
+          "VASC": 2,
+          "SCC": 6
+        },
+        "uncalibrated_test_ba": 26.69718587748495,
+        "uncalibrated_test_f1": 0.26962791141720194,
+        "calibrated_test_ba": 28.38257434964523,
+        "calibrated_test_f1": 0.2713171853465919,
+        "calibrated_test_auroc": 0.7317386750032066,
+        "calibrated_minority_recall": 13.084527427992473,
+        "best_tau": 0.6657894736842105
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 20,
+          "NV": 39,
+          "BCC": 10,
+          "AK": 3,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 22.46914269234727,
+        "uncalibrated_test_f1": 0.21517065990254067,
+        "calibrated_test_ba": 23.605420819040816,
+        "calibrated_test_f1": 0.22439826442010155,
+        "calibrated_test_auroc": 0.6813925221626943,
+        "calibrated_minority_recall": 1.3967289043276887,
+        "best_tau": 0.4947368421052631
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 28,
+          "NV": 58,
+          "BCC": 13,
+          "AK": 4,
+          "BKL": 14,
+          "DF": 1,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 22.764114344872112,
+        "uncalibrated_test_f1": 0.22618217890507064,
+        "calibrated_test_ba": 24.430029810381914,
+        "calibrated_test_f1": 0.24170841300502355,
+        "calibrated_test_auroc": 0.7103906043046376,
+        "calibrated_minority_recall": 4.8433203068461435,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 35,
+          "NV": 76,
+          "BCC": 20,
+          "AK": 4,
+          "BKL": 18,
+          "DF": 3,
+          "VASC": 2,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 24.395332388200302,
+        "uncalibrated_test_f1": 0.24052722120486864,
+        "calibrated_test_ba": 27.042943727924833,
+        "calibrated_test_f1": 0.27215107433087066,
+        "calibrated_test_auroc": 0.7614881274243703,
+        "calibrated_minority_recall": 5.818931828050369,
+        "best_tau": 0.4605263157894736
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 40,
+          "NV": 98,
+          "BCC": 23,
+          "AK": 6,
+          "BKL": 24,
+          "DF": 4,
+          "VASC": 2,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 26.326418764571603,
+        "uncalibrated_test_f1": 0.26526535944982743,
+        "calibrated_test_ba": 29.48348120996363,
+        "calibrated_test_f1": 0.2792399452020029,
+        "calibrated_test_auroc": 0.758198570913016,
+        "calibrated_minority_recall": 15.585775799681576,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 45,
+          "NV": 121,
+          "BCC": 30,
+          "AK": 9,
+          "BKL": 25,
+          "DF": 4,
+          "VASC": 2,
+          "SCC": 4
+        },
+        "uncalibrated_test_ba": 25.600872989844426,
+        "uncalibrated_test_f1": 0.2619744735604226,
+        "calibrated_test_ba": 31.124598068684005,
+        "calibrated_test_f1": 0.2914318552122982,
+        "calibrated_test_auroc": 0.7674775468800632,
+        "calibrated_minority_recall": 18.30231401071067,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 52,
+          "NV": 140,
+          "BCC": 37,
+          "AK": 9,
+          "BKL": 28,
+          "DF": 4,
+          "VASC": 3,
+          "SCC": 7
+        },
+        "uncalibrated_test_ba": 28.049997095105827,
+        "uncalibrated_test_f1": 0.2935271181534761,
+        "calibrated_test_ba": 30.217126679718774,
+        "calibrated_test_f1": 0.30660779676865424,
+        "calibrated_test_auroc": 0.7759083958988464,
+        "calibrated_minority_recall": 14.58783832682009,
+        "best_tau": 0.32368421052631574
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 60,
+          "NV": 159,
+          "BCC": 38,
+          "AK": 11,
+          "BKL": 34,
+          "DF": 5,
+          "VASC": 4,
+          "SCC": 9
+        },
+        "uncalibrated_test_ba": 31.542518131088553,
+        "uncalibrated_test_f1": 0.324061013457026,
+        "calibrated_test_ba": 36.8468053801575,
+        "calibrated_test_f1": 0.3145583683297012,
+        "calibrated_test_auroc": 0.7933848298688673,
+        "calibrated_minority_recall": 30.278296424952956,
+        "best_tau": 0.6657894736842105
+      }
+    ]
+  ],
+  "A9_ColdStart": [
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 24,
+          "NV": 42,
+          "BCC": 7,
+          "AK": 0,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 0
+        },
+        "uncalibrated_test_ba": 18.504743390744522,
+        "uncalibrated_test_f1": 0.17618330947203117,
+        "calibrated_test_ba": 19.07566598687236,
+        "calibrated_test_f1": 0.18193963816039704,
+        "calibrated_test_auroc": 0.6391604786083104,
+        "calibrated_minority_recall": 0.0,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 30,
+          "NV": 58,
+          "BCC": 18,
+          "AK": 2,
+          "BKL": 10,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 21.94609985847941,
+        "uncalibrated_test_f1": 0.2107790507003761,
+        "calibrated_test_ba": 23.38309854123798,
+        "calibrated_test_f1": 0.22609874749939293,
+        "calibrated_test_auroc": 0.694356802894625,
+        "calibrated_minority_recall": 1.474525980605008,
+        "best_tau": 0.7
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 39,
+          "NV": 81,
+          "BCC": 20,
+          "AK": 3,
+          "BKL": 15,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 23.154811353958628,
+        "uncalibrated_test_f1": 0.22312837687049855,
+        "calibrated_test_ba": 24.509172506841395,
+        "calibrated_test_f1": 0.23320349805273788,
+        "calibrated_test_auroc": 0.6884915135589531,
+        "calibrated_minority_recall": 2.0281516862063977,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 45,
+          "NV": 98,
+          "BCC": 32,
+          "AK": 3,
+          "BKL": 18,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 24.261676928320924,
+        "uncalibrated_test_f1": 0.23902903079123694,
+        "calibrated_test_ba": 24.580662120994052,
+        "calibrated_test_f1": 0.23899005042522858,
+        "calibrated_test_auroc": 0.7066785713620742,
+        "calibrated_minority_recall": 2.5510204081632653,
+        "best_tau": 0.2552631578947368
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 56,
+          "NV": 118,
+          "BCC": 36,
+          "AK": 3,
+          "BKL": 22,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 4
+        },
+        "uncalibrated_test_ba": 25.6121398451863,
+        "uncalibrated_test_f1": 0.24839020853450514,
+        "calibrated_test_ba": 26.5430076716768,
+        "calibrated_test_f1": 0.24808132735808652,
+        "calibrated_test_auroc": 0.710006562816363,
+        "calibrated_minority_recall": 4.535750470400926,
+        "best_tau": 0.7
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 60,
+          "NV": 142,
+          "BCC": 39,
+          "AK": 6,
+          "BKL": 26,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 28.308037480278216,
+        "uncalibrated_test_f1": 0.28223456724029605,
+        "calibrated_test_ba": 30.68832080818159,
+        "calibrated_test_f1": 0.28867868537763663,
+        "calibrated_test_auroc": 0.7335725331073857,
+        "calibrated_minority_recall": 13.87024171370676,
+        "best_tau": 0.5973684210526315
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 64,
+          "NV": 165,
+          "BCC": 47,
+          "AK": 8,
+          "BKL": 29,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 28.308530574524593,
+        "uncalibrated_test_f1": 0.27867066716758815,
+        "calibrated_test_ba": 30.394342378812546,
+        "calibrated_test_f1": 0.28214749683591295,
+        "calibrated_test_auroc": 0.7389048656162833,
+        "calibrated_minority_recall": 12.206904038211029,
+        "best_tau": 0.7
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 14,
+          "NV": 40,
+          "BCC": 13,
+          "AK": 1,
+          "BKL": 11,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 0
+        },
+        "uncalibrated_test_ba": 21.984776562768126,
+        "uncalibrated_test_f1": 0.20975408754259367,
+        "calibrated_test_ba": 22.125369744057522,
+        "calibrated_test_f1": 0.20968739757874724,
+        "calibrated_test_auroc": 0.6512948678702289,
+        "calibrated_minority_recall": 1.773049645390071,
+        "best_tau": 0.5631578947368421
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 24,
+          "NV": 62,
+          "BCC": 17,
+          "AK": 2,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 25.76254516865229,
+        "uncalibrated_test_f1": 0.24126650112052606,
+        "calibrated_test_ba": 26.523138296069952,
+        "calibrated_test_f1": 0.24218816191780362,
+        "calibrated_test_auroc": 0.7061202916363315,
+        "calibrated_minority_recall": 4.418439716312057,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 33,
+          "NV": 81,
+          "BCC": 25,
+          "AK": 2,
+          "BKL": 14,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 24.827473643176713,
+        "uncalibrated_test_f1": 0.23917235022524191,
+        "calibrated_test_ba": 26.95780276115879,
+        "calibrated_test_f1": 0.25531252356403655,
+        "calibrated_test_auroc": 0.7156226400234892,
+        "calibrated_minority_recall": 5.2730496453900715,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 38,
+          "NV": 103,
+          "BCC": 29,
+          "AK": 4,
+          "BKL": 19,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 25.802748576690703,
+        "uncalibrated_test_f1": 0.2549541465668436,
+        "calibrated_test_ba": 29.326690897443413,
+        "calibrated_test_f1": 0.28099921860181637,
+        "calibrated_test_auroc": 0.7269638924298587,
+        "calibrated_minority_recall": 11.533362281082645,
+        "best_tau": 0.4947368421052631
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 49,
+          "NV": 123,
+          "BCC": 34,
+          "AK": 5,
+          "BKL": 22,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 26.380983992752526,
+        "uncalibrated_test_f1": 0.2632375468673514,
+        "calibrated_test_ba": 28.57096766699479,
+        "calibrated_test_f1": 0.2752729384718839,
+        "calibrated_test_auroc": 0.7375743325068798,
+        "calibrated_minority_recall": 10.625271385149805,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 55,
+          "NV": 147,
+          "BCC": 40,
+          "AK": 6,
+          "BKL": 24,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 6
+        },
+        "uncalibrated_test_ba": 27.496557145239393,
+        "uncalibrated_test_f1": 0.2728826505175601,
+        "calibrated_test_ba": 29.321328286573856,
+        "calibrated_test_f1": 0.2829121597226542,
+        "calibrated_test_auroc": 0.7447324856639255,
+        "calibrated_minority_recall": 11.223476624692431,
+        "best_tau": 0.4605263157894736
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 60,
+          "NV": 172,
+          "BCC": 43,
+          "AK": 7,
+          "BKL": 28,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 8
+        },
+        "uncalibrated_test_ba": 25.218869912385216,
+        "uncalibrated_test_f1": 0.2495892104195807,
+        "calibrated_test_ba": 28.788592031788767,
+        "calibrated_test_f1": 0.28052956212772995,
+        "calibrated_test_auroc": 0.7557021266696302,
+        "calibrated_minority_recall": 11.403242147922999,
+        "best_tau": 0.631578947368421
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 17,
+          "NV": 42,
+          "BCC": 9,
+          "AK": 1,
+          "BKL": 9,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 19.203270366764,
+        "uncalibrated_test_f1": 0.18356522264479322,
+        "calibrated_test_ba": 20.223861487086488,
+        "calibrated_test_f1": 0.19557276526815037,
+        "calibrated_test_auroc": 0.6235987177077866,
+        "calibrated_minority_recall": 1.7857142857142856,
+        "best_tau": 0.42631578947368415
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 28,
+          "NV": 61,
+          "BCC": 15,
+          "AK": 2,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 20.94160990821977,
+        "uncalibrated_test_f1": 0.19872400339706725,
+        "calibrated_test_ba": 22.09775467281546,
+        "calibrated_test_f1": 0.21150395634204616,
+        "calibrated_test_auroc": 0.6228286449814144,
+        "calibrated_minority_recall": 2.06252713851498,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 37,
+          "NV": 78,
+          "BCC": 19,
+          "AK": 6,
+          "BKL": 17,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.67358332807144,
+        "uncalibrated_test_f1": 0.25325490642686665,
+        "calibrated_test_ba": 26.713738876977477,
+        "calibrated_test_f1": 0.2494800484539769,
+        "calibrated_test_auroc": 0.6814939319478357,
+        "calibrated_minority_recall": 12.228614850195399,
+        "best_tau": 0.3921052631578947
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 46,
+          "NV": 96,
+          "BCC": 24,
+          "AK": 7,
+          "BKL": 22,
+          "DF": 2,
+          "VASC": 0,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.327722984758154,
+        "uncalibrated_test_f1": 0.25032000542086336,
+        "calibrated_test_ba": 27.70574645100882,
+        "calibrated_test_f1": 0.2557998423542715,
+        "calibrated_test_auroc": 0.7118389465882191,
+        "calibrated_minority_recall": 12.6592126212187,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 50,
+          "NV": 117,
+          "BCC": 30,
+          "AK": 10,
+          "BKL": 28,
+          "DF": 2,
+          "VASC": 0,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.35998658068693,
+        "uncalibrated_test_f1": 0.25100996502109696,
+        "calibrated_test_ba": 29.789989377626224,
+        "calibrated_test_f1": 0.2757793099196914,
+        "calibrated_test_auroc": 0.7296339438532049,
+        "calibrated_minority_recall": 17.979266174554926,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 55,
+          "NV": 141,
+          "BCC": 34,
+          "AK": 11,
+          "BKL": 32,
+          "DF": 2,
+          "VASC": 0,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 28.35788278339203,
+        "uncalibrated_test_f1": 0.275335777946942,
+        "calibrated_test_ba": 30.32523307985967,
+        "calibrated_test_f1": 0.263619438702586,
+        "calibrated_test_auroc": 0.7358012061284738,
+        "calibrated_minority_recall": 19.79664206107975,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 60,
+          "NV": 163,
+          "BCC": 36,
+          "AK": 14,
+          "BKL": 37,
+          "DF": 2,
+          "VASC": 1,
+          "SCC": 7
+        },
+        "uncalibrated_test_ba": 29.567873471784107,
+        "uncalibrated_test_f1": 0.28599912935890687,
+        "calibrated_test_ba": 30.918102774997536,
+        "calibrated_test_f1": 0.2886201936646132,
+        "calibrated_test_auroc": 0.7475641037526635,
+        "calibrated_minority_recall": 14.680127370096976,
+        "best_tau": 0.22105263157894733
+      }
+    ]
+  ],
+  "A15_MAL": [
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 19,
+          "NV": 44,
+          "BCC": 9,
+          "AK": 2,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 0
+        },
+        "uncalibrated_test_ba": 21.813035077296757,
+        "uncalibrated_test_f1": 0.21731149700281327,
+        "calibrated_test_ba": 23.8676018657973,
+        "calibrated_test_f1": 0.23208802430125872,
+        "calibrated_test_auroc": 0.6682865302222796,
+        "calibrated_minority_recall": 3.1914893617021276,
+        "best_tau": 0.7
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 23,
+          "NV": 60,
+          "BCC": 13,
+          "AK": 5,
+          "BKL": 17,
+          "DF": 1,
+          "VASC": 0,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 22.121166770760844,
+        "uncalibrated_test_f1": 0.21764847399087647,
+        "calibrated_test_ba": 23.5933734516075,
+        "calibrated_test_f1": 0.23183429973870734,
+        "calibrated_test_auroc": 0.6721904066253912,
+        "calibrated_minority_recall": 1.0638297872340425,
+        "best_tau": 0.3578947368421052
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 33,
+          "NV": 63,
+          "BCC": 17,
+          "AK": 13,
+          "BKL": 27,
+          "DF": 2,
+          "VASC": 0,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 23.08100412865389,
+        "uncalibrated_test_f1": 0.23037926697716363,
+        "calibrated_test_ba": 24.95058558714491,
+        "calibrated_test_f1": 0.24871681348328492,
+        "calibrated_test_auroc": 0.6811813032386103,
+        "calibrated_minority_recall": 4.0563033724127955,
+        "best_tau": 0.3921052631578947
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 39,
+          "NV": 67,
+          "BCC": 27,
+          "AK": 18,
+          "BKL": 37,
+          "DF": 2,
+          "VASC": 0,
+          "SCC": 10
+        },
+        "uncalibrated_test_ba": 21.561964213488643,
+        "uncalibrated_test_f1": 0.21670177119954426,
+        "calibrated_test_ba": 25.203664352204353,
+        "calibrated_test_f1": 0.2563575753274437,
+        "calibrated_test_auroc": 0.6888185882289097,
+        "calibrated_minority_recall": 6.086038138659719,
+        "best_tau": 0.631578947368421
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 47,
+          "NV": 73,
+          "BCC": 36,
+          "AK": 24,
+          "BKL": 44,
+          "DF": 3,
+          "VASC": 0,
+          "SCC": 13
+        },
+        "uncalibrated_test_ba": 22.785646201874464,
+        "uncalibrated_test_f1": 0.23456211800283946,
+        "calibrated_test_ba": 25.701567669356262,
+        "calibrated_test_f1": 0.26257547266135145,
+        "calibrated_test_auroc": 0.6785613302113074,
+        "calibrated_minority_recall": 6.429114198871037,
+        "best_tau": 0.5973684210526315
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 55,
+          "NV": 78,
+          "BCC": 42,
+          "AK": 31,
+          "BKL": 51,
+          "DF": 5,
+          "VASC": 0,
+          "SCC": 18
+        },
+        "uncalibrated_test_ba": 23.28706954483061,
+        "uncalibrated_test_f1": 0.23636422675875868,
+        "calibrated_test_ba": 26.357770426075582,
+        "calibrated_test_f1": 0.25424272173770324,
+        "calibrated_test_auroc": 0.6899054644318152,
+        "calibrated_minority_recall": 7.115718627876682,
+        "best_tau": 0.7
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 57,
+          "NV": 86,
+          "BCC": 49,
+          "AK": 37,
+          "BKL": 62,
+          "DF": 7,
+          "VASC": 0,
+          "SCC": 22
+        },
+        "uncalibrated_test_ba": 23.172695897512945,
+        "uncalibrated_test_f1": 0.23402224598391175,
+        "calibrated_test_ba": 27.163072347300005,
+        "calibrated_test_f1": 0.2755154679598618,
+        "calibrated_test_auroc": 0.7151102760055461,
+        "calibrated_minority_recall": 8.690204805326385,
+        "best_tau": 0.7
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 13,
+          "NV": 43,
+          "BCC": 6,
+          "AK": 4,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 23.266508411899935,
+        "uncalibrated_test_f1": 0.2304775794841368,
+        "calibrated_test_ba": 23.71404925733079,
+        "calibrated_test_f1": 0.22526254398856316,
+        "calibrated_test_auroc": 0.6506654857354517,
+        "calibrated_minority_recall": 10.473657548125633,
+        "best_tau": 0.7
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 24,
+          "NV": 50,
+          "BCC": 18,
+          "AK": 8,
+          "BKL": 14,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 5
+        },
+        "uncalibrated_test_ba": 24.26683794193878,
+        "uncalibrated_test_f1": 0.24967361849423472,
+        "calibrated_test_ba": 25.161296240149646,
+        "calibrated_test_f1": 0.2497762990449098,
+        "calibrated_test_auroc": 0.6854941422982372,
+        "calibrated_minority_recall": 9.820523954262555,
+        "best_tau": 0.7
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 31,
+          "NV": 52,
+          "BCC": 32,
+          "AK": 15,
+          "BKL": 20,
+          "DF": 1,
+          "VASC": 1,
+          "SCC": 8
+        },
+        "uncalibrated_test_ba": 23.35139402402761,
+        "uncalibrated_test_f1": 0.2390179413185261,
+        "calibrated_test_ba": 25.25108935616697,
+        "calibrated_test_f1": 0.2490882313813008,
+        "calibrated_test_auroc": 0.6697875568185296,
+        "calibrated_minority_recall": 9.48762483716891,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 38,
+          "NV": 62,
+          "BCC": 35,
+          "AK": 23,
+          "BKL": 29,
+          "DF": 3,
+          "VASC": 1,
+          "SCC": 9
+        },
+        "uncalibrated_test_ba": 23.98319850727273,
+        "uncalibrated_test_f1": 0.2442441912418484,
+        "calibrated_test_ba": 24.607722129535553,
+        "calibrated_test_f1": 0.2482259664118202,
+        "calibrated_test_auroc": 0.6934978725863858,
+        "calibrated_minority_recall": 5.141843971631205,
+        "best_tau": 0.32368421052631574
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 41,
+          "NV": 67,
+          "BCC": 42,
+          "AK": 29,
+          "BKL": 40,
+          "DF": 3,
+          "VASC": 1,
+          "SCC": 17
+        },
+        "uncalibrated_test_ba": 25.375792164838423,
+        "uncalibrated_test_f1": 0.2592416868986765,
+        "calibrated_test_ba": 27.740159131079118,
+        "calibrated_test_f1": 0.26839497570802245,
+        "calibrated_test_auroc": 0.6947567844932387,
+        "calibrated_minority_recall": 12.272036474164134,
+        "best_tau": 0.7
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 47,
+          "NV": 74,
+          "BCC": 52,
+          "AK": 39,
+          "BKL": 44,
+          "DF": 3,
+          "VASC": 1,
+          "SCC": 20
+        },
+        "uncalibrated_test_ba": 25.131827531774015,
+        "uncalibrated_test_f1": 0.26003467364081373,
+        "calibrated_test_ba": 28.504228143622683,
+        "calibrated_test_f1": 0.28135547940532113,
+        "calibrated_test_auroc": 0.701678452269215,
+        "calibrated_minority_recall": 11.273339122883195,
+        "best_tau": 0.7
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 52,
+          "NV": 77,
+          "BCC": 57,
+          "AK": 47,
+          "BKL": 53,
+          "DF": 5,
+          "VASC": 1,
+          "SCC": 28
+        },
+        "uncalibrated_test_ba": 22.788392054967705,
+        "uncalibrated_test_f1": 0.23566497602365447,
+        "calibrated_test_ba": 27.63707717717974,
+        "calibrated_test_f1": 0.27119496655731284,
+        "calibrated_test_auroc": 0.7077774148727498,
+        "calibrated_minority_recall": 14.598259516572584,
+        "best_tau": 0.631578947368421
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 20,
+          "NV": 39,
+          "BCC": 10,
+          "AK": 3,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 21.07335276424505,
+        "uncalibrated_test_f1": 0.20579816602448617,
+        "calibrated_test_ba": 21.754075280662637,
+        "calibrated_test_f1": 0.2133380762888726,
+        "calibrated_test_auroc": 0.6855452413307976,
+        "calibrated_minority_recall": 2.229628021421335,
+        "best_tau": 0.5973684210526315
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 25,
+          "NV": 49,
+          "BCC": 24,
+          "AK": 5,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 4
+        },
+        "uncalibrated_test_ba": 21.895074414583963,
+        "uncalibrated_test_f1": 0.2065068903335145,
+        "calibrated_test_ba": 22.18063504363471,
+        "calibrated_test_f1": 0.20746997871851247,
+        "calibrated_test_auroc": 0.6633180214458991,
+        "calibrated_minority_recall": 0.4324070053553336,
+        "best_tau": 0.4947368421052631
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 33,
+          "NV": 57,
+          "BCC": 33,
+          "AK": 12,
+          "BKL": 19,
+          "DF": 1,
+          "VASC": 1,
+          "SCC": 4
+        },
+        "uncalibrated_test_ba": 20.35016759756856,
+        "uncalibrated_test_f1": 0.1905859979850791,
+        "calibrated_test_ba": 21.01987607204626,
+        "calibrated_test_f1": 0.19871845734931945,
+        "calibrated_test_auroc": 0.6853744550976095,
+        "calibrated_minority_recall": 1.8508467216673903,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 35,
+          "NV": 69,
+          "BCC": 41,
+          "AK": 15,
+          "BKL": 30,
+          "DF": 2,
+          "VASC": 1,
+          "SCC": 7
+        },
+        "uncalibrated_test_ba": 21.16940032379657,
+        "uncalibrated_test_f1": 0.20602181274966963,
+        "calibrated_test_ba": 24.03385939622504,
+        "calibrated_test_f1": 0.22461803538746794,
+        "calibrated_test_auroc": 0.7162824467478259,
+        "calibrated_minority_recall": 8.134317556809957,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 44,
+          "NV": 71,
+          "BCC": 45,
+          "AK": 26,
+          "BKL": 42,
+          "DF": 3,
+          "VASC": 1,
+          "SCC": 8
+        },
+        "uncalibrated_test_ba": 21.555450091334773,
+        "uncalibrated_test_f1": 0.20906519372194377,
+        "calibrated_test_ba": 23.873381236008363,
+        "calibrated_test_f1": 0.22610062172367443,
+        "calibrated_test_auroc": 0.7196972836240141,
+        "calibrated_minority_recall": 7.481183962946881,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 53,
+          "NV": 76,
+          "BCC": 54,
+          "AK": 32,
+          "BKL": 50,
+          "DF": 3,
+          "VASC": 1,
+          "SCC": 11
+        },
+        "uncalibrated_test_ba": 22.12945299626346,
+        "uncalibrated_test_f1": 0.2159621749401225,
+        "calibrated_test_ba": 23.727958744408582,
+        "calibrated_test_f1": 0.22111473422687336,
+        "calibrated_test_auroc": 0.7118271059941689,
+        "calibrated_minority_recall": 7.801418439716312,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 60,
+          "NV": 82,
+          "BCC": 63,
+          "AK": 38,
+          "BKL": 58,
+          "DF": 3,
+          "VASC": 2,
+          "SCC": 14
+        },
+        "uncalibrated_test_ba": 22.494079575031208,
+        "uncalibrated_test_f1": 0.21748305574842755,
+        "calibrated_test_ba": 25.255677569689855,
+        "calibrated_test_f1": 0.2393991802429264,
+        "calibrated_test_auroc": 0.7333960825519017,
+        "calibrated_minority_recall": 7.325589810392242,
+        "best_tau": 0.631578947368421
+      }
+    ]
+  ],
+  "A16_MAL_LogitAdj": [
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 19,
+          "NV": 44,
+          "BCC": 9,
+          "AK": 2,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 0
+        },
+        "uncalibrated_test_ba": 24.06167809520629,
+        "uncalibrated_test_f1": 0.22954789321329205,
+        "calibrated_test_ba": 24.818045696739503,
+        "calibrated_test_f1": 0.22969411189562042,
+        "calibrated_test_auroc": 0.661430689890748,
+        "calibrated_minority_recall": 3.0141843971631204,
+        "best_tau": 0.4605263157894736
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 22,
+          "NV": 55,
+          "BCC": 17,
+          "AK": 8,
+          "BKL": 16,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 2
+        },
+        "uncalibrated_test_ba": 24.10726605673886,
+        "uncalibrated_test_f1": 0.22755057029628778,
+        "calibrated_test_ba": 24.394922840357165,
+        "calibrated_test_f1": 0.2274965613251131,
+        "calibrated_test_auroc": 0.6544938309926522,
+        "calibrated_minority_recall": 4.0563033724127955,
+        "best_tau": 0.18684210526315786
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 28,
+          "NV": 67,
+          "BCC": 27,
+          "AK": 9,
+          "BKL": 26,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.146710570602536,
+        "uncalibrated_test_f1": 0.23240046801821285,
+        "calibrated_test_ba": 25.21655514201737,
+        "calibrated_test_f1": 0.22816510554156383,
+        "calibrated_test_auroc": 0.6772803829546847,
+        "calibrated_minority_recall": 3.0141843971631204,
+        "best_tau": 0.32368421052631574
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 33,
+          "NV": 77,
+          "BCC": 30,
+          "AK": 15,
+          "BKL": 38,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 7
+        },
+        "uncalibrated_test_ba": 27.291445006532427,
+        "uncalibrated_test_f1": 0.25412170397284006,
+        "calibrated_test_ba": 27.291445006532427,
+        "calibrated_test_f1": 0.25412170397284006,
+        "calibrated_test_auroc": 0.6940385203684204,
+        "calibrated_minority_recall": 5.132797799971053,
+        "best_tau": 0.0
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 41,
+          "NV": 78,
+          "BCC": 39,
+          "AK": 21,
+          "BKL": 52,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 9
+        },
+        "uncalibrated_test_ba": 26.19282952498489,
+        "uncalibrated_test_f1": 0.24681384636420042,
+        "calibrated_test_ba": 26.20041109684401,
+        "calibrated_test_f1": 0.24555001874702187,
+        "calibrated_test_auroc": 0.6895560987809874,
+        "calibrated_minority_recall": 6.252713851498045,
+        "best_tau": 0.05
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 49,
+          "NV": 84,
+          "BCC": 45,
+          "AK": 26,
+          "BKL": 61,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 15
+        },
+        "uncalibrated_test_ba": 25.782317173692654,
+        "uncalibrated_test_f1": 0.25043583124695173,
+        "calibrated_test_ba": 26.316275776197795,
+        "calibrated_test_f1": 0.2519687312635081,
+        "calibrated_test_auroc": 0.695014706137795,
+        "calibrated_minority_recall": 7.484802431610942,
+        "best_tau": 0.08421052631578947
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 54,
+          "NV": 90,
+          "BCC": 58,
+          "AK": 33,
+          "BKL": 66,
+          "DF": 0,
+          "VASC": 0,
+          "SCC": 19
+        },
+        "uncalibrated_test_ba": 26.914155180852383,
+        "uncalibrated_test_f1": 0.2502799810538099,
+        "calibrated_test_ba": 26.447313409186258,
+        "calibrated_test_f1": 0.2406063753934979,
+        "calibrated_test_auroc": 0.6913993829581814,
+        "calibrated_minority_recall": 10.533362281082645,
+        "best_tau": 0.1526315789473684
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 13,
+          "NV": 43,
+          "BCC": 6,
+          "AK": 4,
+          "BKL": 12,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 24.343513579099273,
+        "uncalibrated_test_f1": 0.2319700831830924,
+        "calibrated_test_ba": 24.65733105360534,
+        "calibrated_test_f1": 0.22605117920419857,
+        "calibrated_test_auroc": 0.6511203836202248,
+        "calibrated_minority_recall": 13.677811550151974,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 17,
+          "NV": 53,
+          "BCC": 16,
+          "AK": 10,
+          "BKL": 17,
+          "DF": 2,
+          "VASC": 2,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 24.232293833800966,
+        "uncalibrated_test_f1": 0.2286664484552176,
+        "calibrated_test_ba": 24.738809661275766,
+        "calibrated_test_f1": 0.2319140828830739,
+        "calibrated_test_auroc": 0.6808452456121655,
+        "calibrated_minority_recall": 12.769575915472572,
+        "best_tau": 0.05
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 20,
+          "NV": 61,
+          "BCC": 34,
+          "AK": 14,
+          "BKL": 23,
+          "DF": 3,
+          "VASC": 2,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 25.255422513852576,
+        "uncalibrated_test_f1": 0.24803609449716907,
+        "calibrated_test_ba": 25.493544319201444,
+        "calibrated_test_f1": 0.23672043894353276,
+        "calibrated_test_auroc": 0.6802886918544093,
+        "calibrated_minority_recall": 14.242066507454044,
+        "best_tau": 0.6657894736842105
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 23,
+          "NV": 79,
+          "BCC": 43,
+          "AK": 16,
+          "BKL": 27,
+          "DF": 3,
+          "VASC": 3,
+          "SCC": 6
+        },
+        "uncalibrated_test_ba": 25.851377265490683,
+        "uncalibrated_test_f1": 0.25698211857175235,
+        "calibrated_test_ba": 25.851377265490683,
+        "calibrated_test_f1": 0.25698211857175235,
+        "calibrated_test_auroc": 0.6963101332257409,
+        "calibrated_minority_recall": 9.33203068461427,
+        "best_tau": 0.0
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 25,
+          "NV": 88,
+          "BCC": 54,
+          "AK": 21,
+          "BKL": 35,
+          "DF": 3,
+          "VASC": 3,
+          "SCC": 11
+        },
+        "uncalibrated_test_ba": 26.65819639012638,
+        "uncalibrated_test_f1": 0.25073387794554886,
+        "calibrated_test_ba": 26.776464268688237,
+        "calibrated_test_f1": 0.23669093048402168,
+        "calibrated_test_auroc": 0.6921257458595328,
+        "calibrated_minority_recall": 18.566561731075407,
+        "best_tau": 0.5289473684210526
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 34,
+          "NV": 101,
+          "BCC": 64,
+          "AK": 21,
+          "BKL": 38,
+          "DF": 4,
+          "VASC": 6,
+          "SCC": 12
+        },
+        "uncalibrated_test_ba": 28.845672315152854,
+        "uncalibrated_test_f1": 0.27210771010584456,
+        "calibrated_test_ba": 28.65099212902427,
+        "calibrated_test_f1": 0.2556105971918483,
+        "calibrated_test_auroc": 0.7179777026685996,
+        "calibrated_minority_recall": 19.521104718483137,
+        "best_tau": 0.42631578947368415
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 40,
+          "NV": 111,
+          "BCC": 72,
+          "AK": 24,
+          "BKL": 48,
+          "DF": 4,
+          "VASC": 7,
+          "SCC": 14
+        },
+        "uncalibrated_test_ba": 28.98907045903188,
+        "uncalibrated_test_f1": 0.2724677722689059,
+        "calibrated_test_ba": 29.948420329881365,
+        "calibrated_test_f1": 0.2621221688672305,
+        "calibrated_test_auroc": 0.7183942511505453,
+        "calibrated_minority_recall": 22.340036546533504,
+        "best_tau": 0.42631578947368415
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "budget": 80,
+        "acquired_class_counts": {
+          "MEL": 20,
+          "NV": 39,
+          "BCC": 10,
+          "AK": 3,
+          "BKL": 6,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 1
+        },
+        "uncalibrated_test_ba": 21.527859024605654,
+        "uncalibrated_test_f1": 0.2064013244516716,
+        "calibrated_test_ba": 21.523806890175806,
+        "calibrated_test_f1": 0.20564842182104537,
+        "calibrated_test_auroc": 0.6706740634946959,
+        "calibrated_minority_recall": 2.273049645390071,
+        "best_tau": 0.1526315789473684
+      },
+      {
+        "round": 1,
+        "budget": 120,
+        "acquired_class_counts": {
+          "MEL": 26,
+          "NV": 52,
+          "BCC": 16,
+          "AK": 6,
+          "BKL": 16,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 3
+        },
+        "uncalibrated_test_ba": 21.2006907716339,
+        "uncalibrated_test_f1": 0.2083210540408474,
+        "calibrated_test_ba": 21.21295378461001,
+        "calibrated_test_f1": 0.20696023126265348,
+        "calibrated_test_auroc": 0.6654752095784684,
+        "calibrated_minority_recall": 2.3827616152844118,
+        "best_tau": 0.18684210526315786
+      },
+      {
+        "round": 2,
+        "budget": 160,
+        "acquired_class_counts": {
+          "MEL": 32,
+          "NV": 57,
+          "BCC": 30,
+          "AK": 11,
+          "BKL": 23,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 6
+        },
+        "uncalibrated_test_ba": 23.0614747279461,
+        "uncalibrated_test_f1": 0.22014325642570337,
+        "calibrated_test_ba": 23.022634751113063,
+        "calibrated_test_f1": 0.21723394619695022,
+        "calibrated_test_auroc": 0.6962118166787096,
+        "calibrated_minority_recall": 4.466999565783761,
+        "best_tau": 0.18684210526315786
+      },
+      {
+        "round": 3,
+        "budget": 200,
+        "acquired_class_counts": {
+          "MEL": 42,
+          "NV": 64,
+          "BCC": 35,
+          "AK": 15,
+          "BKL": 31,
+          "DF": 0,
+          "VASC": 1,
+          "SCC": 12
+        },
+        "uncalibrated_test_ba": 25.76946714643696,
+        "uncalibrated_test_f1": 0.23504400241802167,
+        "calibrated_test_ba": 25.896162851600035,
+        "calibrated_test_f1": 0.22657846733059728,
+        "calibrated_test_auroc": 0.7098143407234574,
+        "calibrated_minority_recall": 12.94688088001158,
+        "best_tau": 0.18684210526315786
+      },
+      {
+        "round": 4,
+        "budget": 240,
+        "acquired_class_counts": {
+          "MEL": 48,
+          "NV": 80,
+          "BCC": 39,
+          "AK": 18,
+          "BKL": 40,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 13
+        },
+        "uncalibrated_test_ba": 26.348900800906804,
+        "uncalibrated_test_f1": 0.2503950169671065,
+        "calibrated_test_ba": 27.75966221761077,
+        "calibrated_test_f1": 0.24432801624202483,
+        "calibrated_test_auroc": 0.7250829944703623,
+        "calibrated_minority_recall": 16.207121146330874,
+        "best_tau": 0.28947368421052627
+      },
+      {
+        "round": 5,
+        "budget": 280,
+        "acquired_class_counts": {
+          "MEL": 58,
+          "NV": 84,
+          "BCC": 47,
+          "AK": 22,
+          "BKL": 52,
+          "DF": 0,
+          "VASC": 2,
+          "SCC": 15
+        },
+        "uncalibrated_test_ba": 27.4636958136637,
+        "uncalibrated_test_f1": 0.25244248694659566,
+        "calibrated_test_ba": 27.511105710499486,
+        "calibrated_test_f1": 0.24855403548479965,
+        "calibrated_test_auroc": 0.7187893241006684,
+        "calibrated_minority_recall": 12.60493559125778,
+        "best_tau": 0.08421052631578947
+      },
+      {
+        "round": 6,
+        "budget": 320,
+        "acquired_class_counts": {
+          "MEL": 62,
+          "NV": 100,
+          "BCC": 50,
+          "AK": 24,
+          "BKL": 66,
+          "DF": 0,
+          "VASC": 3,
+          "SCC": 15
+        },
+        "uncalibrated_test_ba": 24.821486677470954,
+        "uncalibrated_test_f1": 0.22600812924005617,
+        "calibrated_test_ba": 24.821486677470954,
+        "calibrated_test_f1": 0.22600812924005617,
+        "calibrated_test_auroc": 0.7228478410973708,
+        "calibrated_minority_recall": 9.64321898972355,
+        "best_tau": 0.0
+      }
+    ]
+  ]
+}

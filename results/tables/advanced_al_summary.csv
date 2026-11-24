@@ -1,0 +1,5 @@
+Method,Description,Uncalibrated Bal-Acc (%),Calibrated Bal-Acc (%),Calibrated Macro-F1,Calibrated AUROC,Minority Recall (%)
+A1_Random,Class-Weighted Random Baseline,28.69 ± 2.07,32.21 ± 3.50,0.2959 ± 0.0182,0.7678 ± 0.0262,18.7 ± 8.2%
+A9_ColdStart,Cold-Start + Class-Weighted Loss,27.70 ± 1.83,30.03 ± 0.91,0.2838 ± 0.0035,0.7474 ± 0.0069,12.8 ± 1.4%
+A15_MAL,Minority-Aware Active Learning (Proposed),22.82 ± 0.28,26.69 ± 1.03,0.2620 ± 0.0161,0.7188 ± 0.0108,10.2 ± 3.2%
+A16_MAL_LogitAdj,MAL + Logit-Adjusted Loss,26.91 ± 1.70,27.07 ± 2.14,0.2429 ± 0.0148,0.7109 ± 0.0139,14.2 ± 5.8%
