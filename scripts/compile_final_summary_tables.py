@@ -5,7 +5,7 @@ from pathlib import Path
 repo_root = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al")
 df = pd.read_csv(repo_root / "results" / "all_experiments.csv")
 
-methods = ["A1_Frozen", "A1_Finetuned", "A9_ColdStart", "A17_MAL_Diversity"]
+methods = ["A1_Frozen", "A1_Finetuned", "A9_ColdStart", "A17_MAL_Diversity", "A18_Improved_MAL"]
 budgets = [80, 120, 160, 200, 240, 280, 320]
 
 # 1. Budget Trajectory
