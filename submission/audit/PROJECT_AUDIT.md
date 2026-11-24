@@ -11,7 +11,7 @@
 
 This audit assesses the technical integrity, implementation fidelity, experimental validity, and academic documentation of the CSDA-AL repository. The evaluation verifies that:
 1. No synthetic metrics or fabricated results are reported as experimental evidence.
-2. The strict canonical partition (17,771 train, 3,758 validation, 3,802 test) is preserved without label leakage.
+2. The strict canonical partition (17,732 train, 3,800 validation, 3,799 test) is preserved without label leakage.
 3. Every reported metric corresponds to tangible JSON/CSV run artifacts.
 4. All limitations, including the critical prior-shift failure mode of active learning under extreme (54:1) class imbalance, are explicitly disclosed.
 

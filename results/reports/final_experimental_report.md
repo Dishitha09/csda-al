@@ -2,7 +2,7 @@
 
 **Author:** Senior Machine Learning Research Engineer  
 **Dataset:** ISIC 2019 Dermoscopic Image Classification (25,331 images, 8 classes)  
-**Partition:** 70% Train (17,771) / 15% Validation (3,758) / 15% Test (3,802)  
+**Partition:** 70% Train (17,732) / 15% Validation (3,800) / 15% Test (3,799)  
 **Evaluation Protocol:** 3 Random Seeds (42, 43, 44), Annotation Budget = 320 samples (1.8% of training set), Canonical Zero-Leakage Split.  
 
 ---

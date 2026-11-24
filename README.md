@@ -91,7 +91,7 @@ CSDA-AL/
 ├── outputs/                             # Verified experimental logs and cached representations
 │   ├── cached_features/                 # Pre-extracted 512-dim ResNet-18 features (52.6 MB)
 │   └── isic2019/                        # Checkpoints, manifests, and run records
-│       ├── splits/                      # Canonical partition IDs (Train: 17,771 | Val: 3,758 | Test: 3,802)
+│       ├── splits/                      # Canonical partition IDs (Train: 17,732 | Val: 3,800 | Test: 3,799)
 │       ├── experiments/                 # A0–A14 run logs across seeds 42, 43, 44
 │       └── reports/                     # Audit logs and diagnostic reports
 │
