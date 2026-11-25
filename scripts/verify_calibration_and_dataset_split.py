@@ -99,8 +99,10 @@ def main():
     # -------------------------------------------------------------------------
     print("\n[PART 2: CALIBRATION IMPLEMENTATION AUDIT]")
     
-    # Load A23 Ensemble checkpoint
+    # Load A23 Ensemble checkpoint (with fallback for clean clones/Colab)
     ens_ckpt_path = repo_root / "outputs" / "isic2019" / "research_investigation" / "checkpoints" / "A23_Ensemble" / "ensemble_A1_Finetuned_budget_320.pt"
+    if not ens_ckpt_path.exists():
+        ens_ckpt_path = repo_root / "models" / "champion_checkpoints" / "ensemble_A1_Finetuned_budget_320.pt"
     assert ens_ckpt_path.exists(), f"Ensemble checkpoint missing at {ens_ckpt_path}"
     ens_ckpt = torch.load(ens_ckpt_path, map_location="cpu", weights_only=False)
 
@@ -109,6 +111,7 @@ def main():
 
     # Reconstruct raw probabilities from individual model checkpoints
     ckpt_base = repo_root / "outputs" / "isic2019" / "research_investigation" / "checkpoints" / "A1_Finetuned"
+    alt_ckpt_base = repo_root / "models" / "champion_checkpoints"
     
     from run_advanced_improvements import FineTunedAdapter
     val_probs_list = []
@@ -116,6 +119,8 @@ def main():
 
     for seed in [42, 43, 44]:
         s_path = ckpt_base / f"seed_{seed}" / "round_0006_budget_320.pt"
+        if not s_path.exists():
+            s_path = alt_ckpt_base / f"seed_{seed}_round_0006_budget_320.pt"
         ckpt = torch.load(s_path, map_location="cpu", weights_only=False)
         m = FineTunedAdapter(512, NUM_CLASSES)
         m.load_state_dict(ckpt.get("model_state") or ckpt.get("model_state_dict"))

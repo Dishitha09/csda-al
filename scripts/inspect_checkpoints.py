@@ -7,14 +7,15 @@ from pathlib import Path
 import torch
 
 def inspect_all():
-    repo_root = Path(r"C:\Users\Dishitha Ramesh\Desktop\ml project\csda_al")
+    repo_root = Path(__file__).resolve().parent.parent
     ckpt_root = repo_root / "outputs" / "isic2019" / "research_investigation" / "checkpoints"
+    champ_root = repo_root / "models" / "champion_checkpoints"
 
     print("=================================================================")
     print("        ISIC 2019 SAVED CHECKPOINTS AUDIT & DIRECTORY")
     print("=================================================================\n")
 
-    methods = sorted([d.name for d in ckpt_root.iterdir() if d.is_dir()])
+    methods = sorted([d.name for d in ckpt_root.iterdir() if d.is_dir()]) if ckpt_root.exists() else []
     total_files = 0
 
     for m in methods:
@@ -23,10 +24,18 @@ def inspect_all():
         total_files += len(files)
         print(f"📁 [{m}]: {len(files)} saved .pt checkpoints")
 
+    if champ_root.exists():
+        c_files = list(champ_root.glob("*.pt"))
+        print(f"📁 [champion_checkpoints]: {len(c_files)} portable .pt checkpoints")
+        if not methods:
+            total_files += len(c_files)
+
     print(f"\nTOTAL SAVED RESEARCH CHECKPOINTS: {total_files} files\n")
 
     # Inspect the top-performing model checkpoint (A1_Finetuned, Seed 44, Round 6, Budget 320)
     top_ckpt_path = ckpt_root / "A1_Finetuned" / "seed_44" / "round_0006_budget_320.pt"
+    if not top_ckpt_path.exists():
+        top_ckpt_path = champ_root / "seed_44_round_0006_budget_320.pt"
     if top_ckpt_path.exists():
         print("=================================================================")
         print("   DEEP-INSPECTION: Top Model (A1_Finetuned Seed 44 Budget 320)")
